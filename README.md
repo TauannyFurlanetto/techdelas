@@ -12,3 +12,12 @@ O objetivo é permitir que mulheres de todas as idades interajam umas com as out
 - Sobre(sobre.html)
 - Postagens individuais.(post.html)
 - Login e Cadastro (popUps)
+
+### Fontes
+@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
+
+### Cores
+- Roxo base: #702082;
+- Roxo saturado: #8B008B;
+- Roxo claro: #FCF2F8;
+- Branco: #FFFFFF;
