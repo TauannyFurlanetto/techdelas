@@ -1,0 +1,79 @@
+@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#forms, #story {
+    color: #702082;
+    margin: 30px auto;
+    width: 80%;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;  
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+input, textarea {
+    background-color: #FCF2F8;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+#email, textarea {
+    width: 80%;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8B008B;
+}
+
+#div-anonymous{
+    display: flex;
+    flex-direction: row;
+}
+
+input#anonymous {
+    order: -1;
+    margin-right: 10px;
+}
+
+#div-buttom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#buttom-forms {
+    background-color: #702082;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+
