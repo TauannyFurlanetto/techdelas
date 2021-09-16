@@ -13,6 +13,7 @@
 
 *{
     box-sizing: border-box;
+     outline: none; /*Isso remove a caixinha preta que aparecia ao selecionar um formulario */
 }
 
 /* POP-UP */
@@ -84,7 +85,30 @@
     padding-left: 1rem;
 }
 
-.pop-up-wrapper .pop-up input {
+a.esqueci {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #8B008B;
+}
+
+.pop-up form .input {
+    display: flex;
+    background-color: #FCF2F8;
+    border:none;
+    border-radius: 50px;
+    padding: 0 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.pop-up form .input input {
+    background: none;
+    user-select: none;
+}
+
+.pop-up-wrapper .pop-up form > input, .pop-up form .input {
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
