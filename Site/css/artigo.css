@@ -1,0 +1,114 @@
+@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
+
+.content {
+    width: 1000px;
+    max-width: 90%;
+    margin: 1.5rem auto;
+}
+
+.artigo h1, .artigo h2, .artigo h3, .artigo h4, .artigo p, .artigo figcaption, .artigo a{color: #702082}
+
+.artigo h1, .artigo h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.artigo h3, .artigo h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.artigo h1, .artigo h3 {
+    font-weight: 700
+}
+
+.artigo h2, .artigo h4 {
+    font-weight: 400;
+}
+
+.artigo h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+.artigo h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-bottom: 3rem;
+}
+.artigo h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+.artigo p, .artigo figcaption {
+    font-size: 1rem;
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
+.artigo figcaption {
+    text-align: center;
+}
+
+.artigo figure {
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.artigo figure img {
+    max-width: 100%;
+    justify-self: center;
+}
+
+/* TAGS */
+
+.content .tags {
+    margin: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content .tags a {
+    text-decoration: none;
+    background: #FCF2F8;
+    border-radius: 50px;
+    margin-right: 1rem;
+    padding: 0.8rem;
+}
+
+.separador {
+    background: #702082;
+    width: 100%;
+    height: 5px;
+}
+
+.reacao {
+    display: flex;
+}
+
+.reacao a {
+    padding: 1rem;
+    width: 4rem;
+    height: 4rem;
+}
+
+.reacao a img {
+    width: 100%;
+}
+
+.comentario .caixa {
+    display: flex;
+    background: #FCF2F8;
+    border-radius: 50px;
+    width: 100%;
+    height: 20rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentario .caixa textarea {
+    width: 90%;
+    height: 60%;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    outline: none;
+    border: none;
+    background: none;
+    resize: none;
+}
