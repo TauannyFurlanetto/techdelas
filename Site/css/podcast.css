@@ -3,27 +3,60 @@
 *{
     box-sizing: border-box; 
 }
-header{
-    position: relative;
-
-}
 .container{
     width: 1000px;
     max-width: 100%;
     margin: 0 auto;
-    position: relative;
-    display: flex;
-    flex-direction: row;
 }
-header .container #escritalogo h1{
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navegacao ul{
+    display: flex;
+    list-style: none;
+}
+#navegacao ul li {
+    padding: 5px;
+}
+header .logo{
+   display: flex;
+   align-items: center;
+}
+header .escritalogo {
+    display: flex;
+    align-items: center;
+}
+header .escritalogo h1{
     position: relative;
     text-transform: uppercase;
     font-family: Poppins;
+    display: inline-block;
 }
-header .container #navegacao{
+header #navegacao{
     position: relative;
+    display: inline-block;
+}
+section#podcasts article .escritaarticle{
+    text-align: justify;
+    align-items: center;
+}
+section#podcasts article .escritaarticle  h1{
+    color: #702082;
+    font-family: Poppins;
+    text-align: justify;
+}
+section#podcasts article .escritaarticle  p{
+    color: #702082;
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+}
+section#podcasts article{
     display: flex;
-
+    align-items: center;
 }
 body{
     padding: 0;
@@ -42,8 +75,8 @@ body{
     line-height: 20px;
     text-align: justify;
 }
-
 footer{
     background-color: #702082;
     color: white;
 }
+
