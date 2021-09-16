@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    box-sizing: border-box; 
+}
+header{
+    position: relative;
+
+}
+.container{
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+header .container #escritalogo h1{
+    position: relative;
+    text-transform: uppercase;
+    font-family: Poppins;
+}
+header .container #navegacao{
+    position: relative;
+    display: flex;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    color: #702082;
+}
+#intro h1{
+    color: #702082;
+    font-family: Poppins;
+    text-align: justify;
+}
+#intro h2{
+    color: #702082;
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: justify;
+}
+
+footer{
+    background-color: #702082;
+    color: white;
+}
