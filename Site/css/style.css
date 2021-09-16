@@ -59,6 +59,12 @@
     flex-direction: column;
 }
 
+.pop-up-wrapper .pop-up>a, .pop-up-wrapper .pop-up>a img {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: flex-end;
+}
+
 .pop-up-wrapper .pop-up h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
