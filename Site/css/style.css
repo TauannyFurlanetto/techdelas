@@ -13,7 +13,120 @@
 
 *{
     box-sizing: border-box;
+     outline: none; /*Isso remove a caixinha preta que aparecia ao selecionar um formulario */
 }
+
+/* POP-UP */
+
+.pop-up-wrapper.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.pop-up-wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    
+    visibility: hidden;
+    opacity: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.pop-up-wrapper .pop-up{
+    width: min(97%, 26rem);
+    height: fit-content;
+    position: fixed;
+
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: #ffffff;
+    border-radius: 0.2rem;
+
+    visibility: hidden;
+    opacity: 0;
+
+    padding: 4rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-up-wrapper .pop-up>a, .pop-up-wrapper .pop-up>a img {
+    width: 2.5rem;
+    height: 2.5rem;
+    align-self: flex-end;
+}
+
+.pop-up-wrapper .pop-up h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.pop-up-wrapper .pop-up form {
+    display: flex;
+    flex-direction: column;
+}
+
+.pop-up-wrapper .pop-up label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding-left: 1rem;
+}
+
+a.esqueci {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #8B008B;
+}
+
+.pop-up form .input {
+    display: flex;
+    background-color: #FCF2F8;
+    border:none;
+    border-radius: 50px;
+    padding: 0 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.pop-up form .input input {
+    background: none;
+    user-select: none;
+}
+
+.pop-up-wrapper .pop-up form > input, .pop-up form .input {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.pop-up .button {
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+.pop-up button {
+    padding: 0.6rem 1.3rem;
+}
+
+.pop-up-wrapper .pop-up.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ------ */
 
 body{
     padding: 0;
@@ -106,7 +219,7 @@ header ul li{
     background-color:#702082;
     margin-right:40px;
 }
-.banner button{
+button {
     border:none;
     border-radius: 20px;
     background-color:#702082;
@@ -145,7 +258,7 @@ header ul li{
     list-style: none;
     
 }
-.posts .barra input{
+.posts .barra input, .pop-up input{
     background-color: #FCF2F8;
     border:none;
     border-radius: 50px;
@@ -153,11 +266,11 @@ header ul li{
     text-align: left;
     width: 100%;
 }
-.posts .barra input::placeholder{
+.posts .barra input::placeholder, .pop-up input::placeholder{
     color:#702082;
     font-size: 15px;
 }
-.posts .barra input[type=text]{
+.posts .barra input[type=text], .pop-up input[type=text]{
     color:#702082;
     font-size: 15px;
 }
