@@ -192,7 +192,7 @@ header #menu, header #sair{
     flex-wrap: wrap;
 }
 .banner .left{
-    width: 45%;
+    width: 50%;
     padding: 60px 0;
 }
 .banner h1{
@@ -485,9 +485,29 @@ header #cadastro button {
     color: #702082;
     margin-top: 30px;
 }
-/* BANNER */
 
 }
+@media (max-width:711px){
+    .banner .left{
+        width: 80%;
+    }
+    .banner .left h1{
+        font-size: 40px;
+    }
+    .banner .container #img{
+        margin: 0 auto;
+    }
+    .janela .topo .post {
+        flex-wrap: wrap;
+    }
+    .posts .container{
+        width: 50%;
+    }
+    .posts .barra, .posts .barra .categorias ul {
+        display: none;
+    }
+}
+
 @media (max-width:615px){
     footer .container .left .logo .texto p{
         font-size: 12px;
@@ -505,13 +525,40 @@ header #cadastro button {
         height: 10%;
     } 
     footer .socialMedia, footer .left .logo .texto{
-        width: 40%;
+        width: 60%;
     }  
     footer .socialMedia li img{
-        width: 70%;
+        width: 80%;
     }
-    /* BREAK: 414px */
+    /* REMOVE BAR POSTS */
+    .janela .topo::after{
+        content:none;
     }
+    .janela .topo{
+        padding: 0;
+    }
+    .janela .topo .post img {
+        width: 100%;
+        margin:0;
+    }
+}
+@media (max-width: 300px){
+    footer .left .logo .texto {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    footer .left .logo .texto p{
+        text-align: center;
+    }
+    footer .left .logo {
+        display: block;
+        text-align: center;
+    }
+    footer .texto {
+        margin: 0;
+    }  
+}
 
 
 
