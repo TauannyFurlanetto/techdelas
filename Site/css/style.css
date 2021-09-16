@@ -1,0 +1,271 @@
+/* 
+- Uso de height pra fazer as barras
+- As margens como maneira de se dar espaco (acredito que porque nao 
+    ha largura fixa nao cria espacamento com o between [e porque nao ha width no pai])
+- Colar esse texto do footer na base (Copyright), acredito que seja a mesma questao
+    de flexbox e margem de novo
+- O uso do width no footer (ou usar o margin pra criar esse espacamentp)
+- Tudo isso relacionado a questao de responsividade
+
+*/
+@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color:  #702082;
+}
+.container{
+    width: 900px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+header .container{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+header ul{
+    list-style: none;
+    margin: 0;
+}
+header ul a{
+    text-decoration: none;
+    color: #702082;
+}
+/* MUDAR ISSO <--*/
+header ul li{
+    display: inline-block;
+    padding: 0 12px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo p, .banner h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0 0 0 10px;
+    font-size: 25px;
+}
+.logo span, .banner h1>span{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+/* Navegacao */
+.navegacao{
+    display: flex;
+    align-items: center;
+}
+.navegacao button{
+    border:none;
+    border-radius: 20px;
+    background-color:#702082;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+
+/* BANNER */
+.banner{
+    margin-bottom: 70px;
+}
+.banner .container{
+    display: flex;
+    justify-content: space-around;
+}
+.banner .left{
+    width: 45%;
+    padding: 60px 0;
+}
+.banner h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 65px;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.banner .paragrafo{
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+.banner .left .bannerBar{
+    height: 50px;
+    width: 10px;
+    background-color:#702082;
+    margin-right:40px;
+}
+.banner button{
+    border:none;
+    border-radius: 20px;
+    background-color:#702082;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+#imagem{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 338px;
+    width: 255px;
+}
+/* ARTIGO/HOME */
+/* Barra de pesquisa, botao e categorias */
+.posts{
+    margin-bottom: 50px;
+}
+.posts .container{
+    width: 650px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.posts .barra{
+    margin-bottom: 50px;
+}
+.posts .barra .topo{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.posts .barra .categorias ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    
+}
+.posts .barra input{
+    background-color: #FCF2F8;
+    border:none;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+}
+.posts .barra input::placeholder{
+    color:#702082;
+    font-size: 15px;
+}
+.posts .barra input[type=text]{
+    color:#702082;
+    font-size: 15px;
+}
+.posts .barra .categorias ul li a{
+    text-decoration: none;
+    color:#8B008B;
+    padding-left: 20px;
+}
+.posts .barra button{
+    border:none;
+    border-radius: 50px;
+    background-color:#702082;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+.posts .barra button img{
+    width: 25px;
+    margin: 0;
+    padding: 0;
+}
+.posts #artigo{
+    margin-left: 20px;
+}
+.posts .barra .categorias{
+    display: flex;
+    justify-content: center;
+}
+
+/* Postagens */
+.janela div.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.janela .topo .post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.janela .topo .post img {
+    margin: 20px 10px;
+}
+.janela .topo .barra{
+    margin: 0;
+    padding: 0;
+    width: 10px;
+    background-color:#702082;
+    height: 780px;
+    margin-left: 40px;
+}
+.janela>p{
+    text-align: right;
+    color:#8B008B;
+    cursor: pointer;
+}
+.janela .postagens a{
+    text-decoration: none;
+    color: #702082;
+}
+/* FOOTER */
+footer{
+    background-color:#702082;
+    color: white;
+    font-weight: 200;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+
+}
+footer .socialMedia ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+footer .left .logo .texto{
+    margin-left: 30px;
+    width: 60%;
+}
+footer span{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+footer .left .logo .texto>p{
+    font-size: 15px;
+    font-weight: 200;
+}
+footer .left .logo .texto h3{
+    font-size: 60px;
+    font-weight: 200;
+    margin: 0 0 10px 0;
+}
+footer .left>p{
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+footer .socialMedia h3{
+    text-transform: uppercase;
+
+}
+footer .socialMedia{
+    width: 30%;
+}
+
+
