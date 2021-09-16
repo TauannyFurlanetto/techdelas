@@ -356,7 +356,7 @@ footer .socialMedia ul{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 50px;   
 }
@@ -450,7 +450,7 @@ header #menu{
     text-align: left;
     position: fixed;
     z-index: 999;
-    width: 33%;
+    width: 100%;
     height: 100vh;
     padding: 2em;
     top: 0;
@@ -500,11 +500,20 @@ header #cadastro button {
     .janela .topo .post {
         flex-wrap: wrap;
     }
+    .janela .topo .post img {
+        margin: 0;
+    }
     .posts .container{
         width: 50%;
     }
     .posts .barra, .posts .barra .categorias ul {
         display: none;
+    }
+    .banner .left .paragrafo::before{
+        width: 5px;
+    }
+    .banner .left .paragrafo{
+        padding-right: 20px;
     }
 }
 
@@ -519,7 +528,7 @@ header #cadastro button {
         font-size: 15px;
     }
     footer .left .logo .texto h3{
-        font-size: 30px;
+        font-size: 40px;
     }     
     footer .logo img {
         height: 10%;
@@ -539,10 +548,9 @@ header #cadastro button {
     }
     .janela .topo .post img {
         width: 100%;
-        margin:0;
     }
 }
-@media (max-width: 300px){
+@media (max-width: 340px){
     footer .left .logo .texto {
         margin: 0;
         width: 100%;
@@ -550,7 +558,12 @@ header #cadastro button {
     }
     footer .left .logo .texto p{
         text-align: center;
+        margin: 0;
+        width: auto;
     }
+    footer .left .logo .texto h3{
+        font-size: 35px;
+    } 
     footer .left .logo {
         display: block;
         text-align: center;
