@@ -5,75 +5,229 @@ body {
     padding: 0;
 }
 
-#forms, #story {
-    color: #702082;
-    margin: 30px auto;
-    width: 80%;
+.container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-h1 {
+/* Descrição */
+
+section.story, section.forms {
+    color: #702082;
+}
+
+section.story h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 40px;
+    padding: 10px auto;
 }
 
-p {
+section.story p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     text-align: justify;
     line-height: 25px;  
+    padding: 10px auto;
 }
 
-#formulario{
+/* Formulário */
+
+section.forms {
+    padding-top: 30px;
+}
+
+section.forms .container {
+    padding: 10px auto;
+    width: 1000px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+section.forms .formulario{
+    width: 80%;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
 }
 
-label {
-    font-family: 'Roboto', sans-serif;
+section.forms label {
     font-weight: 700;
     font-size: 16px;
     padding: 10px 0;
 }
 
-input, textarea {
+section.forms input, section.forms textarea {
     background-color: #FCF2F8;
     border: none;
     border-radius: 20px;
     padding: 15px;
 }
 
-#email, textarea {
-    width: 80%;
+section.forms .nome-sobrenome {
+    display: flex;
 }
 
-::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #8B008B;
+section.forms .name, section.forms .last-name {
+    flex-direction: column;
 }
 
-#div-anonymous{
+section.forms .name input {
+    width: 70%;
+}
+
+section.forms .last-name input {
+    width: 115%;
+}
+
+section.forms .email, .your-story {
+    display: flex;
+    flex-direction: column;
+}
+
+section.forms .div-anonymous{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
-input#anonymous {
+/* section.forms .div-anonymous input[type=checkbox]{
+    outline-color: #FFFFFF;
+} */
+
+section.forms .div-anonymous input#anonymous {
     order: -1;
     margin-right: 10px;
 }
 
-#div-buttom {
+section.forms .div-buttom {
     display: flex;
     justify-content: flex-end;
+    width: 80%;
 }
 
-#buttom-forms {
+section.forms .div-buttom #buttom-forms {
     background-color: #702082;
     color: #FFFFFF;
     padding: 10px 20px;
     margin-top: 20px;
 }
 
+section.forms ::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8B008B;
+}
+
+section.forms .container .container-2 {
+    max-width: 80%;
+}
+
+section.forms .container .container-2 .nome-sobrenome, .email, .div-anonymous, .your-story {
+    padding: 10px 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 1040px) {
+    .container {
+        width: 1000px;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    section.story p {
+        font-size: 20px;
+    }
+
+    section.forms {
+        width: 100%;
+    }
+
+    section.forms .nome-sobrenome {
+        gap: 60px;
+    }
+
+    section.forms .nome-sobrenome .name input {
+        width: 90%; 
+    }
+    
+    section.forms .nome-sobrenome .last-name input {
+        width: 170%;
+    }
+
+    section.forms .email input, section.forms .your-story textarea {
+        width: 130%;
+    } 
+
+    section.forms .div-buttom {
+        width: 110%;
+    }
+
+    section.forms label {
+        font-size: 17px;
+    }
+
+    section.forms ::placeholder {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 945px) {
+
+    section.forms .nome-sobrenome {
+        gap: 100px;
+    }
+
+    section.forms .nome-sobrenome .name input {
+        width: 120%; 
+    }
+    
+    section.forms .nome-sobrenome .last-name input {
+        width: 180%;
+    }
+
+    section.forms .div-buttom {
+        width: 110%;
+    }
+}
+
+@media (max-width: 825px) {
+
+    section.forms .container .container-2 .nome-sobrenome {
+        display: block;
+    }
+
+    section.forms .nome-sobrenome .name {
+        padding-bottom: 30px;
+    }
+
+    section.forms .nome-sobrenome .name input, section.forms .nome-sobrenome .last-name input {
+        width: 150%;
+    }
+
+    section.forms .email input, section.forms .your-story textarea {
+        width: 150%;
+    } 
+
+    section.forms .div-buttom {
+        width: 125%;
+    }
+}
+
+@media (max-width: 615px) {
+
+    section.forms .div-buttom {
+        width: 130%;
+    }
+    
+}
+
+@media (max-width: 415px) {
+    section.forms .div-anonymous label {
+        white-space: nowrap;
+    }   
+}

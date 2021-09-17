@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escreva</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/escreva.css">
 </head>
 
 <body>
@@ -13,35 +13,51 @@
         <!-- Aqui vai a barra de navegação -->
     </header>
 
-    <section id="story">
-        <h1>Mande sua história...</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas harum adipisci placeat, porro quasi cumque facilis nihil earum delectus, obcaecati libero beatae quis quisquam provident accusantium culpa vitae natus sed nam! Accusamus eveniet qui quas eaque sapiente ipsum esse vero inventore? Voluptas velit rerum aspernatur dolor assumenda iusto deserunt hic, possimus porro voluptatum minima at adipisci.</p> <!-- Escrever a descrição da página -->
+    <section class="story">
+        <div class="container">
+            <h1>Mande sua história...</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi voluptas harum adipisci placeat, porro quasi cumque facilis nihil earum delectus, obcaecati libero beatae quis quisquam provident accusantium culpa vitae natus sed nam! Accusamus eveniet qui quas eaque sapiente ipsum esse vero inventore? Voluptas velit rerum aspernatur dolor assumenda iusto deserunt hic, possimus porro voluptatum minima at adipisci.</p> <!-- Escrever a descrição da página -->
+        </div>
     </section>
 
-    <section id="forms">
-        <form id="formulario" action="" target="_blank" method="POST">
+    <section class="forms">
+        <div class="container">
+            <form class="formulario" action="" target="_blank" method="POST">
+
+                <div class="container-2">
+                    <div class="nome-sobrenome">
+                        <div class="name">
+                            <label for="fname">Primeiro nome:</label>
+                            <input type="text" id="fname" name="fname" required="required" placeholder="Digite aqui seu primeiro nome" autofocus>
+                        </div>
             
-            <label for="fname">Primeiro nome:</label>
-            <input type="text" id="fname" name="fname" required="required" placeholder="Digite aqui seu primeiro nome" autofocus>
+                        <div class="last-name">
+                            <label for="lname">Sobrenome:</label>
+                            <input type="text" id="lname" name="lname" required="required" placeholder="Digite aqui seu sobrenome">
+                        </div>
+                    </div>
+        
+                    <div class="email">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required="required" placeholder="seuemail@aqui.com" maxlength="50" autocomplete="on">
+                    </div>
 
-            <label for="lname">Sobrenome:</label>
-            <input type="text" id="lname" name="lname" required="required" placeholder="Digite aqui seu sobrenome">
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" required="required" placeholder="seuemail@aqui.com" maxlength="50" autocomplete="on">
-
-            <div id="div-anonymous">
-                <label for="anonymous">Mandar anonimamente</label>
-                <input type="checkbox" id="anonymous" name="anonymous" value="">
-            </div>
-
-            <label for="message">Conte sua história:</label>
-            <textarea name="message" id="message" cols="30" rows="10" required="required" placeholder="Digite aqui a sua história ou conteúdo"></textarea>
-
-            <div id="div-buttom">
-                <input id="buttom-forms" type="submit" value="Enviar">
-            </div>
-        </form>
+                    <div class="div-anonymous">
+                        <label for="anonymous">Mandar anonimamente</label>
+                        <input type="checkbox" id="anonymous" name="anonymous" value="">
+                    </div>
+        
+                    <div class="your-story">
+                        <label for="message">Conte sua história:</label>
+                        <textarea name="message" id="message" cols="30" rows="10" required="required" placeholder="Digite aqui a sua história ou conteúdo"></textarea>
+                    </div>
+                </div>
+    
+                <div class="div-buttom">
+                    <input id="buttom-forms" type="submit" value="Enviar">
+                </div>
+            </form>
+        </div>
     </section>
     
     <footer>
