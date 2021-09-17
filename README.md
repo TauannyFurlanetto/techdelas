@@ -21,3 +21,12 @@ O objetivo é permitir que mulheres de todas as idades interajam umas com as out
 - Roxo saturado: #8B008B;
 - Roxo claro: #FCF2F8;
 - Branco: #FFFFFF;
+
+### Fontes
+PC
+- Corpo: 18px
+- Titulo: 40px
+- Subtitulo: 30px
+Mobile*:
+- Corpo: 20px
+*A única alteração feita para o menor tamanho de tela
