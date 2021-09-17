@@ -199,6 +199,13 @@ section.contatos a {
         justify-content: center;
     }
 
+    article.sobre p,
+    section.objetivo p,
+    section.equipe p,
+    section.contatos p {
+        font-size: 20px;
+    }
+
     article.sobre, section.objetivo{
         width: 100%;
     }
@@ -255,7 +262,7 @@ section.contatos a {
         text-align: center;
     }
         
-    }
+}
 
 @media (max-width: 370px) {
 
@@ -263,6 +270,13 @@ section.contatos a {
         width: 800px;
         max-width: 90%;
         margin: 0 auto;
+    }
+
+    article.sobre p,
+    section.objetivo p,
+    section.equipe p,
+    section.contatos p {
+        font-size: 20px;
     }
 
     .aboult, .objetivos {
