@@ -1,4 +1,4 @@
-@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
 
 body {
     margin: 0;
@@ -55,7 +55,7 @@ section.forms .formulario{
 
 section.forms label {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 18px;
     padding: 10px 0;
 }
 
@@ -64,6 +64,7 @@ section.forms input, section.forms textarea {
     border: none;
     border-radius: 20px;
     padding: 15px;
+    resize: none;
 }
 
 section.forms .nome-sobrenome {
@@ -76,10 +77,12 @@ section.forms .name, section.forms .last-name {
 
 section.forms .name input {
     width: 70%;
+    margin-top: 10px;
 }
 
 section.forms .last-name input {
-    width: 115%;
+    width: 110%;
+    margin-top: 10px;
 }
 
 section.forms .email, .your-story {
@@ -93,9 +96,10 @@ section.forms .div-anonymous{
     align-items: center;
 }
 
-/* section.forms .div-anonymous input[type=checkbox]{
-    outline-color: #FFFFFF;
-} */
+section.forms .div-anonymous input[type=checkbox]{
+    cursor: pointer;
+    /* outline-color: #FFFFFF; */
+} 
 
 section.forms .div-anonymous input#anonymous {
     order: -1;
@@ -113,11 +117,16 @@ section.forms .div-buttom #buttom-forms {
     color: #FFFFFF;
     padding: 10px 20px;
     margin-top: 20px;
+    cursor: pointer;
+}
+
+section.forms .div-buttom #buttom-forms:hover {
+    background-color: #8B008B;
 }
 
 section.forms ::placeholder {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     color: #8B008B;
 }
@@ -168,11 +177,11 @@ section.forms .container .container-2 .nome-sobrenome, .email, .div-anonymous, .
     }
 
     section.forms label {
-        font-size: 17px;
+        font-size: 18px;
     }
 
     section.forms ::placeholder {
-        font-size: 15px;
+        font-size: 16px;
     }
 }
 
