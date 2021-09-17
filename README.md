@@ -27,6 +27,8 @@ PC
 - Corpo: 18px
 - Titulo: 40px
 - Subtitulo: 30px
-Mobile*:
+- Inputs (formularios): 16px
+
+Mobile:*
 - Corpo: 20px
 *A única alteração feita para o menor tamanho de tela
