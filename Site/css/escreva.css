@@ -64,6 +64,7 @@ section.forms input, section.forms textarea {
     border: none;
     border-radius: 20px;
     padding: 15px;
+    resize: none;
 }
 
 section.forms .nome-sobrenome {
