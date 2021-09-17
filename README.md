@@ -31,4 +31,5 @@ PC
 
 Mobile:*
 - Corpo: 20px
+
 *A única alteração feita para o menor tamanho de tela
