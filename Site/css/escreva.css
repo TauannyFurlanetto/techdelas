@@ -5,75 +5,134 @@ body {
     padding: 0;
 }
 
-#forms, #story {
-    color: #702082;
-    margin: 30px auto;
-    width: 80%;
+.container {
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-h1 {
+section.story, section.forms {
+    color: #702082;
+}
+
+section.story h1 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 40px;
+    padding: 10px auto;
 }
 
-p {
+section.story p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     text-align: justify;
     line-height: 25px;  
+    padding: 10px auto;
 }
 
-#formulario{
+section.forms .container {
+    padding: 10px auto;
+    width: 1000px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+section.forms .formulario{
+    font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
 }
 
-label {
-    font-family: 'Roboto', sans-serif;
+section.forms label {
     font-weight: 700;
     font-size: 16px;
     padding: 10px 0;
 }
 
-input, textarea {
+section.forms input, section.forms textarea {
     background-color: #FCF2F8;
     border: none;
     border-radius: 20px;
     padding: 15px;
 }
 
-#email, textarea {
+section.forms #email, section.forms textarea {
     width: 80%;
 }
 
-::placeholder {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    color: #8B008B;
-}
-
-#div-anonymous{
+section.forms .nome-sobrenome {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 83%;
+    /* gap: 120px; */
+    padding: 10px 0;
 }
 
-input#anonymous {
+section.forms .name, section.forms .last-name {
+    display: flex;
+    flex-direction: column;
+}
+
+section.forms .name input {
+    width: 110%;
+}
+
+section.forms .last-name input {
+    width: 200%;
+}
+
+section.forms .email, .your-story {
+    display: flex;
+    flex-direction: column;
+}
+
+section.forms .div-anonymous{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 0 6px 0;
+}
+
+/* section.forms .div-anonymous input[type=checkbox]{
+    outline-color: #FFFFFF;
+} */
+
+section.forms .div-anonymous input#anonymous {
     order: -1;
     margin-right: 10px;
 }
 
-#div-buttom {
+section.forms .div-buttom {
     display: flex;
     justify-content: flex-end;
+    width: 83%;
 }
 
-#buttom-forms {
+section.forms .div-buttom #buttom-forms {
     background-color: #702082;
     color: #FFFFFF;
     padding: 10px 20px;
     margin-top: 20px;
 }
 
+section.forms ::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #8B008B;
+}
+
+section.forms .container .teste {
+    max-width: 80%;
+}
+
+/* section.forms .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.forms .container .teste {
+    width: 100%;
+} */
