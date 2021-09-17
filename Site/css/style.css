@@ -1,7 +1,6 @@
 
 
-@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
 *{
     box-sizing: border-box;
     outline: none; /*Isso remove a caixinha preta que aparecia ao selecionar um formulario */
@@ -183,6 +182,12 @@ header #menu, header #sair{
     padding: 12px;
     cursor: pointer;
 }
+header #login{
+    cursor: pointer;
+}
+header #cadastro button:hover{
+    background-color: #8B008B;
+}
 
 /* BANNER */
 .banner{
@@ -229,6 +234,9 @@ button {
     cursor: pointer;
     font-size: 18px;
 }
+button:hover {
+    background-color: #8B008B;
+}
 #imagem{
     background-repeat: no-repeat;
     background-size: cover;
@@ -268,15 +276,15 @@ button {
     padding: 15px;
     text-align: left;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
 }
 .posts .barra input::placeholder, .pop-up input::placeholder{
     color:#702082;
-    font-size: 18px;
+    font-size: 16px;
 }
 .posts .barra input[type=text], .pop-up input[type=text]{
     color:#702082;
-    font-size: 18px;
+    font-size: 16px;
 }
 .posts .barra .categorias ul li a{
     text-decoration: none;
@@ -291,10 +299,13 @@ button {
     padding: 12px;
     cursor: pointer;
 }
+.posts .barra button:hover{
+    background-color: #8B008B;
+}
 .posts .barra button img{
-    width: 25px;
+    height: 25px;
     margin: 0;
-    padding: 0;
+    padding: 0 3px;
 }
 .posts #artigo{
     margin-left: 20px;
@@ -333,10 +344,12 @@ button {
     top: 0;
     right:0;
 }
-.janela>p{
+.janela>a{
+    display: block;
     text-align: right;
     color:#8B008B;
     cursor: pointer;
+    text-decoration: none;
 }
 .janela .postagens a{
     text-decoration: none;
@@ -361,9 +374,10 @@ footer .socialMedia ul{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 50px;   
+    justify-content: center;
+    gap: 15px;
+    align-items: center; 
+
 }
 footer .logo{
     display: flex;
@@ -385,6 +399,9 @@ footer .left .logo .texto h3{
     font-weight: 200;
     margin: 0 0 10px 0;
 }
+footer .texto>h3{
+    font-family: 'Poppins', sans-serif;
+}
 footer .left>p{
     margin-top: 50px;
     margin-bottom: 0;
@@ -392,6 +409,7 @@ footer .left>p{
 footer .container p{
     margin: 0;
     padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
     
 }
 footer .socialMedia h3{
@@ -470,6 +488,7 @@ header #menu{
     margin: 0;
     padding: 15px 0;
     font-size: 20px;
+    text-align: center;
 }
 #menuMobile ul {
     margin: 30px 0;
@@ -482,10 +501,10 @@ header #sair{
     display: block;
     background-color: white;
     border-radius: 50px;
-    padding: 5px;
+    padding: 5px 8px;
 }
 header #sair img{
-    width: 45px;
+    width: 30px;
     height: auto;
 }
 header #cadastro button {
@@ -547,18 +566,19 @@ header #cadastro button {
         width: 80%;
     }
 
-    /* REMOVE SEARCH BAR POSTS */
+    /* REMOVE  BAR POSTS */
     .janela .topo::after{
         content:none;
     }
     .janela .topo{
         padding: 0;
+        text-align: center;
     }
     .janela .topo .post img {
         width: 100%;
     }
 }
-@media (max-width: 391px){
+@media (max-width: 422px){
     body, button, footer{
         font-size: 20px;
     }
