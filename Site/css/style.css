@@ -124,9 +124,10 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color:  #702082;
+    font-size: 18px;
 }
 .container{
-    width: 800px;
+    width: 1000px;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -154,6 +155,7 @@ header ul li{
 .logo {
     display: flex;
     align-items: center;
+    
 }
 .logo p, .banner h1{
     font-family: 'Poppins', sans-serif;
@@ -220,11 +222,12 @@ header #menu, header #sair{
 }
 button {
     border:none;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color:#702082;
     color: white;
     padding: 12px;
     cursor: pointer;
+    font-size: 18px;
 }
 #imagem{
     background-repeat: no-repeat;
@@ -239,7 +242,7 @@ button {
     margin-bottom: 50px;
 }
 .posts .container{
-    width: 650px;
+    width: 680px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -255,6 +258,7 @@ button {
     display: flex;
     justify-content: space-between;
     list-style: none;
+    font-size: 18px;
     
 }
 .posts .barra input, .pop-up input{
@@ -264,14 +268,15 @@ button {
     padding: 15px;
     text-align: left;
     width: 100%;
+    font-size: 18px;
 }
 .posts .barra input::placeholder, .pop-up input::placeholder{
     color:#702082;
-    font-size: 15px;
+    font-size: 18px;
 }
 .posts .barra input[type=text], .pop-up input[type=text]{
     color:#702082;
-    font-size: 15px;
+    font-size: 18px;
 }
 .posts .barra .categorias ul li a{
     text-decoration: none;
@@ -372,7 +377,7 @@ footer span{
     font-weight: 600;
 }
 footer .left .logo .texto>p{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 200;
 }
 footer .left .logo .texto h3{
@@ -387,6 +392,7 @@ footer .left>p{
 footer .container p{
     margin: 0;
     padding-bottom: 20px;
+    
 }
 footer .socialMedia h3{
     text-transform: uppercase;
@@ -416,7 +422,7 @@ footer .socialMedia{
     }
 }
 
-@media (max-width:889px){
+@media (max-width:960px){
 /* FOOTER E HEADER  */
 footer .logo{
     justify-content: center;
@@ -433,6 +439,7 @@ footer .container p{
     margin: 0;
     padding-bottom: 20px;
 }
+/* Menu mobile */
 header #menu{
     display: block;
     color: #702082;
@@ -461,7 +468,8 @@ header #menu{
 #menuMobile ul li{
     display: block;
     margin: 0;
-    padding: 5px 0;
+    padding: 15px 0;
+    font-size: 20px;
 }
 #menuMobile ul {
     margin: 30px 0;
@@ -477,22 +485,21 @@ header #sair{
     padding: 5px;
 }
 header #sair img{
-    width: 30px;
+    width: 45px;
     height: auto;
 }
 header #cadastro button {
     background-color: white;
     color: #702082;
     margin-top: 30px;
+    font-size: 20px;
+    border-radius: 30px;
 }
 
 }
 @media (max-width:711px){
     .banner .left{
         width: 80%;
-    }
-    .banner .left h1{
-        font-size: 40px;
     }
     .banner .container #img{
         margin: 0 auto;
@@ -519,16 +526,16 @@ header #cadastro button {
 
 @media (max-width:615px){
     footer .container .left .logo .texto p{
-        font-size: 12px;
+        font-size: 20px;
     }
     footer .socialMedia p, li, footer p{
-        font-size: 12px;
+        font-size: 20px;
     }
     footer .socialMedia h3{
-        font-size: 15px;
+        font-size: 20px;
     }
     footer .left .logo .texto h3{
-        font-size: 40px;
+        font-size: 35px;
     }     
     footer .logo img {
         height: 10%;
@@ -539,7 +546,8 @@ header #cadastro button {
     footer .socialMedia li img{
         width: 80%;
     }
-    /* REMOVE BAR POSTS */
+
+    /* REMOVE SEARCH BAR POSTS */
     .janela .topo::after{
         content:none;
     }
@@ -550,7 +558,10 @@ header #cadastro button {
         width: 100%;
     }
 }
-@media (max-width: 340px){
+@media (max-width: 391px){
+    body, button, footer{
+        font-size: 20px;
+    }
     footer .left .logo .texto {
         margin: 0;
         width: 100%;
@@ -560,6 +571,7 @@ header #cadastro button {
         text-align: center;
         margin: 0;
         width: auto;
+        font-size: 20px;
     }
     footer .left .logo .texto h3{
         font-size: 35px;
@@ -571,6 +583,9 @@ header #cadastro button {
     footer .texto {
         margin: 0;
     }  
+    .banner .left h1{
+        font-size: 40px;
+    }
 }
 
 
