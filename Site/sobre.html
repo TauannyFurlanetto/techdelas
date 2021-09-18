@@ -7,8 +7,34 @@
     <title>TECHdelas - Sobre</title>
     <link rel="icon" href="icones/logo-branco.png">
     <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
+
+    <header>
+        <div class="container">
+            <section class="logo">
+            <img src="icones/logo_header.svg" alt="Logotipo_TechDelas">
+            <p><span>Tech</span>delas</p>
+        </section>
+        <button id="menu">☰</button>
+        <section class="navegacao" id="menuMobile" >
+            <nav>
+                <button id="sair"><img src="icones/exit.svg" alt="Sair do menu"></button>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="podcast.html">Podcasts</a></li>
+                    <li><a href="escreva.html">Escreva</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <!-- login e cadastro -->
+                    <li id ="login">Login</li>
+                    <li id="cadastro"><button>Cadastre-se</button></li>
+                </ul>
+            </nav>
+        </section>
+        </div>
+    </header>
 
     <div class="container">
         <section class="aboult">
@@ -102,3 +128,35 @@
             </section>
         </section>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="conteudo">
+                <div class="left">
+                    <div class="logo">
+                        <img src="icones/logo_footer.svg" alt="Logo do footer">
+                        <div class="texto">
+                            <h3><span>Tech</span>delas</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="socialMedia">
+                <h3>Titulo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore earum voluptatibus et, architecto totam similique vitae id sint debitis minima.</p>
+                <div class="iconesSocial">
+                    <ul>
+                        <li><a href=""><img src="icones/linkedin.svg" alt="Acesso ao linkedin"></a></li>
+                        <li><a href=""><img src="icones/facebook.svg" alt="Acesso ao facebook"></a></li>
+                        <li><a href=""><img src="icones/youtube.svg" alt="Acesso ao youtube"></a></li>
+                        <li><a href=""><img src="icones/instagram.svg" alt="Acesso ao instagram"></a></li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <p>Copyright de <span>Tech</span>delas</p>
+        </div>
+    </footer>
+
+    </body>
+    </html>
