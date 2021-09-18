@@ -1,0 +1,247 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+*{
+    box-sizing: border-box;
+    outline: none; /*Isso remove a caixinha preta que aparecia ao selecionar um formulario */
+}
+
+/* ------ */
+
+/* body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color:  #702082;
+    font-size: 18px;
+}
+.container{
+    width: 1000px;
+    max-width: 90%;
+    margin: 0 auto;
+} */
+
+/* BANNER */
+.banner h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    margin: 0 0 0 10px;
+    font-size: 25px;
+}
+.banner h1>span{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.banner{
+    margin-bottom: 70px;
+}
+.banner .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.banner .left{
+    width: 50%;
+    padding: 60px 0;
+}
+.banner h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 65px;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.banner .paragrafo{
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+    position: relative;
+    padding-left: 40px;
+}
+.banner .left .paragrafo::before{
+    content: " ";
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    background-color:#702082;
+}
+
+#imagem{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 338px;
+    width: 255px;
+}
+/* ARTIGO/HOME */
+/* Barra de pesquisa, botao e categorias */
+.posts{
+    margin-bottom: 50px;
+}
+.posts .container{
+    width: 680px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.posts .barra{
+    margin-bottom: 50px;
+}
+.posts .barra .topo{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.posts .barra .categorias ul{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-size: 18px;
+    
+}
+.posts .barra input, .pop-up input{
+    background-color: #FCF2F8;
+    border:none;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+}
+.posts .barra input::placeholder, .pop-up input::placeholder{
+    color:#702082;
+    font-size: 16px;
+}
+.posts .barra input[type=text], .pop-up input[type=text]{
+    color:#702082;
+    font-size: 16px;
+}
+.posts .barra .categorias ul li a{
+    text-decoration: none;
+    color:#8B008B;
+    padding-left: 20px;
+}
+.posts .barra button{
+    border:none;
+    border-radius: 50px;
+    background-color:#702082;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+}
+.posts .barra button:hover{
+    background-color: #8B008B;
+}
+.posts .barra button img{
+    height: 25px;
+    margin: 0;
+    padding: 0 3px;
+}
+.posts #artigo{
+    margin-left: 20px;
+}
+.posts .barra .categorias{
+    display: flex;
+    justify-content: center;
+}
+.pagPosts h2{
+    font-size: 40px;
+}
+
+/* Postagens */
+.janela div.topo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.janela .topo .post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.janela .topo .post img {
+    margin: 20px 10px;
+}
+.janela .topo{
+    position: relative;
+    padding-right: 40px;
+}
+.janela .topo::after{
+    content: " ";
+    width: 10px;
+    background-color:#702082;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+.janela>a{
+    display: block;
+    text-align: right;
+    color:#8B008B;
+    cursor: pointer;
+    text-decoration: none;
+    padding-top: 20px;
+}
+.janela .postagens a{
+    text-decoration: none;
+    color: #702082;
+}
+
+@media (max-width:711px){
+    .banner .left{
+        width: 80%;
+    }
+    .banner .container #img{
+        margin: 0 auto;
+    }
+    .janela .topo .post {
+        flex-wrap: wrap;
+    }
+    .janela .topo .post img {
+        margin: 0;
+    }
+    .posts .container{
+        width: 50%;
+    }
+    .pagPosts h2{
+        text-align: center;
+    }
+    .posts .barra, .posts .barra .categorias ul {
+        display: none;
+    }
+    .banner .left .paragrafo::before{
+        width: 5px;
+    }
+    .banner .left .paragrafo{
+        padding-right: 20px;
+    }
+}
+
+@media (max-width:615px){
+    /* REMOVE  BAR POSTS */
+    .janela .topo::after{
+        content:none;
+    }
+    .janela .topo{
+        padding: 0;
+        text-align: center;
+    }
+    .janela .topo .post img {
+        width: 100%;
+    }
+}
+@media (max-width: 422px){
+    body, button, footer{
+        font-size: 20px;
+    }
+    .banner .left h1{
+        font-size: 40px;
+    }
+}
+
+
+
