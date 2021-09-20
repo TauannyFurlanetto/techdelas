@@ -81,8 +81,15 @@ section.forms .name input {
 }
 
 section.forms .last-name input {
-    width: 110%;
+    width: 95%;
     margin-top: 10px;
+}
+
+input[type=text], input[type=email], textarea {
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color:#702082;
 }
 
 section.forms .email, .your-story {
