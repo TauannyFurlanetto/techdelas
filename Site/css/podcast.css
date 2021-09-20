@@ -38,9 +38,14 @@ header #navegacao{
     position: relative;
     display: inline-block;
 }
-section#podcasts article .escritaarticle{
-    text-align: justify;
-    align-items: center;
+section#podcasts {
+    width: 1000px;
+    max-width: 70%;
+    margin: 0 auto;
+}
+article.podcast img{
+    width: 100px;
+    margin-right: 50px;
 }
 section#podcasts article .escritaarticle  h1{
     color: #702082;
