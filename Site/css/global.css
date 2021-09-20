@@ -95,6 +95,7 @@ a.esqueci {
 .pop-up form .input input {
     background: none;
     user-select: none;
+    color: #702082;
 }
 
 .pop-up-wrapper .pop-up form > input, .pop-up form .input {
