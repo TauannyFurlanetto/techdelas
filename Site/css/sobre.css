@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
 
+
+* {
+    box-sizing: content-box;
+}
+
 .body {
     padding: 0;
     margin: 0;
@@ -12,6 +17,7 @@
 }
 
 section.aboult {
+    padding-top: 5%;
     display: flex;
     justify-content: space-between;
 }
@@ -38,7 +44,7 @@ article.sobre p {
 }
 
 article.logomao img {
-    width: 180px;
+    width: 150px;
     padding: 30px 100px 0 100px;
 }
 
@@ -52,7 +58,7 @@ section.frase {
     color: #702082;
     font-family: poppins;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 section.frase p span {
@@ -139,6 +145,7 @@ section.contatos h1{
 }
 
 .contact {
+    padding-bottom: 10%;
     display: flex;
     justify-content:space-between;
     align-items: flex-start;

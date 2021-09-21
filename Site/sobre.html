@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHdelas - Sobre</title>
     <link rel="icon" href="icones/logo-branco.png">
-    <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/sobre.css">
+ 
 </head>
 <body>
 
@@ -67,35 +68,35 @@
             <h1 id="titulo">A Equipe</h1>
                 <section class="equipe">
                     <article>
-                        <div class="person" style="background-image: url(fotos/ilust.jpeg);"></div>
+                        <div class="person" style="background-image: url(fotos/foto_Alice.jpeg);"></div>
                         <h2>Alice Marques Candido</h2>
                         <p>In feugiat elementum porttitor arcu, fermentum, dui urna. Amet volutpat ipsum fermentum sed.
                         </p>
                     </article>
 
                     <article>
-                        <div class="person" style="background-image: url(fotos/ilust.jpeg);"></div>
+                        <div class="person" style="background-image: url(fotos/foto_Giovana.png);"></div>
                         <h2>Giovana Narciso Guimarães</h2>
                         <p>In feugiat elementum porttitor arcu, fermentum, dui urna. Amet volutpat ipsum fermentum sed.
                         </p>
                     </article>
 
                     <article>
-                        <div class="person" style="background-image: url(fotos/ilust.jpeg);"></div>
+                        <div class="person" style="background-image: url(fotos/foto_Tau.jpg);"></div>
                         <h2>Tauanny Virgínio Furlanetto</h2>
                         <p>In feugiat elementum porttitor arcu, fermentum, dui urna. Amet volutpat ipsum fermentum sed.
                         </p>
                     </article>
 
                     <article>
-                        <div class="person" style="background-image: url(fotos/ilust.jpeg);"></div>
+                        <div class="person" style="background-image: url(fotos/foto_Vanessa.jpg);"></div>
                         <h2>Vanessa Rodrigues Cardoso</h2>
                         <p>In feugiat elementum porttitor arcu, fermentum, dui urna. Amet volutpat ipsum fermentum sed.
                         </p>
                     </article>
 
                     <article>
-                        <div class="person" style="background-image: url(fotos/ilust.jpeg);"></div>
+                        <div class="person" style="background-image: url(fotos/foto_vivian.jpeg);"></div>
                         <h2>Vivian Ribeiro</h2>
                         <p>In feugiat elementum porttitor arcu, fermentum, dui urna. Amet volutpat ipsum fermentum sed.
                         </p>
@@ -157,6 +158,77 @@
             <p>Copyright de <span>Tech</span>delas</p>
         </div>
     </footer>
+
+    <!-- POP-UP -->
+
+    <div class="pop-up-wrapper">
+        <div class="pop-up register">
+
+            <a href=""><img src="icones/exit.svg" alt=""></a>
+
+            <h2>Cadastre-se:</h2>
+
+            <form>
+                <label for-id="nome">Nome</label>
+                <input type="nome" id="nome" name="nome"/>
+
+                <label for-id="email">Email</label>
+                <div class="input">
+                    <img src="icones/email.svg" alt="">
+                    <input type="email" id="email" name="email"/>
+                </div>
+
+                <label for-id="senha">Senha</label>
+                <div class="input">
+                    <img src="icones/senha.svg" alt="">
+                    <input type="senha" id="senha" name="senha"/>
+                </div>
+
+                <label for-id="senha">Digite novamente sua senha</label>
+                <div class="input">
+                    <img src="icones/senha.svg" alt="">
+                    <input type="senha" id="senha" name="senha"/>
+                </div>
+
+                <div class="button">
+                    <button class="register">Cadastre-se</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="pop-up login">
+
+            <a href=""><img src="icones/exit.svg" alt=""></a>
+
+            <h2>Login:</h2>
+
+            <form>
+
+                <label for-id="email">Email</label>
+                <div class="input">
+                    <img src="icones/email.svg" alt="">
+                    <input type="email" id="email" name="email"/>
+                </div>
+
+                <label for-id="senha">Senha</label>
+                <div class="input">
+                    <img src="icones/senha.svg" alt="">
+                    <input type="senha" id="senha" name="senha"/>
+                </div>
+
+                <a class="esqueci" href="">Esqueci minha senha</a>
+
+                <div class="button">
+                    <button class="register">Login</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+    <!-- ------ -->
 
     </body>
     </html>
