@@ -1,7 +1,6 @@
 
 
-@import url(‘https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap’);
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
 *{
     box-sizing: border-box;
     outline: none; /*Isso remove a caixinha preta que aparecia ao selecionar um formulario */
@@ -124,9 +123,10 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color:  #702082;
+    font-size: 18px;
 }
 .container{
-    width: 800px;
+    width: 1000px;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -154,14 +154,15 @@ header ul li{
 .logo {
     display: flex;
     align-items: center;
+    
 }
-.logo p, .banner h1{
+.logo p{
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     margin: 0 0 0 10px;
     font-size: 25px;
 }
-.logo span, .banner h1>span{
+.logo span{
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -181,162 +182,26 @@ header #menu, header #sair{
     padding: 12px;
     cursor: pointer;
 }
+header #login{
+    cursor: pointer;
+}
+header #cadastro button:hover{
+    background-color: #8B008B;
+}
 
-/* BANNER */
-.banner{
-    margin-bottom: 70px;
-}
-.banner .container{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.banner .left{
-    width: 45%;
-    padding: 60px 0;
-}
-.banner h1{
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 65px;
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-.banner .paragrafo{
-    display: flex;
-    align-items: center;
-    margin: 0 0 10px 0;
-    position: relative;
-    padding-left: 40px;
-}
-.banner .left .paragrafo::before{
-    content: " ";
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    background-color:#702082;
-}
 button {
     border:none;
-    border-radius: 20px;
+    border-radius: 25px;
     background-color:#702082;
     color: white;
     padding: 12px;
     cursor: pointer;
+    font-size: 18px;
 }
-#imagem{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 338px;
-    width: 255px;
-}
-/* ARTIGO/HOME */
-/* Barra de pesquisa, botao e categorias */
-.posts{
-    margin-bottom: 50px;
-}
-.posts .container{
-    width: 650px;
-    max-width: 100%;
-    margin: 0 auto;
-}
-.posts .barra{
-    margin-bottom: 50px;
-}
-.posts .barra .topo{
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-}
-.posts .barra .categorias ul{
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    
-}
-.posts .barra input, .pop-up input{
-    background-color: #FCF2F8;
-    border:none;
-    border-radius: 50px;
-    padding: 15px;
-    text-align: left;
-    width: 100%;
-}
-.posts .barra input::placeholder, .pop-up input::placeholder{
-    color:#702082;
-    font-size: 15px;
-}
-.posts .barra input[type=text], .pop-up input[type=text]{
-    color:#702082;
-    font-size: 15px;
-}
-.posts .barra .categorias ul li a{
-    text-decoration: none;
-    color:#8B008B;
-    padding-left: 20px;
-}
-.posts .barra button{
-    border:none;
-    border-radius: 50px;
-    background-color:#702082;
-    color: white;
-    padding: 12px;
-    cursor: pointer;
-}
-.posts .barra button img{
-    width: 25px;
-    margin: 0;
-    padding: 0;
-}
-.posts #artigo{
-    margin-left: 20px;
-}
-.posts .barra .categorias{
-    display: flex;
-    justify-content: center;
+button:hover {
+    background-color: #8B008B;
 }
 
-/* Postagens */
-.janela div.topo{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.janela .topo .post {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.janela .topo .post img {
-    margin: 20px 10px;
-}
-.janela .topo{
-    position: relative;
-    padding-right: 40px;
-}
-.janela .topo::after{
-    content: " ";
-    width: 10px;
-    background-color:#702082;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right:0;
-}
-.janela>p{
-    text-align: right;
-    color:#8B008B;
-    cursor: pointer;
-}
-.janela .postagens a{
-    text-decoration: none;
-    color: #702082;
-}
 /* FOOTER */
 footer{
     background-color:#702082;
@@ -356,9 +221,10 @@ footer .socialMedia ul{
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;   
+    justify-content: center;
+    gap: 15px;
+    align-items: center; 
+
 }
 footer .logo{
     display: flex;
@@ -372,13 +238,16 @@ footer span{
     font-weight: 600;
 }
 footer .left .logo .texto>p{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 200;
 }
 footer .left .logo .texto h3{
     font-size: 60px;
     font-weight: 200;
     margin: 0 0 10px 0;
+}
+footer .texto>h3{
+    font-family: 'Poppins', sans-serif;
 }
 footer .left>p{
     margin-top: 50px;
@@ -387,6 +256,8 @@ footer .left>p{
 footer .container p{
     margin: 0;
     padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    
 }
 footer .socialMedia h3{
     text-transform: uppercase;
@@ -416,7 +287,7 @@ footer .socialMedia{
     }
 }
 
-@media (max-width:889px){
+@media (max-width:960px){
 /* FOOTER E HEADER  */
 footer .logo{
     justify-content: center;
@@ -433,6 +304,7 @@ footer .container p{
     margin: 0;
     padding-bottom: 20px;
 }
+/* Menu mobile */
 header #menu{
     display: block;
     color: #702082;
@@ -450,7 +322,7 @@ header #menu{
     text-align: left;
     position: fixed;
     z-index: 999;
-    width: 33%;
+    width: 100%;
     height: 100vh;
     padding: 2em;
     top: 0;
@@ -461,7 +333,9 @@ header #menu{
 #menuMobile ul li{
     display: block;
     margin: 0;
-    padding: 5px 0;
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
 }
 #menuMobile ul {
     margin: 30px 0;
@@ -474,7 +348,7 @@ header #sair{
     display: block;
     background-color: white;
     border-radius: 50px;
-    padding: 5px;
+    padding: 5px 8px;
 }
 header #sair img{
     width: 30px;
@@ -484,34 +358,59 @@ header #cadastro button {
     background-color: white;
     color: #702082;
     margin-top: 30px;
+    font-size: 20px;
+    border-radius: 30px;
 }
-/* BANNER */
 
 }
+
+
 @media (max-width:615px){
     footer .container .left .logo .texto p{
-        font-size: 12px;
+        font-size: 20px;
     }
     footer .socialMedia p, li, footer p{
-        font-size: 12px;
+        font-size: 20px;
     }
     footer .socialMedia h3{
-        font-size: 15px;
+        font-size: 20px;
     }
     footer .left .logo .texto h3{
-        font-size: 30px;
+        font-size: 35px;
     }     
     footer .logo img {
         height: 10%;
     } 
     footer .socialMedia, footer .left .logo .texto{
-        width: 40%;
+        width: 60%;
     }  
     footer .socialMedia li img{
-        width: 70%;
+        width: 80%;
     }
-    /* BREAK: 414px */
+}
+@media (max-width: 422px){
+    footer .left .logo .texto {
+        margin: 0;
+        width: 100%;
+        text-align: center;
     }
+    footer .left .logo .texto p{
+        text-align: center;
+        margin: 0;
+        width: auto;
+        font-size: 20px;
+    }
+    footer .left .logo .texto h3{
+        font-size: 35px;
+    } 
+    footer .left .logo {
+        display: block;
+        text-align: center;
+    }
+    footer .texto {
+        margin: 0;
+    }  
+}
 
 
 

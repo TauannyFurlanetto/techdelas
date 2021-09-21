@@ -10,15 +10,17 @@
 }
 header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-#navegacao ul{
-    display: flex;
+.navegacao ul{
     list-style: none;
 }
-#navegacao ul li {
+.navegacao ul li {
     padding: 5px;
+    display: inline-block;
+}
+.navegacao ul li a{
+    text-decoration: none;
+    color: #702082;
 }
 header .logo{
    display: flex;
@@ -72,6 +74,7 @@ body{
     color: #702082;
     font-family: Poppins;
     text-align: justify;
+    font-size: 30px;
 }
 #intro h2{
     color: #702082;
@@ -83,5 +86,6 @@ body{
 footer{
     background-color: #702082;
     color: white;
+    display: flex;
 }
 

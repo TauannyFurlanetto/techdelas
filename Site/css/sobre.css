@@ -24,7 +24,7 @@ article.sobre h1 {
     color: #702082;
     font-family: poppins, sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -32,7 +32,7 @@ article.sobre p {
     color: #702082;
     font-family: roboto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
     line-height: 23px;
 }
@@ -60,26 +60,26 @@ section.frase p span {
     color: #702082;
     font-family: poppins;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 section.objetivo{
     width: 45%;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 section.objetivo h2 {
     color: #702082;
     font-family: poppins, sans-serif;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
 }
 
 section.objetivo p{
     color: #702082;
     font-family: roboto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
     line-height: 23px;
     margin: 0;
@@ -89,7 +89,7 @@ h1#titulo {
     color: #702082;
     font-family: poppins, sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
 }
 
@@ -124,7 +124,7 @@ section.equipe p {
     color: #702082;
     font-family: roboto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
     line-height: 23px;
 }
@@ -134,7 +134,7 @@ section.contatos h1{
     color: #702082;
     font-family: poppins, sans-serif;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
     margin-top: 10%;
 }
 
@@ -149,7 +149,7 @@ section.contatos p {
     color: #702082;
     font-family: roboto;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
     line-height: 23px;
 }
@@ -169,8 +169,6 @@ section.contatos a {
         max-width: 90%;
         margin: 0 auto;
     }
-
-
 }
 
 @media (max-width: 769px) {
@@ -199,6 +197,13 @@ section.contatos a {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    article.sobre p,
+    section.objetivo p,
+    section.equipe p,
+    section.contatos p {
+        font-size: 20px;
     }
 
     article.sobre, section.objetivo{
@@ -257,7 +262,7 @@ section.contatos a {
         text-align: center;
     }
         
-    }
+}
 
 @media (max-width: 370px) {
 
@@ -265,6 +270,13 @@ section.contatos a {
         width: 800px;
         max-width: 90%;
         margin: 0 auto;
+    }
+
+    article.sobre p,
+    section.objetivo p,
+    section.equipe p,
+    section.contatos p {
+        font-size: 20px;
     }
 
     .aboult, .objetivos {
