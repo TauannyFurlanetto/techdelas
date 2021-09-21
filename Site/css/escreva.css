@@ -59,13 +59,42 @@ section.forms label {
     padding: 10px 0;
 }
 
-section.forms input, section.forms textarea {
+section.forms input, section.forms textarea { 
     background-color: #FCF2F8;
     border: none;
     border-radius: 20px;
     padding: 15px;
     resize: none;
 }
+
+section.forms .email input {
+    background-color: #FCF2F8;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 0px 15px 40px;
+    text-align: left;
+    width: 94%;
+    font-size: 16px;
+    background-image: url(../icones/email.svg);
+    background-repeat: no-repeat;
+    background-position: 12px;
+}
+
+/* 
+section.forms .input {
+    display: flex;
+    background-color: #FCF2F8;
+    border: none;
+    border-radius: 50px;
+    padding: 0 15px;
+    text-align: left;
+    width: 96%;
+    /* background-color: #FCF2F8;
+    border: none;
+    border-radius: 20px;
+    padding: 2px 0px 2px 20px;
+    resize: none; 
+} */
 
 section.forms .nome-sobrenome {
     display: flex;
@@ -81,7 +110,7 @@ section.forms .name input {
 }
 
 section.forms .last-name input {
-    width: 95%;
+    width: 96%;
     margin-top: 10px;
 }
 
@@ -176,7 +205,7 @@ section.forms .container .container-2 .nome-sobrenome, .email, .div-anonymous, .
     }
 
     section.forms .email input, section.forms .your-story textarea {
-        width: 130%;
+        width: 128%;
     } 
 
     section.forms .div-buttom {
@@ -226,7 +255,7 @@ section.forms .container .container-2 .nome-sobrenome, .email, .div-anonymous, .
     }
 
     section.forms .email input, section.forms .your-story textarea {
-        width: 150%;
+        width: 148%;
     } 
 
     section.forms .div-buttom {
