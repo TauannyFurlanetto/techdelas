@@ -110,7 +110,7 @@
     font-size: 16px;
 }
 .posts .barra input::placeholder, .pop-up input::placeholder{
-    color:#702082;
+    color: #8B008B;
     font-size: 16px;
 }
 .posts .barra input[type=text], .pop-up input[type=text]{
