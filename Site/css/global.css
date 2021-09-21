@@ -345,6 +345,10 @@ header #menu{
 #menuMobile a{
     color: white;
 }
+#menuMobile button:active{
+    background-color:#702082;
+    color: white;
+}
 header #sair{
     display: block;
     background-color: white;
