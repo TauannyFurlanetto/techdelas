@@ -74,6 +74,8 @@
     background-position: center;
     height: 338px;
     width: 255px;
+    /* animation: bannerImg 10s infinite; */
+
 }
 /* ARTIGO/HOME */
 /* Barra de pesquisa, botao e categorias */
@@ -242,6 +244,9 @@
         font-size: 40px;
     }
 }
-
+/* @keyframes bannerImg{
+    0% {background-image:url(../img/heroFoto.jpg);}
+    100% {background-image:url(../img/heroFoto2.jpg);}
+} */
 
 
