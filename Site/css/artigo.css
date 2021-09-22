@@ -117,6 +117,9 @@
     border: none;
     background: none;
     resize: none;
+    font-family: 'roboto', sans-serif;
+    color: #702082;
+    font-size: 18px;
 }
 
 .caixa {
