@@ -6,7 +6,9 @@
     margin: 1.5rem auto;
 }
 
-.artigo h1, .artigo h2, .artigo h3, .artigo h4, .artigo p, .artigo figcaption, .artigo a{color: #702082}
+.artigo h1, .artigo h2, .artigo h3, .artigo h4, .artigo p, .artigo figcaption, .artigo a{
+    color: #702082
+}
 
 .artigo h1, .artigo h2 {
     font-family: 'Poppins', sans-serif;
@@ -25,22 +27,25 @@
 }
 
 .artigo h1 {
-    font-size: 5rem;
+    font-size: 40px;
     margin: 0;
 }
+
 .artigo h2 {
-    font-size: 2.5rem;
+    font-size: 30px;
     margin: 0;
     padding-bottom: 3rem;
 }
 .artigo h3 {
-    font-size: 1rem;
-    margin: 0;
+    font-size: 18px;
+    margin: 0 0 1% 0;
 }
+
 .artigo p, .artigo figcaption {
-    font-size: 1rem;
+    font-size: 18px;
     margin: 0;
     padding-bottom: 1rem;
+    text-align: justify;
 }
 
 .artigo figcaption {
@@ -48,7 +53,7 @@
 }
 
 .artigo figure {
-    margin: 1rem 0;
+    margin: 2% 0;
     width: 100%;
 }
 
@@ -70,6 +75,7 @@
     border-radius: 50px;
     margin-right: 1rem;
     padding: 0.8rem;
+    margin-top: 5%;
 }
 
 .separador {
@@ -111,4 +117,15 @@
     border: none;
     background: none;
     resize: none;
+}
+
+.caixa {
+    margin-bottom: 5%;
+}
+
+@media (max-width: 545px) {
+
+    .artigo p {
+        font-size: 20px;
+    }
 }
