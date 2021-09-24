@@ -9,7 +9,7 @@
 /* POP-UP */
 
 .pop-up-wrapper * {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 
 .pop-up-wrapper.active{
