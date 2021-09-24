@@ -8,9 +8,14 @@
 
 /* POP-UP */
 
+.pop-up-wrapper * {
+    box-sizing: border-box;
+}
+
 .pop-up-wrapper.active{
     visibility: visible;
     opacity: 1;
+    z-index: 9999;
 }
 
 .pop-up-wrapper{
@@ -115,6 +120,26 @@ a.esqueci {
 .pop-up-wrapper .pop-up.active {
     visibility: visible;
     opacity: 1;
+}
+
+.pop-up input{
+    background-color: #FCF2F8;
+    border:none;
+    border-radius: 50px;
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+}
+
+.pop-up input[type=text]{
+    color:#702082;
+    font-size: 16px;
+}
+
+.pop-up input::placeholder{
+    color: #8B008B;
+    font-size: 16px;
 }
 
 /* ------ */
@@ -268,7 +293,7 @@ footer .socialMedia{
 }
 
 /* RESPONSIVIDADE */
-@media (max-width:1024px){
+@media (max-width:1040px){
     /* FOOTER */
     footer .socialMedia{
         align-items: center;
@@ -285,6 +310,67 @@ footer .socialMedia{
     }
     footer .socialMedia{
         width: 60%;
+    }
+    /* Menu mobile */
+    header #menu{
+    display: block;
+    color: #702082;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 25px;
+    align-self: center;
+    }
+    .navegacao{
+    display: none;
+    }
+    #menuMobile{
+    text-align: left;
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    padding: 2em;
+    top: 0;
+    right: 0;
+    background: #702082;
+    color:white;
+    }
+    #menuMobile ul li{
+    display: block;
+    margin: 0;
+    padding: 15px 0;
+    font-size: 20px;
+    text-align: center;
+    }
+    #menuMobile ul {
+    margin: 30px 0;
+    padding: 0;
+    }
+    #menuMobile a{
+    color: white;
+    }
+    #menuMobile button:active{
+    background-color:#702082;
+    color: white;
+    }
+    header #sair{
+    display: block;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 8px;
+    }
+    header #sair img{
+    width: 30px;
+    height: auto;
+    }
+    header #cadastro button {
+    background-color: white;
+    color: #702082;
+    margin-top: 30px;
+    font-size: 20px;
+    border-radius: 30px;
     }
 }
 
@@ -305,67 +391,7 @@ footer .container p{
     margin: 0;
     padding-bottom: 20px;
 }
-/* Menu mobile */
-header #menu{
-    display: block;
-    color: #702082;
-    border: 0;
-    border-radius: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 25px;
-    align-self: center;
-}
-.navegacao{
-    display: none;
-}
-#menuMobile{
-    text-align: left;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100vh;
-    padding: 2em;
-    top: 0;
-    right: 0;
-    background: #702082;
-    color:white;
-}
-#menuMobile ul li{
-    display: block;
-    margin: 0;
-    padding: 15px 0;
-    font-size: 20px;
-    text-align: center;
-}
-#menuMobile ul {
-    margin: 30px 0;
-    padding: 0;
-}
-#menuMobile a{
-    color: white;
-}
-#menuMobile button:active{
-    background-color:#702082;
-    color: white;
-}
-header #sair{
-    display: block;
-    background-color: white;
-    border-radius: 50px;
-    padding: 5px 8px;
-}
-header #sair img{
-    width: 30px;
-    height: auto;
-}
-header #cadastro button {
-    background-color: white;
-    color: #702082;
-    margin-top: 30px;
-    font-size: 20px;
-    border-radius: 30px;
-}
+
 
 }
 
@@ -393,7 +419,7 @@ header #cadastro button {
         width: 80%;
     }
 }
-@media (max-width: 422px){
+@media (max-width: 439px){
     footer .left .logo .texto {
         margin: 0;
         width: 100%;
@@ -414,7 +440,11 @@ header #cadastro button {
     }
     footer .texto {
         margin: 0;
-    }  
+    }
+    .pop-up-wrapper .pop-up h2 {
+        font-size: 1.6rem;
+    }
+    
 }
 
 
