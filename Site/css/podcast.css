@@ -34,7 +34,6 @@ article.podcast img{
 section#podcasts article .escritaarticle  h1{
     color: #702082;
     font-family: Poppins;
-    text-align: justify;
     font-size: 30px;
 }
 section#podcasts article .escritaarticle  p{
@@ -54,7 +53,6 @@ section#podcasts article{
 #intro h1{
     color: #702082;
     font-family: Poppins;
-    text-align: justify;
     font-size: 40px;
 }
 #intro p{
@@ -65,5 +63,26 @@ section#podcasts article{
     text-align: justify;
 }
 @media (max-width: 540px) {
-
+    .container{
+        width: 1000px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    #intro h1{
+        color: #702082;
+        font-family: Poppins;
+        font-size: 40px;
+    }
+    section#podcasts article{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    #intro p{
+        color: #702082;
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: justify;
+    }
 }
