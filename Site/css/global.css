@@ -419,7 +419,7 @@ footer .container p{
         width: 80%;
     }
 }
-@media (max-width: 422px){
+@media (max-width: 439px){
     footer .left .logo .texto {
         margin: 0;
         width: 100%;
@@ -440,7 +440,11 @@ footer .container p{
     }
     footer .texto {
         margin: 0;
-    }  
+    }
+    .pop-up-wrapper .pop-up h2 {
+        font-size: 1.6rem;
+    }
+    
 }
 
 
