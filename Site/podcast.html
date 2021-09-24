@@ -16,19 +16,40 @@
 
 <body>
     <header>
-       
+        <div class="container">
+            <section class="logo">
+            <img src="icones/logo_header.svg" alt="Logotipo_TechDelas">
+            <p><span>Tech</span>delas</p>
+        </section>
+        <button id="menu">☰</button>
+        <section class="navegacao" id="menuMobile" >
+            <nav>
+                <button id="sair"><img src="icones/exit.svg" alt="Sair do menu"></button>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+                    <li><a href="podcast.html">Podcasts</a></li>
+                    <li><a href="escreva.html">Escreva</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <!-- login e cadastro -->
+                    <li id ="login">Login</li>
+                    <li id="cadastro"><button>Cadastre-se</button></li>
+                </ul>
+            </nav>
+        </section>
+        </div>
     </header>
     <div class="container">
         <section id="intro">
             <h1>
                 Recomendacoes de podcasts
             </h1>
-            <h2>
+            <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Risus, tempor faucibus bibendum egestas nec. Diam in nunc consectetur vulputate feugiat volutpat, sit id
                 adipiscing.
                 Duis vulputate purus id amet tortor augue. Dapibus curabitur pulvinar diam vitae interdum mauris.
-            </h2>
+            </p>
         </section>
         <section id="podcasts">
             <article class="podcast">
@@ -107,9 +128,100 @@
             </article>
         </section>
         <footer>
-            
+            <div class="container">
+                <div class="conteudo">
+                    <div class="left">
+                        <div class="logo">
+                            <img src="icones/logo_footer.svg" alt="Logo do footer">
+                            <div class="texto">
+                                <h3><span>Tech</span>delas</h3>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, laudantium.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="socialMedia">
+                    <h3>Titulo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore earum voluptatibus et, architecto totam similique vitae id sint debitis minima.</p>
+                    <div class="iconesSocial">
+                        <ul>
+                            <li><a href=""><img src="icones/linkedin.svg" alt="Acesso ao linkedin"></a></li>
+                            <li><a href=""><img src="icones/facebook.svg" alt="Acesso ao facebook"></a></li>
+                            <li><a href=""><img src="icones/youtube.svg" alt="Acesso ao youtube"></a></li>
+                            <li><a href=""><img src="icones/instagram.svg" alt="Acesso ao instagram"></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <p>Copyright de <span>Tech</span>delas</p>
+            </div>
         </footer>
-        <popup></popup>
+        <div class="pop-up-wrapper">
+            <div class="pop-up register">
+    
+                <a href=""><img src="icones/exit.svg" alt=""></a>
+    
+                <h2>Cadastre-se:</h2>
+    
+                <form>
+                    <label for-id="nome">Nome</label>
+                    <input type="nome" id="nome" name="nome"/>
+    
+                    <label for-id="email">Email</label>
+                    <div class="input">
+                        <img src="icones/email.svg" alt="">
+                        <input type="email" id="email" name="email"/>
+                    </div>
+    
+                    <label for-id="senha">Senha</label>
+                    <div class="input">
+                        <img src="icones/senha.svg" alt="">
+                        <input type="senha" id="senha" name="senha"/>
+                    </div>
+    
+                    <label for-id="senha">Digite novamente sua senha</label>
+                    <div class="input">
+                        <img src="icones/senha.svg" alt="">
+                        <input type="senha" id="senha" name="senha"/>
+                    </div>
+    
+                    <div class="button">
+                        <button class="register">Cadastre-se</button>
+                    </div>
+                </form>
+    
+            </div>
+    
+            <div class="pop-up login">
+    
+                <a href=""><img src="icones/exit.svg" alt=""></a>
+    
+                <h2>Login:</h2>
+    
+                <form>
+    
+                    <label for-id="email">Email</label>
+                    <div class="input">
+                        <img src="icones/email.svg" alt="">
+                        <input type="email" id="email" name="email"/>
+                    </div>
+    
+                    <label for-id="senha">Senha</label>
+                    <div class="input">
+                        <img src="icones/senha.svg" alt="">
+                        <input type="senha" id="senha" name="senha"/>
+                    </div>
+    
+                    <a class="esqueci" href="">Esqueci minha senha</a>
+    
+                    <div class="button">
+                        <button class="register">Login</button>
+                    </div>
+                </form>
+    
+            </div>
+    
+        </div>
+        <script src="js/script.js"></script>
     </div>
 </body>
 

@@ -1,45 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 *{
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    outline: none; 
 }
 .container{
     width: 1000px;
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
 }
 /* corpo 18, titulo 40 subtitulo 30 versao mobile corpo 20*/ 
-header {
-    display: flex;
-}
-.navegacao ul{
-    list-style: none;
-}
-.navegacao ul li {
-    padding: 5px;
-    display: inline-block;
-}
-.navegacao ul li a{
-    text-decoration: none;
-    color: #702082;
-}
-header .logo{
-   display: flex;
-   align-items: center;
-}
-header .escritalogo {
-    display: flex;
-    align-items: center;
-}
-header .escritalogo h1{
-    position: relative;
-    text-transform: uppercase;
-    font-family: Poppins;
-    display: inline-block;
-}
-header #navegacao{
-    position: relative;
-    display: inline-block;
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    color:  #702082;
+    font-size: 18px;
 }
 section#podcasts {
     width: 1000px;
@@ -70,11 +46,6 @@ section#podcasts article{
     display: flex;
     align-items: center;
 }
-body{
-    padding: 0;
-    margin: 0;
-    color: #702082;
-}
 #intro{
     margin-bottom: 20px;
 }
@@ -82,18 +53,12 @@ body{
     color: #702082;
     font-family: Poppins;
     text-align: justify;
-    font-size: 30px;
+    font-size: 40px;
 }
-#intro h2{
+#intro p{
     color: #702082;
     font-family: Roboto;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 20px;
     text-align: justify;
 }
-footer{
-    background-color: #702082;
-    color: white;
-    display: flex;
-}
-
