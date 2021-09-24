@@ -35,7 +35,7 @@ window.addEventListener('load', () => {
   wrapper = document.querySelector(".pop-up-wrapper");
   loginPage = document.querySelector(".pop-up.login");
   cadastroPage = document.querySelector(".pop-up.register");
-  exitPopup = document.querySelectorAll(".pop-up img:first-of-type")
+  exitPopup = document.querySelectorAll(".pop-up a img:first-of-type")
 
   btnLogin.onclick = (event) => {
     loginToggle()
