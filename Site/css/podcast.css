@@ -27,18 +27,20 @@ section#podcasts article{
     padding-bottom: 60px;
 }
 article.podcast img{
-    width: 100px;
+    margin-top: 30px;
+    width: 200px;
     margin-right: 50px;
 }
 section#podcasts article .escritaarticle  h1{
     color: #702082;
     font-family: Poppins;
     text-align: justify;
+    font-size: 30px;
 }
 section#podcasts article .escritaarticle  p{
     color: #702082;
     font-family: Roboto;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 20px;
     text-align: justify;
 }
@@ -61,4 +63,7 @@ section#podcasts article{
     font-size: 20px;
     line-height: 20px;
     text-align: justify;
+}
+@media (max-width: 540px) {
+
 }
