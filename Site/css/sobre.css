@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;700&display=swap');
 
 
-* {
+* :not(#menuMobile) {
     box-sizing: content-box;
 }
 
@@ -20,10 +20,11 @@ section.aboult {
     padding-top: 5%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 article.sobre{
-    width: 45%;
+    width: 50%;
 }
 
 article.sobre h1 {
@@ -44,7 +45,7 @@ article.sobre p {
 }
 
 article.logomao img {
-    width: 150px;
+    width: 200px;
     padding: 30px 100px 0 100px;
 }
 
@@ -91,6 +92,29 @@ section.objetivo p{
     margin: 0;
 } 
 
+section.objetivo ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2rem;
+    font-weight: 600;  
+    margin-top: 10%;
+}
+
+section.objetivo ul li img{
+    width: 50px;
+    /* margin: 2% 3% 0% 0; */
+}
+
+section.objetivo li {
+    font-family: "poppins", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 5% 0;
+    display: flex;
+    align-items: center;
+    gap: 5%
+}
+
 h1#titulo {
     color: #702082;
     font-family: poppins, sans-serif;
@@ -131,7 +155,7 @@ section.equipe p {
     font-family: roboto;
     font-weight: 400;
     font-size: 18px;
-    text-align: justify;
+    text-align: center;
     line-height: 23px;
 }
 
@@ -179,27 +203,7 @@ section.contatos a {
 }
 
 @media (max-width: 769px) {
-    .local {
-        display:flex;
-    }
-
-    .local iframe {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .contatos h1{
-        margin: 0;
-    }
-}
-
-@media (max-width: 545px) {
-    .container {
-        width: 800px;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
+    
     .aboult, .objetivos {
         display: flex;
         flex-wrap: wrap;
@@ -217,13 +221,18 @@ section.contatos a {
         width: 100%;
     }
 
+    section.aboult {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     article.logomao {
         padding:0;
         display: flex;
     }
 
     article.logomao img {
-        justify-content: center;
         width: 150px; 
     }
     
@@ -268,88 +277,28 @@ section.contatos a {
     article.redes p, a, img {
         text-align: center;
     }
-        
 }
 
 @media (max-width: 370px) {
 
-    .container {
-        width: 800px;
-        max-width: 90%;
-        margin: 0 auto;
-    }
-
-    article.sobre p,
-    section.objetivo p,
-    section.equipe p,
-    section.contatos p {
+    section.objetivo li{
         font-size: 20px;
     }
 
-    .aboult, .objetivos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    article.sobre, section.objetivo{
-        width: 100%;
-    }
-
-    article.logomao {
-        padding:0;
-        display: flex;
+    section.objetivo ul li img {
+        width: 40px;
     }
 
     article.logomao img {
-        justify-content: center;
         width: 100px; 
-    }
-    
-    section.frase {
-        font-size: 20px;
-        width: 100%;
-    }
-
-    section.frase p span {
-        font-size: 15px;
-    }
-
-    .local iframe {
-        width: 100%;
-        padding-top: 15%;
-    }
-
-    article.sobre h1, h1#titulo, section.contatos h1{
-        font-size: 40px;
-    }
-
-    #titulo {
-        padding-top: 20%;
-        text-align: center;
-    }
-
-
-    .contatos h1 {
-        text-align: center;
-        margin: 20% 0% 0% 0%;
-    }
-
-    .contact {
-        display: flex;
-        justify-content: center;
-    }
-
-    .icons {
-        display: flex;
-        justify-content: center;
-    }
-
-    article.redes p, a, img {
-        text-align: center;
     }
 }
 
+@media (max-width: 300px) {
+    article.logomao img{
+        display: none;
+    }
+}
 
 
 
