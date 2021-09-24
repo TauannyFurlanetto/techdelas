@@ -74,6 +74,8 @@
     background-position: center;
     height: 338px;
     width: 255px;
+    /* animation: bannerImg 10s infinite; */
+
 }
 /* ARTIGO/HOME */
 /* Barra de pesquisa, botao e categorias */
@@ -100,7 +102,8 @@
     font-size: 18px;
     
 }
-.posts .barra input, .pop-up input{
+
+.posts .barra input {
     background-color: #FCF2F8;
     border:none;
     border-radius: 50px;
@@ -242,6 +245,9 @@
         font-size: 40px;
     }
 }
-
+/* @keyframes bannerImg{
+    0% {background-image:url(../img/heroFoto.jpg);}
+    100% {background-image:url(../img/heroFoto2.jpg);}
+} */
 
 
