@@ -210,6 +210,9 @@
     .posts .container{
         width: 50%;
     }
+    .post {
+        margin-bottom: 20%;
+    }
     .pagPosts h2{
         text-align: center;
     }
