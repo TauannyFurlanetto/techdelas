@@ -74,7 +74,7 @@
     background-position: center;
     height: 338px;
     width: 255px;
-    /* animation: bannerImg 10s infinite; */
+    animation: bannerImg 10s infinite;
 
 }
 /* ARTIGO/HOME */
@@ -247,7 +247,14 @@
 }
 /* @keyframes bannerImg{
     0% {background-image:url(../img/heroFoto.jpg);}
-    100% {background-image:url(../img/heroFoto2.jpg);}
+    49% {background-image:url(../img/heroFoto.jpg);}
+    50% {background-image:url(../img/heroFoto2.jpg);}
+    99% {background-image:url(../img/heroFoto2.jpg);}
 } */
-
+@keyframes bannerImg{
+    0% {background-image:url(../img/heroFoto.jpg);}
+    48% {background-image:url(../img/heroFoto.jpg);}
+    50% {background-image:url(../img/heroFoto2.jpg);}
+    99% {background-image:url(../img/heroFoto2.jpg);}
+}
 
