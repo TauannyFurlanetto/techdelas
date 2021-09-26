@@ -214,7 +214,6 @@ header #login{
 header #cadastro button:hover{
     background-color: #8B008B;
 }
-
 button {
     border:none;
     border-radius: 25px;
@@ -293,6 +292,7 @@ footer .socialMedia{
 }
 
 /* RESPONSIVIDADE */
+
 @media (max-width:1040px){
     /* FOOTER */
     footer .socialMedia{

@@ -35,13 +35,14 @@ section#podcasts article .escritaarticle  h1{
     color: #702082;
     font-family: Poppins;
     font-size: 30px;
+    line-height: 35px;
 }
 section#podcasts article .escritaarticle  p{
     color: #702082;
     font-family: Roboto;
     font-size: 18px;
-    line-height: 20px;
     text-align: justify;
+    line-height: 23px;
 }
 section#podcasts article{
     display: flex;
@@ -54,24 +55,31 @@ section#podcasts article{
     color: #702082;
     font-family: Poppins;
     font-size: 40px;
+    line-height: 23px;
 }
 #intro p{
     color: #702082;
     font-family: Roboto;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 23px;
     text-align: justify;
 }
-@media (max-width: 540px) {
+@media (max-width: 800px) {
     .container{
         width: 1000px;
         max-width: 90%;
         margin: 0 auto;
     }
+    section#podcasts {
+        width: 1000px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
     #intro h1{
         color: #702082;
         font-family: Poppins;
-        font-size: 40px;
+        font-size: 30px;
+        line-height: 35px;
     }
     section#podcasts article{
         display: flex;
@@ -82,7 +90,23 @@ section#podcasts article{
         color: #702082;
         font-family: Roboto;
         font-size: 20px;
-        line-height: 20px;
+        line-height: 23px;
         text-align: justify;
+    }
+
+    .podcast {
+        display: flex;
+        justify-content: center;
+    }
+
+    #intro {
+        margin-bottom: 20%;
+    }
+    article.podcast img {
+        margin: 0;
+    }
+
+    .escritaarticle h1{
+        text-align: center;
     }
 }

@@ -14,7 +14,7 @@ window.addEventListener('load', () => {
   exitMenu = document.getElementById('sair');
   abrirMenu = document.getElementById('menu');
   menu = document.getElementById('menuMobile');
-
+  let closeMenu = false;
   abrirMenu.addEventListener('click', () => {
     if (menu.style.display === "block") {
       menu.style.display = "none";
@@ -22,11 +22,22 @@ window.addEventListener('load', () => {
       menu.style.display = "block";
     }
   })
-
   exitMenu.addEventListener('click', () => {
     menu.style.display = "none";
+    closeMenu = true;
   })
 
+  window.addEventListener("resize", ()=>{
+    if(window.innerWidth>1040){
+      menu.style.display = "flex";
+      closeMenu = false;
+    }
+    if(window.innerWidth<1040 && closeMenu == false){
+      if(menu.style.display == "flex"){
+          menu.style.display = "none";
+        }
+    }
+  })
   // pop-up stuff
 
   btnLogin = document.querySelector("#login");
