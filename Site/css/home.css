@@ -225,6 +225,10 @@
     .banner .left .paragrafo{
         padding-right: 20px;
     }
+    body, button, footer{
+        font-size: 20px; 
+    }
+
 }
 
 @media (max-width:615px){
@@ -241,10 +245,7 @@
     }
 }
 @media (max-width: 422px){
-    body, button, footer{
-        font-size: 20px;
-    }
-    .banner .left h1{
+    .banner .left h1 {
         font-size: 40px;
     }
 }
