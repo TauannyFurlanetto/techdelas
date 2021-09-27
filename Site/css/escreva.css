@@ -185,7 +185,7 @@ section.forms .container .container-2 .nome-sobrenome, .email, .div-anonymous, .
 @media (max-width: 1040px) {
     .container {
         width: 1000px;
-        max-width: 80%;
+        max-width: 90%;
         margin: 0 auto;
     }
 
