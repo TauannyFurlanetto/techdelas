@@ -142,6 +142,10 @@ body {
     justify-content: flex-end;
 }
 
+a {
+    text-decoration: none;
+}
+
 @media (max-width: 545px) {
 
     .artigo p {
