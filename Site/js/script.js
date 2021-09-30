@@ -28,6 +28,7 @@ function descPod (desc, title){
 let arr = [ ];
 // Cria uma array para armazenar as decricoes
 let arrDesc = [];
+// Cria um contador
 let num =0;
 function numSum (){
   return num = num +1;
@@ -77,12 +78,6 @@ function podFunc(ep){
     podcast[num].style.textDecoration = "none";
     podcast[num].style.cursor = "pointer";
     podH1[num].innerHTML = arr[num].name;
-    /*for (let i=0; i<resp.length;i++){
-      console.log(podH1[num].innerHTML + " " + resp[i]["title"])
-      if(podH1[num].innerHTML==resp[i]["title"]){
-        podP[num].innerHTML = resp[i]["desc"];
-      }
-    }*/
     numSum();
     podH1.forEach((element,index)=>{
       element.innerHTML = arr[index].name
@@ -106,10 +101,10 @@ function podFunc(ep){
           break;
         default:
           break;
-
       }
     })
-  })  
+  }).catch(err =>{
+  });
 }
 
 // MENU
