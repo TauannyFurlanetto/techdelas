@@ -141,9 +141,33 @@ window.addEventListener('load', () => {
     }
   })
   // BANNER
-  // let changeOrder = false;
-  // let img1 = document.querySelector("#imagem img");
-  // let img2 = document.querySelectorAll("#imagem img")[1];
+  let img1 = document.querySelector("#imagem>div");
+  let img2 = document.querySelectorAll("#imagem>div")[1];
+  let animationToogle = true;
+  function changeImg(int){
+    if(int===0){
+      img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+    }else{
+      img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+    }
+  }
+  img1.addEventListener("animationiteration",()=>{
+    if(animationToogle==false){
+      img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+      animationToogle = true;
+    }else{
+      img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+      animationToogle = false;
+    }
+  })  
+  
+    
+  
+  
   // function order(num){
   //     img1.style.order = num;
   //     num = num*-1;
