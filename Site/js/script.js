@@ -157,6 +157,34 @@ window.addEventListener('load', () => {
 
   // pop-up stuff
 
+  btnLogin = document.querySelector("#login");
+  btnCadastro = document.querySelector("#cadastro");
+
+  wrapper = document.querySelector(".pop-up-wrapper");
+  loginPage = document.querySelector(".pop-up.login");
+  cadastroPage = document.querySelector(".pop-up.register");
+  exitPopup = document.querySelectorAll(".pop-up a img:first-of-type")
+
+  btnLogin.onclick = (event) => {
+    loginToggle()
+  }
+
+  btnCadastro.onclick = (event) => {
+    cadastroToggle()
+  }
+
+  wrapper.onclick = (event) => {
+    if (event.target == wrapper) {
+      closePopup()
+    } 
+    else
+    exitPopup.forEach(exit => {
+      if (event.target == exit) {
+        event.preventDefault();
+        closePopup();
+      }
+    });
+  }
 
 })
 
