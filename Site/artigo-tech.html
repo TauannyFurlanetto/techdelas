@@ -15,8 +15,8 @@
     <header>
         <div class="container">
             <section class="logo">
-            <img src="icones/logo_header.svg" alt="Logotipo_TechDelas">
-            <p><span>Tech</span>delas</p>
+            <a href="home.html"><img src="icones/logo_header.svg" alt="Logotipo_TechDelas">
+            <p><span>Tech</span>delas</p></a>
         </section>
         <button id="menu">☰</button>
         <section class="navegacao" id="menuMobile" >
@@ -60,7 +60,7 @@
             <p>Quando olhamos para grandes empresas de tecnologia, no Brasil e no mundo, encontramos várias mulheres em cargos de chefia e presidências. Aqui, temos Kátia Ortiz, gerente-geral da operação brasileira da ServiceNow, bem como Marcelle Paiva, COO da Oracle. Ao redor do mundo, podemos encontrar Lisa Su, CEO da AMD e Ginni Rometty, da IBM, considerada pioneira na empresa. Estes são alguns dos vários exemplos para mulheres jovens e adultas, de que podem e devem estar onde quiserem, ainda que o local seja predominantemente masculino.</p>
             <p>EFocando na Dra. Lisa Su, que foi considerada uma das mulheres mais poderosas do mundo pela Fortune, a CEO, uma imigrante taiwanesa nos Estados Unidos, assumiu a AMD em 2014, onde encontrou o valor da empresa girando em torno de US$ 2 bilhões. Em quase sete anos, esse número ultrapassou a marca de US$ 90 bilhões, representando o crescimento exponencial da companhia no mercado. Para uma empresa focada em movimentos de inovação, diversidade e inclusão como parte da cultura, desde 2018, a AMD revisa anualmente suas métricas e estratégias de Diversidade, Pertencimento e Inclusão e, em 2019, foi selecionada para o Índice de Igualdade de Gênero Bloomberg (GEI), junto com 230 companhias. É fato que empoderar os colaboradores, com transparência e políticas consistentes de igualdade de gênero, pode tornar qualquer empresa mais inovadora, produtiva e eficaz.</p>
 
-            <p><strong>Referências: </strong> BIANCHI, Priscila. Mulheres na tecnologia: como está a presença delas no mercado de TI?. [S. l.], 8 mar. 2021. Disponível em: http://2engenheiroshttps://inforchannel.com.br/2021/03/08/mulheres-na-tecnologia-como-esta-a-presenca-delas-no-mercado-de-ti/.com/2018/02/20/mulheres-na-engenharia/. Acesso em: 24 set. 2021.</p>
+            <p><strong>Referências: </strong> <a href="http://2engenheiroshttps://inforchannel.com.br/2021/03/08/mulheres-na-tecnologia-como-esta-a-presenca-delas-no-mercado-de-ti/.com/2018/02/20/mulheres-na-engenharia/">BIANCHI, Priscila. Mulheres na tecnologia: como está a presença delas no mercado de TI?</a></p>
 
         </article>
 
@@ -70,17 +70,25 @@
             <a href="">Ciência</a>
         </div>
 
-        <div class="separador"></div>
-
         <div class="reacao">
-            <a href=""><img src="icones/thumbs-up.svg" alt=""></a>
-            <a href=""><img src="icones/message-circle.svg" alt=""></a>
+            <img src="icones/thumbs-up.svg" alt="">
+            <button class="coment"><img src="icones/message-circle.svg" alt=""></a></button>
         </div>
 
         <div class="comentario">
             <h3>Escreva seu comentário:</h3>
-            <div class="caixa">
-                <textarea name="" id=""></textarea>
+            <div id="comentario">
+
+            <form>
+                    <div class="caixa">
+                        <label for="comentario"></label>
+                        <textarea name="comentario" id="comentario" required maxlength="200"></textarea>
+                    </div>
+
+                    <button type="submit" class="enviar">Enviar</button>
+
+            </form>
+
             </div>
         </div>
 

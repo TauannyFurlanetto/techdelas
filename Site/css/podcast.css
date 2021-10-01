@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-*{
-    box-sizing: border-box;
-    outline: none; 
+
+* :not(#menuMobile){
+    box-sizing: content-box;
 }
+
 .container{
     width: 1000px;
     max-width: 90%;
