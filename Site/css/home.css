@@ -132,10 +132,12 @@
     color:#702082;
     font-size: 16px;
 }
-.posts .barra .categorias ul li a{
+.posts .barra .categorias ul li{
     text-decoration: none;
     color:#8B008B;
     padding-left: 20px;
+    cursor: pointer;
+    font-weight: 500;
 }
 .posts .barra button{
     border:none;
