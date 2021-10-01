@@ -264,17 +264,23 @@ window.addEventListener ('load', () => {
 
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
-  console.log("oi");
 
   like.addEventListener("click", ()=>{
-    if( like.src == "icones/like.png"){
+    if( like.src.includes("icones/thumbs-up.svg")){
       like.src = "icones/like_colorido.png";
     } else {
-      like.src = "icones/like.png";
+      like.src = "icones/thumbs-up.svg";
     }
   })    
-    console.log("oi");
-  } ) 
+  }) 
+
+
+
+
+
+
+
+
 
 
 
