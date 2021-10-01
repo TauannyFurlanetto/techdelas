@@ -272,17 +272,15 @@ window.addEventListener ('load', () => {
 
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
-  console.log("oi");
 
   like.addEventListener("click", ()=>{
-    if( like.src == "icones/like.png"){
+    if( like.src.includes("icones/like.png")){
       like.src = "icones/like_colorido.png";
     } else {
       like.src = "icones/like.png";
     }
   })    
-    console.log("oi");
-  } ) 
+  }) 
 
 
 
@@ -309,19 +307,3 @@ window.addEventListener ('load', () => {
 
 
 
-
-
-
-
-
-
-
-
-const submitCadastro = document.querySelector(".register button.register ");
-const submitLogin = document.querySelector(".login button.register");
-
-const formCadastro = document.querySelector(".register form");
-const formCadastro = document.querySelector(".login form");
-
-const loginEmail = document;
-const loginSenha = 0;
