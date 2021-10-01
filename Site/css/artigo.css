@@ -144,6 +144,10 @@ a {
     margin-top: 0.5%;
 }
 
+.comentario {
+    display:none;
+}
+
 @media (max-width: 545px) {
 
     .artigo p {

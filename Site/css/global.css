@@ -214,10 +214,10 @@ header #menu, header #sair{
     padding: 12px;
     cursor: pointer;
 }
-header #login{
+header #login {
     cursor: pointer;
 }
-header #cadastro button:hover{
+header #cadastro button:hover {
     background-color: #8B008B;
 }
 button {
