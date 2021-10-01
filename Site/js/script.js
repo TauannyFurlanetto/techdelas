@@ -202,3 +202,7 @@ function closePopup() {
   loginPage.classList.remove("active");
   cadastroPage.classList.remove("active");
 }
+
+//like
+
+
