@@ -257,3 +257,55 @@ window.addEventListener ('load', () => {
 })
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const submitCadastro = document.querySelector(".register button.register ");
+const submitLogin = document.querySelector(".login button.register");
+
+const formCadastro = document.querySelector(".register form");
+const formCadastro = document.querySelector(".login form");
+
+const loginEmail = document;
+const loginSenha= ;
