@@ -13,12 +13,13 @@ function pesquisar(){
             
         if(links.innerHTML.toUpperCase().includes(filtro)){
             menuItens2[i].style.display='block';
-            vejaMais.style.display='none';
+            vejaMais.style.display='block';
 
         }else{
             menuItens2[i].style.display='none';
-            vejaMais.style.display='block';
+            vejaMais.style.display='none';
         }
+        
             
      }
 }
