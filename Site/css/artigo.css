@@ -139,6 +139,11 @@ a {
     text-decoration: none;
 }
 
+.coment {
+    background-color: #fff;
+    margin-top: 0.5%;
+}
+
 @media (max-width: 545px) {
 
     .artigo p {
