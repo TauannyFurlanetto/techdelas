@@ -132,17 +132,33 @@ form textarea {
 }
 
 .caixa {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 a {
     text-decoration: none;
 }
 
+.coment {
+    background-color: #fff;
+    margin-top: 0.5%;
+}
+
 @media (max-width: 545px) {
 
     .artigo p {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 355px) {
+    .titulo h1 {
+        font-size: 30px;
+        /* word-break: break-all; */
+}
+
+    .titulo h2 {
+        font-size: 25px;
     }
 }
 

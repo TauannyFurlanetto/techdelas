@@ -157,6 +157,34 @@ window.addEventListener('load', () => {
 
   // pop-up stuff
 
+  btnLogin = document.querySelector("#login");
+  btnCadastro = document.querySelector("#cadastro");
+
+  wrapper = document.querySelector(".pop-up-wrapper");
+  loginPage = document.querySelector(".pop-up.login");
+  cadastroPage = document.querySelector(".pop-up.register");
+  exitPopup = document.querySelectorAll(".pop-up a img:first-of-type")
+
+  btnLogin.onclick = (event) => {
+    loginToggle()
+  }
+
+  btnCadastro.onclick = (event) => {
+    cadastroToggle()
+  }
+
+  wrapper.onclick = (event) => {
+    if (event.target == wrapper) {
+      closePopup()
+    } 
+    else
+    exitPopup.forEach(exit => {
+      if (event.target == exit) {
+        event.preventDefault();
+        closePopup();
+      }
+    });
+  }
 
 })
 
@@ -189,20 +217,23 @@ function addPost(newPostsAmount) {
 }
 
  // BANNER
- let img1 = document.querySelector("#imagem>div");
- let img2 = document.querySelectorAll("#imagem>div")[1];
- let animationToogle = true;
- img1.addEventListener("animationiteration",()=>{
-   if(animationToogle==false){
-     img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-     img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
-     animationToogle = true;
-   }else{
-     img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
-     img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-     animationToogle = false;
-   }
- })  
+ window.addEventListener("load", ()=>{
+	let img1 = document.querySelector("#imagem>div");
+	let img2 = document.querySelectorAll("#imagem>div")[1];
+	let animationToogle = true;
+	img2.addEventListener("animationiteration",()=>{
+	if(animationToogle==false){
+		img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		animationToogle = true;
+	}else{
+		img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		animationToogle = false;
+	}
+	}) 
+ })
+  
 
 // JS do funcionamento do comentário da página de artigos
 
@@ -220,7 +251,12 @@ window.addEventListener ('load', () => {
           }
   })
 
-  btnComentar.style.background='#fff';
+  let btnEnviar = document.querySelector('.enviar');
+  let formulario = document.querySelector('.artigoComent');
+  btnEnviar.onclick = (evento) => {
+        evento.preventDefault();
+        formulario.submit();
+  }
 })
 
 
@@ -243,5 +279,36 @@ window.addEventListener ('load', () => {
     } else {
       like.src = " ";
     }
-  }    
-}
+  })    
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
