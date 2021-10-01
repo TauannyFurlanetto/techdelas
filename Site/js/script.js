@@ -242,7 +242,7 @@ window.addEventListener ('load', () => {
   let btnComentar = document.querySelector('.coment');
   let comentario = document.querySelector ('.comentario');
   comentario.style.display = 'none';
-
+  
   btnComentar.addEventListener('click', () => {
           if (comentario.style.display === 'none'){
             comentario.style.display = 'block';
@@ -250,15 +250,15 @@ window.addEventListener ('load', () => {
             comentario.style.display = 'none';
           }
   })
-
-  let btnEnviar = document.querySelector('.enviar');
-  let formulario = document.querySelector('.artigoComent');
-  btnEnviar.onclick = (evento) => {
-        evento.preventDefault();
-        formulario.submit();
-  }
 })
 
+window.addEventListener ('load', () => {
+
+  let btnComentar = document.querySelector('.coment');
+  btnComentar.onmouseover = (evento) => {
+  btnComentar.style.cssText = 'background-color: #fff';
+  }
+})
 
 
 
