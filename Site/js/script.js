@@ -253,4 +253,13 @@ window.addEventListener ('load', () => {
   })
 
   btnComentar.style.background='#fff';
+
+  let btnEnviar = document.querySelector('.enviar');
+  let formulario = document.querySelector('.artigoComent');
+  btnEnviar.onclick = (evento) => {
+        evento.preventDefault();
+        formulario.submit();
+  }
 })
+
+

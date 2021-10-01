@@ -132,7 +132,7 @@ form textarea {
 }
 
 .caixa {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 a {
@@ -143,6 +143,17 @@ a {
 
     .artigo p {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 355px) {
+    .titulo h1 {
+        font-size: 30px;
+        /* word-break: break-all; */
+}
+
+    .titulo h2 {
+        font-size: 25px;
     }
 }
 
