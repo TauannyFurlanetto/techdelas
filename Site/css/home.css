@@ -72,22 +72,23 @@
     height: 338px;
     width: 255px;
     display: flex;
+    position: relative;
 }
-#imagem img{
-    /* background-repeat: no-repeat;
+#imagem>div{
+    position: absolute;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center; */
+    background-position: center;
     height: 338px;
     width: 255px;
-    /* animation: bannerImg 10s infinite; */
 }
-#imagem img:first-of-type{
-    animation: slideImg 9s infinite ease-in-out alternate;
+#imagem>div:first-of-type{
+    animation: slideImg 3s infinite;
 }
-#imagem img:last-of-type{
-    animation: slideImg 9s infinite ease-in-out alternate;
-
-} 
+#imagem>div:last-of-type{
+    right: -255px;
+    animation: slideImg 3s infinite;
+}
 /* ARTIGO/HOME */
 /* Barra de pesquisa, botao e categorias */
 .posts{
@@ -275,6 +276,9 @@
 
 @keyframes slideImg{
     0% {transform: translateX(0px);}
-    50% {transform: translateX(-218px);}
-    100% {transform: translateX(-218px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(-255px);}
+    100% {transform: translateX(-255px);}
 }
+
+
