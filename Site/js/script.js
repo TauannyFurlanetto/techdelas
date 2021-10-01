@@ -208,3 +208,21 @@ function closePopup() {
    }
  })  
 
+// JS do funcionamento do comentário da página de artigos
+
+window.addEventListener ('load', () => {
+
+  let btnComentar = document.querySelector('.coment');
+  let comentario = document.querySelector ('.comentario');
+  comentario.style.display = 'none';
+
+  btnComentar.addEventListener('click', () => {
+          if (comentario.style.display === 'none'){
+            comentario.style.display = 'block';
+          } else {
+            comentario.style.display = 'none';
+          }
+  })
+
+  btnComentar.style.background='#fff';
+})

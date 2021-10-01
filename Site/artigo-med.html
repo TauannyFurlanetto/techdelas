@@ -82,20 +82,25 @@
         <div class="separador"></div>
 
         <div class="reacao">
-            <a href=""><img src="icones/thumbs-up.svg" alt=""></a>
-            <a href=""><img src="icones/message-circle.svg" alt=""></a>
+            <img src="icones/thumbs-up.svg" alt="">
+            <button class="coment"><img src="icones/message-circle.svg" alt=""></a></button>
         </div>
 
         <div class="comentario">
             <h3>Escreva seu comentário:</h3>
             <div id="comentario">
-            <div class="caixa">
-                <textarea name="" id=""></textarea>
+
+            <form>
+                    <div class="caixa">
+                        <label for="comentario"></label>
+                        <textarea name="comentario" id="comentario" required maxlength="200"></textarea>
+                    </div>
+
+                    <button type="submit" class="enviar">Enviar</button>
+
+            </form>
+
             </div>
-            <div class="botaoEnviar">
-                <button class="comentar">Enviar</button>
-            </div>
-        </div>
         </div>
 
     </section>
