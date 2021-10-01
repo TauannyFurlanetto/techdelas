@@ -217,20 +217,23 @@ function addPost(newPostsAmount) {
 }
 
  // BANNER
- let img1 = document.querySelector("#imagem>div");
- let img2 = document.querySelectorAll("#imagem>div")[1];
- let animationToogle = true;
- img1.addEventListener("animationiteration",()=>{
-   if(animationToogle==false){
-     img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-     img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
-     animationToogle = true;
-   }else{
-     img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
-     img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-     animationToogle = false;
-   }
- })  
+ window.addEventListener("load", ()=>{
+	let img1 = document.querySelector("#imagem>div");
+	let img2 = document.querySelectorAll("#imagem>div")[1];
+	let animationToogle = true;
+	img2.addEventListener("animationiteration",()=>{
+	if(animationToogle==false){
+		img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		animationToogle = true;
+	}else{
+		img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		animationToogle = false;
+	}
+	}) 
+ })
+  
 
 // JS do funcionamento do comentário da página de artigos
 
@@ -298,14 +301,3 @@ window.addEventListener ('load', () => {
 
 
 
-
-
-
-const submitCadastro = document.querySelector(".register button.register ");
-const submitLogin = document.querySelector(".login button.register");
-
-const formCadastro = document.querySelector(".register form");
-const formCadastro = document.querySelector(".login form");
-
-const loginEmail = document;
-const loginSenha= ;
