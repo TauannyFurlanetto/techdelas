@@ -67,16 +67,27 @@
     width: 10px;
     background-color:#702082;
 }
-
 #imagem{
-    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 338px;
+    width: 255px;
+    display: flex;
+}
+#imagem img{
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     height: 338px;
     width: 255px;
     /* animation: bannerImg 10s infinite; */
-
 }
+#imagem img:first-of-type{
+    animation: slideImg 9s infinite ease-in-out alternate;
+}
+#imagem img:last-of-type{
+    animation: slideImg 9s infinite ease-in-out alternate;
+
+} 
 /* ARTIGO/HOME */
 /* Barra de pesquisa, botao e categorias */
 .posts{
@@ -262,3 +273,8 @@
     99% {background-image:url(../img/heroFoto2.jpg);}
 } */
 
+@keyframes slideImg{
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(-218px);}
+    100% {transform: translateX(-218px);}
+}

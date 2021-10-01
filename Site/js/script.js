@@ -140,7 +140,18 @@ window.addEventListener('load', () => {
         }
     }
   })
-
+  // BANNER
+  // let changeOrder = false;
+  // let img1 = document.querySelector("#imagem img");
+  // let img2 = document.querySelectorAll("#imagem img")[1];
+  // function order(num){
+  //     img1.style.order = num;
+  //     num = num*-1;
+  //     order(num);
+  // }
+  // setTimeout (order(1), 100)
+  
+  
   // POP-UP
 
   // pop-up stuff
