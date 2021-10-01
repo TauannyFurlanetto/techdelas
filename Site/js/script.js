@@ -222,3 +222,26 @@ window.addEventListener ('load', () => {
 
   btnComentar.style.background='#fff';
 })
+
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener ('load', () => {
+  let like = document.querySelector(".reacao img");
+
+  iconLike.addEventListener("click", ()=>{
+    if( like.src == " "){
+      like.src = " ";
+    } else {
+      like.src = " ";
+    }
+  }    
+}
