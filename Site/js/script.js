@@ -112,81 +112,38 @@ function podFunc(ep) {
 // MENU
 window.addEventListener('load', () => {
 
-	// Pega os elementos
-	exitMenu = document.getElementById('sair');
-	abrirMenu = document.getElementById('menu');
-	menu = document.getElementById('menuMobile');
-	let closeMenu = false;
-	// Abre o menu
-	abrirMenu.addEventListener('click', () => {
-		if (menu.style.display === "block") {
-			menu.style.display = "none";
-		} else {
-			menu.style.display = "block";
-		}
-	})
-	// Fecha o menu
-	exitMenu.addEventListener('click', () => {
-		menu.style.display = "none";
-		closeMenu = true;
-	})
-	// Retorna o menu desktop caso a tela aumente de novo
-	window.addEventListener("resize", () => {
-		if (window.innerWidth > 1040) {
-			menu.style.display = "flex";
-			closeMenu = false;
-		}
-		if (window.innerWidth < 1040 && closeMenu == false) {
-			if (menu.style.display == "flex") {
-				menu.style.display = "none";
-			}
-		}
-	})
-	// BANNER
-	// let changeOrder = false;
-	// let img1 = document.querySelector("#imagem img");
-	// let img2 = document.querySelectorAll("#imagem img")[1];
-	// function order(num){
-	//     img1.style.order = num;
-	//     num = num*-1;
-	//     order(num);
-	// }
-	// setTimeout (order(1), 100)
+  // Pega os elementos
+  exitMenu = document.getElementById('sair');
+  abrirMenu = document.getElementById('menu');
+  menu = document.getElementById('menuMobile');
+  let closeMenu = false;
+  // Abre o menu
+  abrirMenu.addEventListener('click', () => {
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  })
+  // Fecha o menu
+  exitMenu.addEventListener('click', () => {
+    menu.style.display = "none";
+    closeMenu = true;
+  })
+  // Retorna o menu desktop caso a tela aumente de novo
+  window.addEventListener("resize", ()=>{
+    if(window.innerWidth>1040){
+      menu.style.display = "flex";
+      closeMenu = false;
+    }
+    if(window.innerWidth<1040 && closeMenu == false){
+      if(menu.style.display == "flex"){
+          menu.style.display = "none";
+        }
+    }
+  })
 
-
-	// POP-UP
-
-	// pop-up stuff
-
-	btnLogin = document.querySelector("#login");
-	btnCadastro = document.querySelector("#cadastro");
-
-	wrapper = document.querySelector(".pop-up-wrapper");
-	loginPage = document.querySelector(".pop-up.login");
-	cadastroPage = document.querySelector(".pop-up.register");
-	exitPopup = document.querySelectorAll(".pop-up a img:first-of-type")
-
-	btnLogin.onclick = (event) => {
-		loginToggle()
-	}
-
-	btnCadastro.onclick = (event) => {
-		cadastroToggle()
-	}
-
-	wrapper.onclick = (event) => {
-		if (event.target == wrapper) {
-			closePopup()
-		} else
-			exitPopup.forEach(exit => {
-				if (event.target == exit) {
-					event.preventDefault();
-					closePopup();
-				}
-			});
-	}
-
-	//Veja mais!!!! aaaaaaaaaaa
+  //Veja mais!!!! aaaaaaaaaaa
 
 	verMais = document.getElementById("veja-mais")
 	if (verMais != null){
@@ -195,6 +152,10 @@ window.addEventListener('load', () => {
 			addPost(3)
 		}
 	}
+ 
+  // POP-UP
+
+  // pop-up stuff
 
 
 })
@@ -226,3 +187,38 @@ function addPost(newPostsAmount) {
 	}
 	
 }
+
+ // BANNER
+ let img1 = document.querySelector("#imagem>div");
+ let img2 = document.querySelectorAll("#imagem>div")[1];
+ let animationToogle = true;
+ img1.addEventListener("animationiteration",()=>{
+   if(animationToogle==false){
+     img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+     img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+     animationToogle = true;
+   }else{
+     img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+     img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+     animationToogle = false;
+   }
+ })  
+
+// JS do funcionamento do comentário da página de artigos
+
+window.addEventListener ('load', () => {
+
+  let btnComentar = document.querySelector('.coment');
+  let comentario = document.querySelector ('.comentario');
+  comentario.style.display = 'none';
+
+  btnComentar.addEventListener('click', () => {
+          if (comentario.style.display === 'none'){
+            comentario.style.display = 'block';
+          } else {
+            comentario.style.display = 'none';
+          }
+  })
+
+  btnComentar.style.background='#fff';
+})
