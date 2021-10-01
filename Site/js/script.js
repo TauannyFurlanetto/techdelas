@@ -218,8 +218,9 @@ function addPost(newPostsAmount) {
 
  // BANNER
  window.addEventListener("load", ()=>{
-	let img1 = document.querySelector("#imagem>div");
 	let img2 = document.querySelectorAll("#imagem>div")[1];
+	if(img2 != null){
+	let img1 = document.querySelector("#imagem>div");
 	let animationToogle = true;
 	img2.addEventListener("animationiteration",()=>{
 	if(animationToogle==false){
@@ -232,31 +233,35 @@ function addPost(newPostsAmount) {
 		animationToogle = false;
 	}
 	}) 
+	}
  })
   
 
 // JS do funcionamento do comentário da página de artigos
 
 window.addEventListener ('load', () => {
-
-  let btnComentar = document.querySelector('.coment');
-  let comentario = document.querySelector ('.comentario');
-  comentario.style.display = 'none';
-  
-  btnComentar.addEventListener('click', () => {
-          if (comentario.style.display === 'none'){
-            comentario.style.display = 'block';
-          } else {
-            comentario.style.display = 'none';
-          }
-  })
+	let btnComentar = document.querySelector('.coment');
+	if (btnComentar != null){
+		let comentario = document.querySelector ('.comentario');
+		comentario.style.display = 'none';
+		
+		btnComentar.addEventListener('click', () => {
+				if (comentario.style.display === 'none'){
+				comentario.style.display = 'block';
+				} else {
+				comentario.style.display = 'none';
+				}
+		})
+	}
 })
 
 window.addEventListener ('load', () => {
 
   let btnComentar = document.querySelector('.coment');
-  btnComentar.onmouseover = (evento) => {
-  btnComentar.style.cssText = 'background-color: #fff';
+  if(btnComentar != null){
+	btnComentar.onmouseover = (evento) => {
+	btnComentar.style.cssText = 'background-color: #fff';
+	}
   }
 })
 
@@ -272,17 +277,16 @@ window.addEventListener ('load', () => {
 
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
-  console.log("oi");
-
-  like.addEventListener("click", ()=>{
-    if( like.src == "icones/like.png"){
-      like.src = "icones/like_colorido.png";
-    } else {
-      like.src = "icones/like.png";
-    }
-  })    
-    console.log("oi");
-  } ) 
+  if (like !=null){
+	like.addEventListener("click", ()=>{
+		if( like.src == "icones/thumbs-up.svg"){
+		  like.src = "icones/like_colorido.svg";
+		} else {
+		  like.src = "icones/thumbs-up.svg";
+		}
+	  })    
+  }
+} ) 
 
 
 
