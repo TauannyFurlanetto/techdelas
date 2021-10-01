@@ -267,12 +267,18 @@ window.addEventListener ('load', () => {
 
 
 
-
-
-
-
-
-
+window.addEventListener ('load', () => {
+  let like = document.querySelector(".reacao img");
+	if(like != null){
+		like.addEventListener("click", ()=>{
+			if( like.src.includes("icones/thumbs-up.svg")){
+			  like.src = "icones/like_colorido.svg";
+			} else {
+			  like.src = "icones/thumbs-up.svg";
+			}
+		  })
+	} 
+}) 
 
 
 window.addEventListener ('load', () => {

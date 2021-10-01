@@ -96,6 +96,7 @@ body {
 
 .reacao {
     display: flex;
+    align-items: center;
 }
 
 .reacao a {
@@ -104,9 +105,8 @@ body {
     height: 4rem;
 }
 
-.reacao a img {
-    width: 100%;
-
+.reacao img {
+    height: 45px;
 }
 
 .comentario .caixa {
