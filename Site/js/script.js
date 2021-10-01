@@ -267,7 +267,7 @@ window.addEventListener ('load', () => {
 
   like.addEventListener("click", ()=>{
     if( like.src.includes("icones/thumbs-up.svg")){
-      like.src = "icones/like_colorido.svg";
+      like.src = "icones/colorido.svg";
     } else {
       like.src = "icones/thumbs-up.svg";
     }
