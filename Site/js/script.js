@@ -8,6 +8,8 @@ let loginPage;
 let cadastroPage;
 let exitPopup;
 
+// PODCAST
+
 // Criar um objeto de podcast
 function podcast(name, img, author, url, feed){
   this.name = name;
@@ -16,29 +18,40 @@ function podcast(name, img, author, url, feed){
   this.url = url;
   this.feed = feed;
 }
+// Cria um objeto da descricao do podcast
 function descPod (desc, title){
   this.desc =desc;
-  this.title = title;
+  this.title = title; //Será usado como chave de comparação
 }
 
-// Cria uma array para armazenar as requisicoes e uma variavel
+// Cria uma array para armazenar as requisicoes
 let arr = [ ];
-let num = 0;
+// Cria uma array para armazenar as decricoes
 let arrDesc = [];
-// arrDesc.push(descHtml.querySelector("description").innerHTML.slice(11,((descHtml.querySelector("description").innerHTML.length)-6)));
-// arrDesc.push(descHtml.querySelector("title").innerHTML.slice(12,((descHtml.querySelector("title").innerHTML.length)-6)));
+// Cria um contador
+let num =0;
+function numSum (){
+  return num = num +1;
+}
+//Pega o resultado da requisicao do script no HTML
 function podFunc(ep){
+  // Armazena os podcasts
   arr.push(new podcast(ep.results[0].collectionName, ep.results[0].artworkUrl600, ep.results[0].artistName, ep.results[0].collectionViewUrl, ep.results[0].feedUrl));
+  
+  // Funcao que busca a desricao
   async function fetchDesc(){
+    console.log(ep.results[0].feedUrl)
     const descRss = await fetch(ep.results[0].feedUrl);
     const descTxt = await descRss.text();
     let domParser = new DOMParser();
     const descHtml = domParser.parseFromString(descTxt, "text/html");
     arrDesc.push(new descPod(descHtml.querySelector("description").innerHTML,descHtml.querySelector("title").innerHTML));
+    console.log(arrDesc)
     return (arrDesc);
   }
+  // Busca a descricao
   fetchDesc().then(resp=>{
-    // resp[2]["desc"] = resp[2]["desc"].replaceAll("<\!--[CDATA[", "");
+    // Formatacao da descricao e titulo
     resp.map((element)=>{
       element["desc"] = element["desc"].replaceAll("<\!--[CDATA[", "");
       element["desc"] = element["desc"].replaceAll("<p-->", "");
@@ -53,25 +66,24 @@ function podFunc(ep){
       element["title"] = element["title"].replaceAll("]]&gt;", "");
     });
 
-    console.log(resp);
-
+    // Seleciona os objetos no html
     const podImg = document.querySelectorAll(".podcast img");
     const podH1 = document.querySelectorAll(".podcast h1");
     const podP = document.querySelectorAll(".podcast p");
     const podcast = document.querySelectorAll("#podcasts a");
-    podImg.forEach((element,index)=>{
-      element.src = arr[index].img
-    })
-    console.log(podcast)
-    podcast.forEach((element,index)=>{
-      element.setAttribute("href", arr[index].url);
-      element.style.textDecoration = "none";
-      element.style.cursor = "pointer";
-    })
-    // podH1[num].innerHTML = arr[num].name; 
+
+    // Define os valores das imagens, h1 e do a (href)
+    podImg[num].src = arr[num].img;
+    podcast[num].setAttribute("href", arr[num].url);
+    podcast[num].style.textDecoration = "none";
+    podcast[num].style.cursor = "pointer";
+    podH1[num].innerHTML = arr[num].name;
+    numSum();
     podH1.forEach((element,index)=>{
       element.innerHTML = arr[index].name
       switch(element.innerHTML){
+        // Compara o titulo do podcast atual ao titulo da descricao
+        // Atribui o valor adequado ao paragrafo
         case resp[0]["title"]:
           podP[index].innerHTML = resp[0]["desc"];
           break;
@@ -89,23 +101,21 @@ function podFunc(ep){
           break;
         default:
           break;
-
       }
     })
-    // console.log((feedHtml.querySelectorAll("description")[0].innerHTML).slice(11,((feedHtml.querySelectorAll("description")[0].innerHTML).length)-5));
-    // console.log(resp);
-    // podP[num].innerHTML= resp;
-    // num = num +1;
-  })
-  
-    
+  }).catch(err =>{
+  });
 }
+
+// MENU
 window.addEventListener('load', () => {
 
+  // Pega os elementos
   exitMenu = document.getElementById('sair');
   abrirMenu = document.getElementById('menu');
   menu = document.getElementById('menuMobile');
   let closeMenu = false;
+  // Abre o menu
   abrirMenu.addEventListener('click', () => {
     if (menu.style.display === "block") {
       menu.style.display = "none";
@@ -113,11 +123,12 @@ window.addEventListener('load', () => {
       menu.style.display = "block";
     }
   })
+  // Fecha o menu
   exitMenu.addEventListener('click', () => {
     menu.style.display = "none";
     closeMenu = true;
   })
-
+  // Retorna o menu desktop caso a tela aumente de novo
   window.addEventListener("resize", ()=>{
     if(window.innerWidth>1040){
       menu.style.display = "flex";
@@ -129,6 +140,44 @@ window.addEventListener('load', () => {
         }
     }
   })
+  // BANNER
+  let img1 = document.querySelector("#imagem>div");
+  let img2 = document.querySelectorAll("#imagem>div")[1];
+  let animationToogle = true;
+  function changeImg(int){
+    if(int===0){
+      img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+    }else{
+      img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+    }
+  }
+  img1.addEventListener("animationiteration",()=>{
+    if(animationToogle==false){
+      img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+      animationToogle = true;
+    }else{
+      img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+      img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+      animationToogle = false;
+    }
+  })  
+  
+    
+  
+  
+  // function order(num){
+  //     img1.style.order = num;
+  //     num = num*-1;
+  //     order(num);
+  // }
+  // setTimeout (order(1), 100)
+  
+  
+  // POP-UP
+
   // pop-up stuff
 
   btnLogin = document.querySelector("#login");

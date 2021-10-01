@@ -67,15 +67,27 @@
     width: 10px;
     background-color:#702082;
 }
-
 #imagem{
+    overflow: hidden;
+    height: 338px;
+    width: 255px;
+    display: flex;
+    position: relative;
+}
+#imagem>div{
+    position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 338px;
     width: 255px;
-    /* animation: bannerImg 10s infinite; */
-
+}
+#imagem>div:first-of-type{
+    animation: slideImg 3s infinite;
+}
+#imagem>div:last-of-type{
+    right: -255px;
+    animation: slideImg 3s infinite;
 }
 /* ARTIGO/HOME */
 /* Barra de pesquisa, botao e categorias */
@@ -261,4 +273,12 @@
     50% {background-image:url(../img/heroFoto2.jpg);}
     99% {background-image:url(../img/heroFoto2.jpg);}
 } */
+
+@keyframes slideImg{
+    0% {transform: translateX(0px);}
+    50% {transform: translateX(0px);}
+    75% {transform: translateX(-255px);}
+    100% {transform: translateX(-255px);}
+}
+
 
