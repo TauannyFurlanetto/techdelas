@@ -217,20 +217,23 @@ function addPost(newPostsAmount) {
 }
 
  // BANNER
- let img1 = document.querySelector("#imagem>div");
- let img2 = document.querySelectorAll("#imagem>div")[1];
- let animationToogle = true;
- img1.addEventListener("animationiteration",()=>{
-   if(animationToogle==false){
-     img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-     img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
-     animationToogle = true;
-   }else{
-     img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
-     img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-     animationToogle = false;
-   }
- })  
+ window.addEventListener("load", ()=>{
+	let img1 = document.querySelector("#imagem>div");
+	let img2 = document.querySelectorAll("#imagem>div")[1];
+	let animationToogle = true;
+	img2.addEventListener("animationiteration",()=>{
+	if(animationToogle==false){
+		img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		animationToogle = true;
+	}else{
+		img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		animationToogle = false;
+	}
+	}) 
+ })
+  
 
 // JS do funcionamento do comentário da página de artigos
 
@@ -240,7 +243,6 @@ window.addEventListener ('load', () => {
   let comentario = document.querySelector ('.comentario');
   comentario.style.display = 'none';
   
-
   btnComentar.addEventListener('click', () => {
           if (comentario.style.display === 'none'){
             comentario.style.display = 'block';
@@ -249,5 +251,53 @@ window.addEventListener ('load', () => {
           }
   })
 })
+
+window.addEventListener ('load', () => {
+
+  let btnComentar = document.querySelector('.coment');
+  btnComentar.onmouseover = (evento) => {
+  btnComentar.style.cssText = 'background-color: #fff';
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener ('load', () => {
+  let like = document.querySelector(".reacao img");
+  console.log("oi");
+
+  like.addEventListener("click", ()=>{
+    if( like.src == "icones/like.png"){
+      like.src = "icones/like_colorido.png";
+    } else {
+      like.src = "icones/like.png";
+    }
+  })    
+    console.log("oi");
+  } ) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
