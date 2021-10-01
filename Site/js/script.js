@@ -262,14 +262,6 @@ window.addEventListener ('load', () => {
 
 
 
-
-
-
-
-
-
-
-
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
   console.log("oi");
