@@ -215,11 +215,19 @@ function addPost(newPostsAmount) {
 
 }
 
+<<<<<<< HEAD
 // BANNER
 window.addEventListener("load", () => {
 	let img1 = document.querySelector("#imagem>div");
+=======
+ // BANNER
+ window.addEventListener("load", ()=>{
+>>>>>>> 41b6763528aa3db4c7943e9f21199ad5f618e061
 	let img2 = document.querySelectorAll("#imagem>div")[1];
+	if(img2 != null){
+	let img1 = document.querySelector("#imagem>div");
 	let animationToogle = true;
+<<<<<<< HEAD
 	img2.addEventListener("animationiteration", () => {
 		if (animationToogle == false) {
 			img1.style.cssText = "background-image: url(img/heroFoto2.jpg)";
@@ -249,26 +257,75 @@ window.addEventListener('load', () => {
 			comentario.style.display = 'none';
 		}
 	})
+=======
+	img2.addEventListener("animationiteration",()=>{
+	if(animationToogle==false){
+		img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		animationToogle = true;
+	}else{
+		img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
+		img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
+		animationToogle = false;
+	}
+	}) 
+	}
+ })
+  
+
+// JS do funcionamento do comentário da página de artigos
+
+window.addEventListener ('load', () => {
+	let btnComentar = document.querySelector('.coment');
+	if (btnComentar != null){
+		let comentario = document.querySelector ('.comentario');
+		comentario.style.display = 'none';
+		
+		btnComentar.addEventListener('click', () => {
+				if (comentario.style.display === 'none'){
+				comentario.style.display = 'block';
+				} else {
+				comentario.style.display = 'none';
+				}
+		})
+	}
+>>>>>>> 41b6763528aa3db4c7943e9f21199ad5f618e061
 })
 
 window.addEventListener('load', () => {
 
+<<<<<<< HEAD
 	let btnComentar = document.querySelector('.coment');
 	btnComentar.onmouseover = (evento) => {
 		btnComentar.style.cssText = 'background-color: #fff';
 	}
+=======
+  let btnComentar = document.querySelector('.coment');
+  if(btnComentar != null){
+	btnComentar.onmouseover = (evento) => {
+	btnComentar.style.cssText = 'background-color: #fff';
+	}
+  }
+>>>>>>> 41b6763528aa3db4c7943e9f21199ad5f618e061
 })
 
 
 
+window.addEventListener ('load', () => {
+  let like = document.querySelector(".reacao img");
+	if(like != null){
+		like.addEventListener("click", ()=>{
+			if( like.src.includes("icones/thumbs-up.svg")){
+			  like.src = "icones/like_colorido.svg";
+			} else {
+			  like.src = "icones/thumbs-up.svg";
+			}
+		  })
+	} 
+}) 
 
 
-
-
-
-
-
-
+<<<<<<< HEAD
 window.addEventListener('load', () => {
 	let like = document.querySelector(".reacao img");
 	console.log("oi");
@@ -283,6 +340,20 @@ window.addEventListener('load', () => {
 	console.log("oi");
 })
 
+=======
+window.addEventListener ('load', () => {
+  let like = document.querySelector(".reacao img");
+  if (like !=null){
+	like.addEventListener("click", ()=>{
+		if( like.src == "icones/thumbs-up.svg"){
+		  like.src = "icones/like_colorido.svg";
+		} else {
+		  like.src = "icones/thumbs-up.svg";
+		}
+	  })    
+  }
+} ) 
+>>>>>>> 41b6763528aa3db4c7943e9f21199ad5f618e061
 
 
 
