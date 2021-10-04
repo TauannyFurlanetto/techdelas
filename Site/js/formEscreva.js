@@ -21,7 +21,7 @@ window.addEventListener("load", ()=>{
         console.log(inputNome.value.length<3);
         if(inputNome.value.length<3 || inputNome.value.length>15){
             console.log(inputNome.value.length<3);
-            errorArr.push("O primeiro nome deve possuir ao menos 3 caracteres e no máximo 5 caracteres");
+            errorArr.push("O primeiro nome deve possuir ao menos 3 caracteres e no máximo 15 caracteres");
         }
         if(inputSobre.value.length<3 || inputSobre.value.length>150){
             errorArr.push("O sobrenome deve possuir ao menos 3 caracteres e no máximo 150 caracteres");
