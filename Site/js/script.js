@@ -386,7 +386,12 @@ function CreateErrorElement(innerhtml = "") {
 	return errorP
 }
 
+<<<<<<< HEAD
+
+
+=======
 function InsertErrorMessage(popup, labelname, msg) {
 	const labelError = document.querySelector(".pop-up." + popup + " .pop-up-labels." + labelname + " p")
 	labelError.parentNode.replaceChild(CreateErrorElement(msg), labelError)
 }
+>>>>>>> 4443beec451db6aebbd709e75b581bcb69c8d863

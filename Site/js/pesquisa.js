@@ -23,6 +23,8 @@ function pesquisar(){
             
      }
 }
+<<<<<<< HEAD
+=======
 
 let toogle = true;
 let arrCat = ["Tecnologia", "Empoderamento", "Ciencia", "Educacao", "Saude"];
@@ -58,3 +60,4 @@ function selectCat(cat, txt){
             vejaMais.style.display = "block";
         };   
 }
+>>>>>>> 4443beec451db6aebbd709e75b581bcb69c8d863

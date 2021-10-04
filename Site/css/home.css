@@ -227,9 +227,6 @@
     .post {
         margin-bottom: 20%;
     }
-    .pagPosts h2{
-        text-align: center;
-    }
     .posts .barra, .posts .barra .categorias ul {
         display: none;
     }
