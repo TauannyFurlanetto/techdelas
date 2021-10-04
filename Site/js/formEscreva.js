@@ -21,16 +21,16 @@ window.addEventListener("load", ()=>{
         console.log(inputNome.value.length<3);
         if(inputNome.value.length<3 || inputNome.value.length>15){
             console.log(inputNome.value.length<3);
-            errorArr.push("O nome deve ser menor que 15 e maior que 3");
+            errorArr.push("O primeiro nome deve possuir ao menos 3 caracteres e no máximo 15 caracteres");
         }
         if(inputSobre.value.length<3 || inputSobre.value.length>150){
-            errorArr.push("O nome deve ser menor que 150 e maior que 3");
+            errorArr.push("O sobrenome deve possuir ao menos 3 caracteres e no máximo 150 caracteres");
         }
         if(inputEmail.value.length<12 || !inputEmail.value.includes("@") || !inputEmail.value.includes(".")){
-            errorArr.push("O email deve ser maior 12 e conter '@' e '.'");
+            errorArr.push("O email deve possuir ao menos 12 caracteres e conter '@' e '.'");
         }
         if(inputMessage.value.length<500 || inputMessage.value.length<4000){ 
-            errorArr.push("A mensagem é muito pequena, deve ser maior que 250 caracteres");
+            errorArr.push("A mensagem é muito pequena, deve possuir ao menos 250 caracteres");
         }if(errorArr.length>0){
             console.log(ulErros);
             errorArr.forEach(erro=>{
