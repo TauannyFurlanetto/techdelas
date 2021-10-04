@@ -59,18 +59,18 @@
                 </div>
                 <div class="categorias">
                     <ul>
-                        <li><a href="">Tecnologia</a></li>
-                        <li><a href="">Empoderamento</a></li>
-                        <li><a href="">Ciência</a></li>
-                        <li><a href="">Educação</a></li>
-                        <li><a href="">Saúde mental</a></li>
+                        <li onclick = "selectCat(0, this)" style= "font-weight: 500;">Tecnologia</li>
+                        <li onclick = "selectCat(1, this)">Empoderamento</li>
+                        <li onclick = "selectCat(2, this)">Ciência</li>
+                        <li onclick = "selectCat(3, this)">Educação</li>
+                        <li onclick = "selectCat(4, this)">Saúde mental</li>
                     </ul>
                 </div>
             </article>
             <article class="janela">
                 <div class="topo">
                     <div class="postagens">
-                        <a href="artigo-tech.html" target="_blank">
+                        <a href="artigo-tech.html" target="_blank" class = "Empoderamento Tecnologia Cat">
                             <div class="post">
                                 <div class="texto">
                                     <h3>Mulheres na Tecnologia</h3>
@@ -79,7 +79,7 @@
                                 <img src="img/post1.jpg" alt="Mulher digital">
                             </div>
                         </a>
-                        <a href="artigo.html" target="_blank">
+                        <a href="artigo.html" target="_blank" class="Ciencia Empoderamento Cat">
                             <div class="post">
                                 <div class="texto">
                                     <h3> Mulheres revolucionárias na Engenharia Química</h3>
@@ -88,7 +88,7 @@
                                 <img src="img/post2.jpg" alt="Mulher extraindo químico de tonel com uma mangueira">
                             </div>
                         </a>
-                        <a href="artigo-med.html" target="_blank">
+                        <a href="artigo-med.html" target="_blank" class="Empoderamento Cat">
                             <div class="post">
                                 <div class="texto">
                                     <h3>Empoderamento da mulher na medicina</h3>
@@ -142,25 +142,37 @@
             <h2>Cadastre-se:</h2>
 
             <form>
-                <label for-id="nome">Nome</label>
-                <input type="nome" id="nome" name="nome"/>
+                <div class="pop-up-labels nome">
+                    <label for-id="reg-nome">Nome</label>
+                    <p></p>
+                </div>
+                <input type="nome" id="reg-nome" name="nome"/>
 
-                <label for-id="email">Email</label>
+                <div class="pop-up-labels email">
+                    <label for-id="reg-email">Email</label>
+                    <p></p>
+                </div>
                 <div class="input">
                     <img src="icones/email.svg" alt="">
-                    <input type="email" id="email" name="email"/>
+                    <input type="email" id="reg-email" name="email"/>
                 </div>
 
-                <label for-id="senha">Senha</label>
+                <div class="pop-up-labels senha">
+                    <label for-id="reg-senha">Senha</label>
+                    <p></p>
+                </div>
                 <div class="input">
                     <img src="icones/senha.svg" alt="">
-                    <input type="senha" id="senha" name="senha"/>
+                    <input type="senha" id="reg-senha" name="senha"/>
                 </div>
 
-                <label for-id="senha">Digite novamente sua senha</label>
+                <div class="pop-up-labels senha-confirm">
+                    <label for-id="reg-senha-confirm">Digite novamente sua senha</label>
+                    <p></p>
+                </div>
                 <div class="input">
                     <img src="icones/senha.svg" alt="">
-                    <input type="senha" id="senha" name="senha"/>
+                    <input type="senha" id="reg-senha-confirm" name="senha"/>
                 </div>
 
                 <div class="button">
@@ -178,22 +190,28 @@
 
             <form>
 
-                <label for-id="email">Email</label>
+                <div class="pop-up-labels email">
+                    <label for-id="login-email">Email</label>
+                    <p></p>
+                </div>
                 <div class="input">
                     <img src="icones/email.svg" alt="">
-                    <input type="email" id="email" name="email"/>
+                    <input type="email" id="login-email" name="email"/>
                 </div>
 
-                <label for-id="senha">Senha</label>
+                <div class="pop-up-labels senha">
+                    <label for-id="login-senha">Senha</label>
+                    <p></p>
+                </div>
                 <div class="input">
                     <img src="icones/senha.svg" alt="">
-                    <input type="senha" id="senha" name="senha"/>
+                    <input type="senha" id="login-senha" name="senha"/>
                 </div>
 
                 <a class="esqueci" href="">Esqueci minha senha</a>
 
                 <div class="button">
-                    <button class="register">Login</button>
+                    <button class="login">Login</button>
                 </div>
             </form>
 

@@ -8,6 +8,17 @@
 
 /* POP-UP */
 
+.pop-up-labels p.error {
+    margin: 0;
+    color: red;
+    font-size: 0.7rem;
+    padding-left: 1rem;
+}
+.pop-up-labels {
+    display: flex;
+    align-items: center;
+}
+
 .pop-up-wrapper * {
     box-sizing: border-box !important;
 }
