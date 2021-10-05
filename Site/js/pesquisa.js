@@ -61,6 +61,7 @@ function selectCat(cat, txt){
         txt.className += " selected"
         toggleView("none")
     }else{
+        boldCategoria(txt);
         toggleView("flex")
         txt.classList.remove("selected");
         
