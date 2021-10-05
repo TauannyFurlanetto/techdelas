@@ -300,12 +300,17 @@ window.addEventListener("load", () => {
 
 	popupLogin.addEventListener("click", (event) => {
 		event.preventDefault()
-		ValidateForm(event.target.classList[0])
+		if (ValidateForm(event.target.classList[0]) == 0){
+			event.target.parentNode.parentNode.submit()
+		}
+
 		//console.log(event.target.classList[0]) //retorna primeira classe do botão clicado
 	})
 	popupRegister.addEventListener("click", (event) => {
 		event.preventDefault()
-		ValidateForm(event.target.classList[0])
+		if (ValidateForm(event.target.classList[0]) == 0){
+			event.target.parentNode.parentNode.submit()
+		}
 	})
 })
 
@@ -313,8 +318,10 @@ function ValidateForm(classname) {
 	let labelDivs
 	if (classname == "register") {
 		labelDivs = document.querySelectorAll(".pop-up.register form > .pop-up-labels")
+		let errorNum = 0
 		if (inpRegName.value.length < 3 || inpRegName.value.length > 20) {
 			InsertErrorMessage("register", "nome", "Nome inválido")
+			errorNum += 1
 		}
 		else {
 			InsertErrorMessage("register", "nome") //passando nenhum parametro de mensagem de erro o erro some da tela
@@ -322,6 +329,7 @@ function ValidateForm(classname) {
 
 		if (!inpRegEmail.value.includes("@")) {
 			InsertErrorMessage("register", "email", "Email inválido")
+			errorNum += 1
 		}
 		else {
 			InsertErrorMessage("register", "email") //passando nenhum parametro de mensagem de erro o erro some da tela
@@ -329,6 +337,7 @@ function ValidateForm(classname) {
 
 		if (inpRegPass.value.length < 6) {
 			InsertErrorMessage("register", "senha", "Senha deve ter ao menos 6 caracteres")
+			errorNum += 1
 		}
 		else {
 			InsertErrorMessage("register", "senha") //passando nenhum parametro de mensagem de erro o erro some da tela
@@ -336,17 +345,20 @@ function ValidateForm(classname) {
 
 		if (inpRegConfirmPass.value != inpRegPass.value) {
 			InsertErrorMessage("register", "senha-confirm", "Senha incorreta")
+			errorNum += 1
 		}
 		else {
 			InsertErrorMessage("register", "senha-confirm") //passando nenhum parametro de mensagem de erro o erro some da tela
 		}
-
+		return errorNum
 	}
 	else if (classname == "login") {
 		labelDivs = document.querySelectorAll(".pop-up.login form > .pop-up-labels")
+		let errorNum = 0
 
 		if (!inpLogEmail.value.includes("@")) {
 			InsertErrorMessage("login", "email", "Email inválido")
+			errorNum += 1
 		}
 		else {
 			InsertErrorMessage("login", "email") //passando nenhum parametro de mensagem de erro o erro some da tela
@@ -354,11 +366,14 @@ function ValidateForm(classname) {
 
 		if (inpLogPass.value.length < 6) {
 			InsertErrorMessage("login", "senha", "Senha deve ter ao menos 6 caracteres")
+			errorNum += 1
 		}
 		else {
 			InsertErrorMessage("login", "senha") //passando nenhum parametro de mensagem de erro o erro some da tela
 		}
+		return errorNum
 	}
+	
 }
 
 function CreateErrorElement(innerhtml = "") {
@@ -368,6 +383,8 @@ function CreateErrorElement(innerhtml = "") {
 	errorP.innerHTML = innerhtml
 	return errorP
 }
+
+
 
 function InsertErrorMessage(popup, labelname, msg) {
 	const labelError = document.querySelector(".pop-up." + popup + " .pop-up-labels." + labelname + " p")
