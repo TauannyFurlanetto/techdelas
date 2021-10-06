@@ -5,13 +5,20 @@ function pesquisar(){
     filtro = input.value.toUpperCase();
     menu = document.querySelector('article.janela');
     menuItens = menu.querySelectorAll('h3');
-    menuItens2 = menu.querySelectorAll('a');
+    let menuItens2 = menu.querySelectorAll('a');
     vejaMais = document.getElementById('veja-mais');
+    const selectedCat = Array.from(document.querySelectorAll(".selected"));
 
     for(let i=0; i<menuItens.length; i++){
         let links = menuItens[i];
+        let listaDeClasses = []; 
+        if(selectedCat.length>0){
+            console.log(selectedCat)
+            listaDeClasses = selectedCat[0].classList[0]
+        }
+        console.log(menuItens2);
+        if(links.innerHTML.toUpperCase().includes(filtro) && (menuItens2[i].classList[0].includes(listaDeClasses) || menuItens2[i].classList[1].includes(listaDeClasses))){
             
-        if(links.innerHTML.toUpperCase().includes(filtro)){
             menuItens2[i].style.display='block';
             vejaMais.style.display='block';
 
@@ -19,7 +26,10 @@ function pesquisar(){
             menuItens2[i].style.display='none';
             vejaMais.style.display='none';
         }
-        
+        // catList.forEach(categoria=>{
+        //     categoria.classList.remove("selected");
+        //     categoria.style.fontWeight = "500"
+        // })
             
      }
 }
