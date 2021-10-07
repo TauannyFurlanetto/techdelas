@@ -43,13 +43,11 @@ function podFunc(ep) {
 
 	// Funcao que busca a desricao
 	async function fetchDesc() {
-		console.log(ep.results[0].feedUrl)
 		const descRss = await fetch(ep.results[0].feedUrl);
 		const descTxt = await descRss.text();
 		let domParser = new DOMParser();
 		const descHtml = domParser.parseFromString(descTxt, "text/html");
 		arrDesc.push(new descPod(descHtml.querySelector("description").innerHTML, descHtml.querySelector("title").innerHTML));
-		console.log(arrDesc)
 		return (arrDesc);
 	}
 	// Busca a descricao
@@ -264,8 +262,6 @@ window.addEventListener('load', () => {
   }
 })
 
-
-
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
 	if(like != null){
@@ -278,6 +274,8 @@ window.addEventListener ('load', () => {
 		  })
 	} 
 }) 
+
+
 let inpLogEmail;
 let inpLogPass;
 
