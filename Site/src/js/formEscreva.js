@@ -31,12 +31,12 @@ window.addEventListener("load", ()=>{
         }
         if(inputMessage.value.length<500 || inputMessage.value.length<4000){ 
             errorArr.push("A mensagem é muito pequena, deve possuir ao menos 250 caracteres");
-        }if(errorArr.length>0){
+        } if(errorArr.length>0){
             console.log(ulErros);
             errorArr.forEach(erro=>{
                 ulErros.innerHTML += "<li>" + erro+ "</li>";
             })
-        }else{
+        } else{
             formEscreva.submit();
         }
     })

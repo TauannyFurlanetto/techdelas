@@ -6,7 +6,7 @@ function pesquisar(){
     menu = document.querySelector('article.janela');
     menuItens = menu.querySelectorAll('h3');
     let menuItens2 = menu.querySelectorAll('a');
-    vejaMais = document.getElementById('veja-mais');
+    let vejaMais = document.getElementById('veja-mais');
     const selectedCat = Array.from(document.querySelectorAll(".selected"));
 
     for(let i=0; i<menuItens.length; i++){
@@ -59,8 +59,7 @@ function toggleView(view){
     });
 }
 
-function selectCat(cat, txt){
-    // txt.classList.toggle("selected");
+function selectCat(txt){
     const catList = document.querySelectorAll(".categorias ul li");
     if(!txt.className.includes("selected")){
         catList.forEach(categoria=>{
@@ -73,30 +72,8 @@ function selectCat(cat, txt){
     }else{
         boldCategoria(txt);
         toggleView("flex")
-        txt.classList.remove("selected");
-        
+        txt.classList.remove("selected");  
     }
-    
-    
-    // cat = arrCat[cat];
-    // boldCategoria(txt);
-    // let vejaMais = document.getElementById('veja-mais');
-    
-    //     if (toogle){
-    //         console.log("if" + toogle);
-    //         posts.forEach(element=>{
-    //             if(!element.className.includes(cat)){
-    //                 element.style.display = "none";
-    //                 toogle = false;
-    //             } 
-    //         })
-    //         vejaMais.style.display = "none";
-    //     }else{
-    //         console.log("else"+ toogle);
-    //         posts.forEach(element=>{
-    //             element.style.display = "flex";
-    //             toogle = true;
-    //         })
-    //         vejaMais.style.display = "block";
-    //     };   
 }
+export {selectCat,
+pesquisar,};
