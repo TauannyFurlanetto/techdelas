@@ -1,3 +1,4 @@
+
 let exitMenu;
 let abrirMenu;
 let menu;
@@ -9,7 +10,6 @@ let cadastroPage;
 let exitPopup;
 
 let verMais;
-
 // PODCAST
 
 // Criar um objeto de podcast
@@ -43,13 +43,11 @@ function podFunc(ep) {
 
 	// Funcao que busca a desricao
 	async function fetchDesc() {
-		console.log(ep.results[0].feedUrl)
 		const descRss = await fetch(ep.results[0].feedUrl);
 		const descTxt = await descRss.text();
 		let domParser = new DOMParser();
 		const descHtml = domParser.parseFromString(descTxt, "text/html");
 		arrDesc.push(new descPod(descHtml.querySelector("description").innerHTML, descHtml.querySelector("title").innerHTML));
-		console.log(arrDesc)
 		return (arrDesc);
 	}
 	// Busca a descricao
@@ -109,9 +107,7 @@ function podFunc(ep) {
 	}).catch(err => {});
 }
 
-// MENU
 window.addEventListener('load', () => {
-
 	// Pega os elementos
 	exitMenu = document.getElementById('sair');
 	abrirMenu = document.getElementById('menu');
@@ -206,7 +202,6 @@ function closePopup() {
 function addPost(newPostsAmount) {
 	const postsList = document.querySelector(".postagens")
 
-
 	for (let i = 0; i < newPostsAmount; i++) {
 		const cloneLastPost = (document.querySelector(".postagens a:last-child")).cloneNode(true) //retorna clone do ultimo post da lista, deve ser trocado por novos posts eventualmente
 		const newPost = cloneLastPost //newPost deve guardar os novos posts, que no momento não existem então ok
@@ -214,27 +209,6 @@ function addPost(newPostsAmount) {
 	}
 
 }
-
- // BANNER
- window.addEventListener("load", ()=>{
-	let img2 = document.querySelectorAll("#imagem>div")[1];
-	if(img2 != null){
-	let img1 = document.querySelector("#imagem>div");
-	let animationToogle = true;
-	img2.addEventListener("animationiteration",()=>{
-	if(animationToogle==false){
-		img1.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-		img2.style.cssText= "background-image: url(img/heroFoto.jpg)";
-		animationToogle = true;
-	}else{
-		img1.style.cssText= "background-image: url(img/heroFoto.jpg)";
-		img2.style.cssText= "background-image: url(img/heroFoto2.jpg)";
-		animationToogle = false;
-	}
-	}) 
-	}
- })
-  
 
 // JS do funcionamento do comentário da página de artigos
 
@@ -264,8 +238,6 @@ window.addEventListener('load', () => {
   }
 })
 
-
-
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
 	if(like != null){
@@ -278,6 +250,8 @@ window.addEventListener ('load', () => {
 		  })
 	} 
 }) 
+
+
 let inpLogEmail;
 let inpLogPass;
 
