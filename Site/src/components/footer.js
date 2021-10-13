@@ -1,4 +1,8 @@
 import logoFooter from "../icones/logo_footer.svg";
+import logoLinkedin from "../icones/linkedin.svg";
+import logoFacebook from "../icones/facebook.svg";
+import logoYoutube from "../icones/youtube.svg";
+import logoInstagram from "../icones/instagram.svg";
 
 export default function Rodape () {
     return (

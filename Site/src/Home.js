@@ -7,10 +7,6 @@ import './js/script.js';
 
 import bannerUm from "./img/heroFoto2.jpg";
 import bannerDois from "./img/heroFoto.jpg";
-import logoLinkedin from "./icones/linkedin.svg";
-import logoFacebook from "./icones/facebook.svg";
-import logoYoutube from "./icones/youtube.svg";
-import logoInstagram from "./icones/instagram.svg";
 import { useState } from 'react';
 import Posts from './components/Posts'
 
