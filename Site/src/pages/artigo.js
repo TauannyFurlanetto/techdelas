@@ -1,26 +1,22 @@
 import '../css/home.css';
 import '../css/global.css';
 
+import postImg from "../img/post2.jpg"
 import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 import Art_individual from '../components/Artigo_indiv';
 import '../js/script.js';
 
-function Postagem() {
-    let items = [
-        {
-            titulo: "Mulheres revolucionárias na Engenharia Química",
-            classes: "Ciencia Empoderamento",
-            txt: "Inspirações femininas na área, desafios e motivações",
-            autor: "Maria Lima",
-            data: "10/07/2021",
-            fig: "magem retirada de pexels",
-            alt: "Mulher extraindo químico de tonel com uma mangueira",
-            artigo: " "
-        }
-    ]
-}
-
+let artigos = [
+    {
+        titulo: "Mulheres revolucionárias na Engenharia Química",
+        classes: "Ciencia Empoderamento",
+        txt: "Inspirações femininas na área, desafios e motivações",
+        img: postImg,
+        alt: "Mulher extraindo químico de tonel com uma mangueira",
+        artigo: "artigo.html"
+    }
+]
 
 export default function Artigo(){
 return (
