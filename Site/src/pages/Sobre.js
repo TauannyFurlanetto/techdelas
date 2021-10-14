@@ -1,11 +1,11 @@
-import './icones/logo-branco.png';
-import './css/global.css';
-import './css/sobre.css';
+import '../icones/logo-branco.png';
+import '../css/global.css';
+import '../css/sobre.css';
 
-import './js/script.js';
+import '../js/script.js';
 
-import Cabecalho from './components/header';
-import Rodape from './components/footer';
+import Cabecalho from '../components/header';
+import Rodape from '../components/footer';
  
 
 function Sobre() {
