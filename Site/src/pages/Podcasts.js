@@ -2,10 +2,14 @@ import {podFunc} from '../js/podcasts.js';
 import '../css/sobre.css';
 import '../css/global.css';
 import Podcast from '../components/Podcast.js';
-import {useState} from 'react';
+import {useEffect} from 'react';
 import {resp} from '../js/api.js'
 function Podcasts(){
-    console.log(resp)
+    
+    useEffect(()=>{
+        console.log(resp)
+    //     
+    })
     return(
         <>
         <div className="container">
