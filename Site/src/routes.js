@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Artigo from './pages/artigo';
 import Podcasts from './pages/Podcasts';
 import Escreva from './pages/Escreva';
-// import Sobre from './pages/Sobre';
+import Sobre from './pages/Sobre';
 import Home from './pages/Home';
 
 function Routes() {
@@ -15,7 +15,7 @@ function Routes() {
         <Route path='/podcasts' component={Podcasts} />
         <Route path='/artigo/:artigo' component={Artigo} />
         <Route path='/escreva' component={Escreva} />
-        {/* <Route path='/sobre' component={Sobre} /> */}
+        <Route path='/sobre' component={Sobre} />
         {/* <Route component={Error404} /> */}
       </Switch>
     </div>
