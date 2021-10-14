@@ -1,12 +1,12 @@
-import './icones/logo-branco.png';
-import './css/global.css';
-import './css/escreva.css';
+import '../icones/logo-branco.png';
+import '../css/global.css';
+import '../css/escreva.css';
 
-import './js/script.js';
-import './js/formEscreva.js';
+import '../js/script.js';
+import '../js/formEscreva.js';
 
-import Cabecalho from './components/header';
-import Rodape from './components/footer';
+import Cabecalho from '../components/header';
+import Rodape from '../components/footer';
 
 
 function Escreva() {

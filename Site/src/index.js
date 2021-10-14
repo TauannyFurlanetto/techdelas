@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Escreva from './Escreva';
+import App from './App';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <Escreva />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

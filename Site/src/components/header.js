@@ -1,5 +1,5 @@
 import logoHeader from "../icones/logo_header.svg";
-
+import exitMobile from "../icones/exit.svg";
 export default function Cabecalho () {
     return (
         <header>
@@ -13,7 +13,7 @@ export default function Cabecalho () {
 
                 <section class="navegacao" id="menuMobile" >
                     <nav>
-                        <button id="sair"><img src="icones/exit.svg" alt="Sair do menu" /></button>
+                        <button id="sair"><img src={exitMobile} alt="Sair do menu" /></button>
                         <ul>
                             <li><a href="home.html">Home</a></li>
                             <li><a href="posts.html">Posts</a></li>

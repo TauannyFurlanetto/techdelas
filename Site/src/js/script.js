@@ -1,4 +1,4 @@
-/*
+
 let exitMenu;
 let abrirMenu;
 let menu;
@@ -269,4 +269,4 @@ function CreateErrorElement(innerhtml = "") {
 function InsertErrorMessage(popup, labelname, msg) {
 	const labelError = document.querySelector(".pop-up." + popup + " .pop-up-labels." + labelname + " p")
 	labelError.parentNode.replaceChild(CreateErrorElement(msg), labelError)
-}*/
+}
