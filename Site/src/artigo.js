@@ -3,17 +3,18 @@ import './css/global.css';
 
 import Cabecalho from './components/header';
 import Rodape from './components/footer';
+import Art_individual from './components/Artigo_indiv';
 import './js/script.js';
 
 <div>
     
     <Cabecalho />
 
-    <section class="content">
+    <section className="content">
         
-        <article class="artigo">
+        <article className="artigo">
 
-            <div class="titulo">
+            <div className="titulo">
                 <h1>Mulheres revolucionárias na Engenharia Química</h1>
                 <h2>Inspirações femininas na área, desafios e motivações</h2>
     
@@ -24,7 +25,7 @@ import './js/script.js';
             <figure>
                 <img src="img/artigo2.jpg" alt=""/>
                 <figcaption>Imagem retirada de pexels</figcaption>
-            <figure />
+            </figure>
 
             <p>Com o passar dos anos, as mulheres vem conquistando cada vez mais seu espaço no mercado de trabalho, tanto em pequenos cargos, como em cargos de liderança, abandonando o estilo “dona de casa” e embarcando para o ramo das finanças, da administração, da medicina e das engenharias.</p>
             <p>A engenharia, por exemplo, vem passando por mudanças, uma delas é o aumento da participação feminina no setor. A cada ano, mais mulheres ingressam nos cursos de Engenharia.</p>
@@ -42,45 +43,46 @@ import './js/script.js';
             <p>No entanto, isso não fez Clarke desistir, muito pelo contrário, suas invenções fizeram a diferença no mundo da engenharia elétrica e para as mulheres e homens em todo o mundo.</p>
             <p><strong>Referências: </strong> <a href="http://2engenheiros.com/2018/02/20/mulheres-na-engenharia/">2 Engenheiros: 5 Mulheres que Revolucionaram a Engenharia.</a></p>
 
-        </article>
+        
 
-        <div class="tags">
+        <div className="tags">
             <a href="">Tecnologia</a>
             <a href="">Empoderamento</a>
             <a href="">Ciência</a>
         </div>
 
-        <div class="separador"></div>
+        <div className="separador"></div>
 
-        <div class="reacao">
+        <div className="reacao">
             <img src="icones/thumbs-up.svg" alt="curtida" />
-            <button class="coment"><img src="icones/message-circle.svg" alt="" /><a /></button>
+            <button className="coment"><img src="icones/message-circle.svg" alt="" /><a /></button>
         </div>
 
-        <div class="comentario">
+        <div className="comentario">
             <h3>Escreva seu comentário:</h3>
             <div id="comentario">
 
-            <form class='artigoComent'>
-                    <div class="caixa">
+            <form className='artigoComent'>
+                    <div className="caixa">
                         <label for="comentario"></label>
                         <textarea name="comentario" id="comentario" required maxlength="200"></textarea>
                     </div>
 
-                    <button type="submit" class="enviar">Enviar</button>
+                    <button type="submit" className="enviar">Enviar</button>
 
             </form>
 
             </div>
         </div>
 
-    </sect ion>
-</div>
+    </article>
+    </section>
+
 
     <Rodape />
 
-    <div class="pop-up-wrapper">
-        <div class="pop-up register">
+    <div className="pop-up-wrapper">
+        <div className="pop-up register">
 
             <a href=""><img src="icones/exit.svg" alt="" /></a>
 
@@ -91,31 +93,31 @@ import './js/script.js';
                 <input type="nome" id="nome" name="nome"/>
 
                 <label for-id="email">Email</label>
-                <div class="input">
+                <div className="input">
                     <img src="icones/email.svg" alt="" />
                     <input type="email" id="email" name="email"/>
                 </div>
 
                 <label for-id="senha">Senha</label>
-                <div class="input">
+                <div className="input">
                     <img src="icones/senha.svg" alt="" />
                     <input type="senha" id="senha" name="senha"/>
                 </div>
 
                 <label for-id="senha">Digite novamente sua senha</label>
-                <div class="input">
+                <div className="input">
                     <img src="icones/senha.svg" alt="" />
                     <input type="senha" id="senha" name="senha"/>
                 </div>
 
-                <div class="button">
-                    <button class="register">Cadastre-se</button>
+                <div className="button">
+                    <button className="register">Cadastre-se</button>
                 </div>
             </form>
 
         </div>
 
-        <div class="pop-up login">
+        <div className="pop-up login">
 
             <a href=""><img src="icones/exit.svg" alt="" /></a>
 
@@ -124,24 +126,25 @@ import './js/script.js';
             <form>
 
                 <label for-id="email">Email</label>
-                <div class="input">
+                <div className="input">
                     <img src="icones/email.svg" alt="" />
                     <input type="email" id="email" name="email"/>
                 </div>
 
                 <label for-id="senha">Senha</label>
-                <div class="input">
+                <div className="input">
                     <img src="icones/senha.svg" alt="" />
                     <input type="senha" id="senha" name="senha"/>
                 </div>
 
-                <a class="esqueci" href="">Esqueci minha senha</a>
+                <a className="esqueci" href="">Esqueci minha senha</a>
 
-                <div class="button">
-                    <button class="register">Login</button>
+                <div className="button">
+                    <button className="register">Login</button>
                 </div>
             </form>
 
         </div>
 
-    </div>
+</div>
+</div>
