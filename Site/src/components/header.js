@@ -2,6 +2,7 @@ import logoHeader from "../icones/logo_header.svg";
 import exitMobile from "../icones/exit.svg";
 import email from "../icones/email.svg"
 import password from "../icones/senha.svg";
+import { Link , NavLink} from "react-router-dom";
 export default function Cabecalho () {
     return (
         <>
@@ -18,11 +19,14 @@ export default function Cabecalho () {
                     <nav>
                         <button id="sair"><img src={exitMobile} alt="Sair do menu" /></button>
                         <ul>
-                            <li><a href="home.html">Home</a></li>
-                            <li><a href="posts.html">Posts</a></li>
-                            <li><a href="podcast.html">Podcasts</a></li>
-                            <li><a href="escreva.html">Escreva</a></li>
-                            <li><a href="sobre.html">Sobre</a></li>
+                            {/* NavLink é o usado no header pois o link aparece em todas as páginas */}
+                            {/* Em outros casos deve se usar a tag <Link> */}
+                            {/* a tag <a> só vai ser usada para redirecionar para fora do site ex: podcast, wikipedia, pudim.com, sei lá... */}
+                            <li><NavLink to="/">Home</NavLink></li>
+                            <li><NavLink to="/posts">Posts</NavLink></li>
+                            <li><NavLink to="/podcasts">Podcasts</NavLink></li>
+                            <li><NavLink to="/escreva">Escreva</NavLink></li>
+                            <li><NavLink to="/sobre">Sobre</NavLink></li>
                             <li id ="login">Login</li>
                             <li id="cadastro"><button>Cadastre-se</button></li>
                         </ul>
