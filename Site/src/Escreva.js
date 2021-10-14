@@ -5,36 +5,15 @@ import './css/escreva.css';
 import './js/script.js';
 import './js/formEscreva.js';
 
+import Cabecalho from './components/header';
 import Rodape from './components/footer';
 
 
 function Escreva() {
     return (
         <div>
-        <header>
-            <div className="container">
-                <section className="logo">
-                <a href="home.html"><img src="icones/logo_header.svg" alt="Logotipo_TechDelas"/>
-                <p><span>Tech</span>delas</p></a>
-            </section>
-            <button id="menu">☰</button>
-            <section className="navegacao" id="menuMobile" >
-                <nav>
-                    <button id="sair"><img src="icones/exit.svg" alt="Sair do menu"/></button>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="posts.html">Posts</a></li>
-                        <li><a href="podcast.html">Podcasts</a></li>
-                        <li><a href="escreva.html">Escreva</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        {/* <!-- login e cadastro --> */}
-                        <li id ="login">Login</li>
-                        <li id="cadastro"><button>Cadastre-se</button></li>
-                    </ul>
-                </nav>
-            </section>
-            </div>
-        </header>
+            
+        <Cabecalho />
 
         <section className="story">
             <div className="container">
