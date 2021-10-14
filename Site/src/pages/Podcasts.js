@@ -1,7 +1,7 @@
-import {podFunc} from './js/podcasts.js';
-import './css/sobre.css';
-import './css/global.css';
-import Podcast from './components/Podcast.js';
+import {podFunc} from '../js/podcasts.js';
+import '../css/sobre.css';
+import '../css/global.css';
+import Podcast from '../components/Podcast.js';
 import {useState} from 'react';
 function Podcasts(){
     const {req, setReq} = useState("")

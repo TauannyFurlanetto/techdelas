@@ -1,11 +1,14 @@
-import './css/home.css';
-import './css/global.css';
+import '../css/home.css';
+import '../css/global.css';
 
-import Cabecalho from './components/header';
-import Rodape from './components/footer';
-import Art_individual from './components/Artigo_indiv';
-import './js/script.js';
+import Cabecalho from '../components/header';
+import Rodape from '../components/footer';
+import Art_individual from '../components/Artigo_indiv';
+import '../js/script.js';
 
+
+export default function Artigo(){
+return (
 <div>
     
     <Cabecalho />
@@ -148,3 +151,4 @@ import './js/script.js';
 
 </div>
 </div>
+)}

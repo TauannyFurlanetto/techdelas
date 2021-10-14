@@ -1,14 +1,14 @@
-import './css/home.css';
-import './css/global.css';
+import '../css/home.css';
+import '../css/global.css';
 
-import Cabecalho from './components/header';
-import Rodape from './components/footer';
-import './js/script.js';
+import Cabecalho from '../components/header';
+import Rodape from '../components/footer';
+import '../js/script.js';
 
-import bannerUm from "./img/heroFoto2.jpg";
-import bannerDois from "./img/heroFoto.jpg";
+import bannerUm from "../img/heroFoto2.jpg";
+import bannerDois from "../img/heroFoto.jpg";
 import { useState } from 'react';
-import Posts from './components/Posts'
+import Posts from '../components/Posts'
 
 function Home() {
     const [banner, setBanner] = useState(bannerUm);
