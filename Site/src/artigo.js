@@ -6,6 +6,35 @@ import Rodape from './components/footer';
 import Art_individual from './components/Artigo_indiv';
 import './js/script.js';
 
+function Postagem() {
+    let items = [
+        {
+            titulo: "Mulheres na Tecnologia",
+            classes: "Tecnologia Empoderamento",
+            txt: "Como está a presença delas no mercado de TI?",
+            img: postImg,
+            alt: "Mulher digital",
+            artigo: "artigo-tech.html"
+        },
+        {
+            titulo: "Mulheres revolucionárias na Engenharia Química",
+            classes: "Ciencia Empoderamento",
+            txt: "Inspirações femininas na área, desafios e motivações",
+            img: postImg,
+            alt: "Mulher extraindo químico de tonel com uma mangueira",
+            artigo: "artigo.html"
+        },
+        {
+            titulo: "Empoderamento da Mulher na Medicina",
+            classes: "Empoderamento",
+            txt: "Apesar de representar a maioria na linha de frente contra o Coronavírus, as mulheres ainda enfrentam uma série de desafios",
+            img: postImg,
+            alt: "Mulher colocando luva médica",
+            artigo: "artigo-med.html"
+        }
+    ]
+}
+
 <div>
     
     <Cabecalho />
