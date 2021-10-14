@@ -19,6 +19,9 @@ export default function Cabecalho () {
                     <nav>
                         <button id="sair"><img src={exitMobile} alt="Sair do menu" /></button>
                         <ul>
+                            {/* NavLink é o usado no header pois o link aparece em todas as páginas */}
+                            {/* Em outros casos deve se usar a tag <Link> */}
+                            {/* a tag <a> só vai ser usada para redirecionar para fora do site ex: podcast, wikipedia, pudim.com, sei lá... */}
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/posts">Posts</NavLink></li>
                             <li><NavLink to="/podcasts">Podcasts</NavLink></li>
