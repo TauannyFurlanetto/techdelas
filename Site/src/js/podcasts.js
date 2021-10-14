@@ -1,6 +1,5 @@
 // PODCAST
 // Criar um objeto de podcast
-alert("carregou arquivo")
 function podcast(name, img, author, url, feed) {
 	this.name = name;
 	this.img = img;

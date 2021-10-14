@@ -38,8 +38,6 @@ function Home() {
     <Rodape />
     <script src="js/pesquisa.js"></script>
     <script src="js/script.js"></script>
-    
-    {/* <!-- ------ --> */}
     </div>
   );
 }

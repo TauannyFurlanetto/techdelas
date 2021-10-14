@@ -3,9 +3,9 @@ import '../css/sobre.css';
 import '../css/global.css';
 import Podcast from '../components/Podcast.js';
 import {useState} from 'react';
+import {resp} from '../js/api.js'
 function Podcasts(){
-    const {req, setReq} = useState("")
-   
+    console.log(resp)
     return(
         <>
         <div className="container">
@@ -42,13 +42,12 @@ function Podcasts(){
         </section>
         </div>
         {/* <script src={`https://itunes.apple.com/lookup?id=1503246918&callback=${podFunc()}`}></script> */}
-        <script src={`https://itunes.apple.com/lookup?id=1498395235&callback=${()=>podFunc()}`}></script>
-        <script src={"https://itunes.apple.com/lookup?id=1367730836&callback=podFunc"}></script>
+        <script src={`https://itunes.apple.com/lookup?id=1498395235`}></script>
+        <script src={"https://itunes.apple.com/lookup?id=136773036&callback=podFunc"}></script>
         <script src={"https://itunes.apple.com/lookup?id=1518837789&callback=podFunc"}></script>
         <script src={"https://itunes.apple.com/lookup?id=1470543817&callback=podFunc"}></script>
-        </>
-    )
-}
+        </> 
+    )}
 export default Podcasts;
 /*
 <a href="">
