@@ -2,7 +2,10 @@ import {podFunc} from './js/podcasts.js';
 import './css/sobre.css';
 import './css/global.css';
 import Podcast from './components/Podcast.js';
+import {useState} from 'react';
 function Podcasts(){
+    const {req, setReq} = useState("")
+   
     return(
         <>
         <div className="container">
@@ -38,8 +41,8 @@ function Podcasts(){
             <Podcast />
         </section>
         </div>
-        <script src={`https://itunes.apple.com/lookup?id=1503246918&callback=${e=>podFunc(e)}`}></script>
-        <script src={"https://itunes.apple.com/lookup?id=1498395235&callback=podFunc"}></script>
+        {/* <script src={`https://itunes.apple.com/lookup?id=1503246918&callback=${podFunc()}`}></script> */}
+        <script src={`https://itunes.apple.com/lookup?id=1498395235&callback=${()=>podFunc()}`}></script>
         <script src={"https://itunes.apple.com/lookup?id=1367730836&callback=podFunc"}></script>
         <script src={"https://itunes.apple.com/lookup?id=1518837789&callback=podFunc"}></script>
         <script src={"https://itunes.apple.com/lookup?id=1470543817&callback=podFunc"}></script>

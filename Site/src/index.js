@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Home from './Home';
 import './index.css';
-import Escreva from './Escreva';
+import Podcasts from './Podcasts';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Escreva />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 );
