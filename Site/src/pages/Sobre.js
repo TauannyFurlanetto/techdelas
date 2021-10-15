@@ -2,6 +2,12 @@ import '../icones/logo-branco.png';
 import '../css/global.css';
 import '../css/sobre.css';
 
+import profAlice from "../fotos/foto_Alice.jpeg"
+import profGi from "../fotos/foto_Giovana.png"
+import profTau from "../fotos/foto_Tau.jpg"
+import profVanessa from "../fotos/foto_Vanessa.jpg"
+import profVivian from "../fotos/foto_vivian.jpeg"
+import logo from "../icones/logo_header.svg"
 import '../js/script.js';
 
 import Cabecalho from '../components/header';
@@ -27,7 +33,7 @@ function Sobre() {
                     </article>
 
                     <article className="logomao">
-                        <img src="icones/logo_header.svg" alt="Logotipo TechDelas"/>
+                        <img src={logo} alt="Logotipo TechDelas"/>
                     </article>
                 </section>
             </div>
@@ -58,7 +64,7 @@ function Sobre() {
                     <h1 id="titulo">A Equipe</h1>
                         <section className="equipe">
                             <article>
-                                <div className="person" style="background-image: url(fotos/foto_Alice.jpeg);"></div>
+                                <div className="person" style={{backgroundImage: `url(${profAlice})`}}></div>
                                 <h2>Alice Marques Candido</h2>
                                 <p>Estudante Universitária<br/>
                                     Estagiária OLX Brasil<br/>
@@ -67,7 +73,7 @@ function Sobre() {
                             </article>
 
                             <article>
-                                <div className="person" style="background-image: url(fotos/foto_Giovana.png);"></div>
+                                <div className="person" style={{backgroundImage: `url(${profGi})`}}></div>
                                 <h2>Giovana Narciso Guimarães</h2>
                                 <p>Estudante Universitária<br/>
                                     Estagiária OLX Brasil<br/>
@@ -76,7 +82,7 @@ function Sobre() {
                             </article>
 
                             <article>
-                                <div className="person" style="background-image: url(fotos/foto_Tau.jpg);"></div>
+                                <div className="person" style={{backgroundImage: `url(${profTau})`}}></div>
                                 <h2>Tauanny Virgínio Furlanetto</h2>
                                 <p>Estudante Universitária<br/>
                                     Estagiária OLX Brasil<br/>
@@ -85,7 +91,7 @@ function Sobre() {
                             </article>
 
                             <article>
-                                <div className="person" style="background-image: url(fotos/foto_Vanessa.jpg);"></div>
+                                <div className="person" style={{backgroundImage: `url(${profVanessa})`}}></div>
                                 <h2>Vanessa Rodrigues Cardoso</h2>
                                 <p>Estudante Ensino Técnico<br/>
                                     Estagiária OLX Brasil<br/>
@@ -94,7 +100,7 @@ function Sobre() {
                             </article>
 
                             <article>
-                                <div className="person" style="background-image: url(fotos/foto_vivian.jpeg);"></div>
+                                <div className="person" style={{backgroundImage: `url(${profVivian})`}}></div>
                                 <h2>Vivian Ribeiro de Souza</h2>
                                 <p>Estudante Universitária<br/>
                                     Estagiária OLX Brasil<br/>
@@ -124,7 +130,7 @@ function Sobre() {
                         </article>
 
                         <article className="local">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0488050159!2d-46.87549321094932!3d-23.68153146695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20State%20of%20S%C3%A3o%20Paulo!5e0!3m2!1sen!2sbr!4v1631658993975!5m2!1sen!2sbr" width="500" height="270" style="border: solid 0px" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0488050159!2d-46.87549321094932!3d-23.68153146695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20State%20of%20S%C3%A3o%20Paulo!5e0!3m2!1sen!2sbr!4v1631658993975!5m2!1sen!2sbr" width="500" height="270" style={{border: "solid 0px"}} allowfullscreen="" loading="lazy"></iframe>
                         </article>
                     </section>
                 </section>

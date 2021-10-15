@@ -17,7 +17,6 @@ let artigos = [
         img: postImg1,
         alt: "Mulher extraindo químico de tonel com uma mangueira",
         fig: "Imagem retirada de pexels",
-
     },
 
     {
@@ -41,7 +40,6 @@ export default function Artigo(){
 return (
 <div>
     
-    <Cabecalho />
 
     <section className="content">
         
@@ -93,7 +91,6 @@ return (
 
     </article>
     </section>
-
 
     <Rodape />
 
