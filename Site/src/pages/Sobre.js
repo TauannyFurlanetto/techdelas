@@ -8,6 +8,19 @@ import profTau from "../fotos/foto_Tau.jpg"
 import profVanessa from "../fotos/foto_Vanessa.jpg"
 import profVivian from "../fotos/foto_vivian.jpeg"
 import logo from "../icones/logo_header.svg"
+import iconeForca from "../icones/forca.png"
+import iconeLampada from "../icones/lampada-brilhante.png"
+import iconeEscala from "../icones/graphics-scale.png"
+import iconeMaoCoracao from "../icones/coracao.png"
+import iconeCoracao from "../icones/coracao-artificial.png"
+import iconeEmail from "../icones/email.svg"
+import iconeTelefone from "../icones/telefone.svg"
+import iconeLinkedin from "../icones/linkedin_roxo.svg"
+import iconeFacebook from "../icones/facebook_roxo.svg"
+import iconeYout from "../icones/youtube_roxo.svg" 
+import iconeInsta from "../icones/instagram_roxo.svg"
+import iconeWhats from "../icones/whatsapp.svg"
+
 import '../js/script.js';
 
 import Cabecalho from '../components/header';
@@ -50,11 +63,11 @@ function Sobre() {
                         <p>Permitir que mulheres de todas as idades interajam umas com as outras e tenham acesso a temas relevantes como mercado de trabalho, empoderamento feminino, ciência, tecnologia e feminismo. </p> <br/>
                         <h2>Valores</h2>
                         <ul>
-                            <li><img src="icones/forca.png" alt="ícone braço"/>Empoderar</li>
-                            <li><img src="icones/lampada-brilhante.png" alt="ícone lâmpada"/>Inspirar</li>
-                            <li><img src="icones/graphics-scale.png" alt="Ícone escala gráfica"/>Crescer e evoluir juntas</li>
-                            <li><img src="icones/coracao.png" alt="Ícone mão segurando coração"/>Incluir</li>
-                            <li><img src="icones/coracao-artificial.png" alt="Ícone de coração"/>Paixão por realizar</li>
+                            <li><img src={iconeForca} alt="ícone braço"/>Empoderar</li>
+                            <li><img src={iconeLampada} alt="ícone lâmpada"/>Inspirar</li>
+                            <li><img src={iconeEscala} alt="Ícone escala gráfica"/>Crescer e evoluir juntas</li>
+                            <li><img src={iconeMaoCoracao} alt="Ícone mão segurando coração"/>Incluir</li>
+                            <li><img src={iconeCoracao} alt="Ícone de coração"/>Paixão por realizar</li>
                         </ul>
                     </section>
                 </div>
@@ -118,14 +131,14 @@ function Sobre() {
                     <section className="contact">
                         <article className="redes">
                             <p>Entre em contato com a gente:</p><br/>
-                            <p><a href="mailto:techdelas@gmail.com"><img src="icones/email.svg"/> techdelas@gmail.com</a></p>
-                            <p><a href="tel:+55559000000"><img src="icones/telefone.svg"/> (55)9000000</a></p>
-                            <p><a href="https://api.whatsapp.com/send?phone=5555559000000&text=Oi%2C%20vi%20seu%20contato%20na%20p%C3%A1gina%20TechDelas!"><img src="icones/whatsapp.svg"/> Whatsapp</a></p>
+                            <p><a href="mailto:techdelas@gmail.com"><img src={iconeEmail}/> techdelas@gmail.com</a></p>
+                            <p><a href="tel:+55559000000"><img src={iconeTelefone}/> (55)9000000</a></p>
+                            <p><a href="https://api.whatsapp.com/send?phone=5555559000000&text=Oi%2C%20vi%20seu%20contato%20na%20p%C3%A1gina%20TechDelas!"><img src={iconeWhats}/> Whatsapp</a></p>
                             <div className="icons">
-                            <a href="http://linkedin.com"><img src="icones/linkedin_roxo.svg" alt="Logotipo linkedin"/></a>
-                            <a href="http://facebook.com"><img src="icones/facebook_roxo.svg" alt="Logotipo facebook"/></a>
-                            <a href="http://youtube.com"><img src="icones/youtube_roxo.svg" alt="Logotipo youtube"/></a>
-                            <a href="http://instagram.com"><img src="icones/instagram_roxo.svg" alt="Logotipo instagram"/></a>
+                            <a href="http://linkedin.com"><img src={iconeLinkedin} alt="Logotipo linkedin"/></a>
+                            <a href="http://facebook.com"><img src={iconeFacebook} alt="Logotipo facebook"/></a>
+                            <a href="http://youtube.com"><img src={iconeYout} alt="Logotipo youtube"/></a>
+                            <a href="http://instagram.com"><img src={iconeInsta} alt="Logotipo instagram"/></a>
                             </div>
                         </article>
 
