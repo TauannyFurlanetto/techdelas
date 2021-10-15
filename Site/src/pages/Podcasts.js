@@ -1,18 +1,18 @@
 import {podFunc} from '../js/podcasts.js';
-import '../js/script.js'
 import '../css/podcast.css'
 import '../css/sobre.css';
 import '../css/global.css';
 import Podcast from '../components/Podcast.js';
 import axios from 'axios'
 import Footer from "../components/footer"
+import {useEffect} from 'react'
 function Podcasts(){
-    let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
-    linksPod.forEach(link=>{
-        axios.get(link).then(response=>response.data).then(val=>podFunc(val))
-    })
-    //axios.get("https://itunes.apple.com/lookup?id=1498395235&callBack").then(response=>response.data).then(val=>podFunc(val))
-    
+    useEffect(()=>{
+        let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
+        linksPod.forEach(link=>{
+            axios.get(link).then(response=>response.data).then(val=>podFunc(val))
+        })
+    },[ ])
     return(
         <>
         <div className="container">
@@ -37,78 +37,3 @@ function Podcasts(){
         </> 
     )}
 export default Podcasts;
-/*
-<a href="">
-                <article class="podcast">
-                    <img src="img/images.jpeg" alt="podcast1" />
-                    <div class="escritaarticle">
-                        <h1>
-                            MULHERES DE 50
-                        </h1>
-                        <p>
-                            T8:01 - Dúvidas com tecnologia? Chama um anjo
-                            Está sofrendo para fazer cadastro no aplicativo do INSS? Não sabe como organizar as fotos no celular? Precisa fazer back-up dos arquivos na nuvem?  A gente se desespera o tempo todo com questões tecnológicas, não é mesmo?
-                            Pois a Viviane Palladino Donnamaria, 42 anos, ajudou a fundar uma empresa que conecta pessoas mais velhas a jovens interessados em ensinar tecnologia.
-                        </p>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article class="podcast">
-                    <img src="img/images.pd2.jpeg" alt="podcast2" />
-                    <div class="escritaarticle">
-                        <h1>
-                            DBServer - Mulheres Na Tecnologia
-                        </h1>
-                        <p>
-                            EP 3 - Mulheres na Tecnologia sobre Comunidades com Isadora Giongo, Sabrina Santos, Michele Citolin e Diuly Guimarães.
-                            Convidamos algumas colaboradoras para conversar sobre a importância de comunidades femininas de TI.
-                        </p>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article class="podcast">
-                    <img src="img/images.pd3.png" alt="podcast3" />
-                    <div class="escritaarticle">
-                        <h1>
-                            #4 Mulheres no TI e Comunidades Digitais
-                        </h1>
-                        <p>
-                            É com muito prazer que trouxemos duas grandes guerreiras para falar sobre seus trabalhos, comunidades, influências e empoderamento feminino na área de tecnologia e como continua crescendo cada vez mais. 
-                            Estamos hoje com, Vanessa Tonini e Carine Ross organizadoras do MariaLab.
-                        </p>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article class="podcast">
-                    <img src="img/images.pd4.jpeg" alt="podcast4" />
-                    <div class="escritaarticle">
-                        <h1>
-                            Vozes Femininas
-                        </h1>
-                        <p>
-                            AFROFUTURISMO: TECNOLOGIA, INCLUSÃO E ANCESTRALIDADE.<br/>
-                            “É preciso disseminar e desmitificar a entrada de pessoas negras na área de tecnologia”- Nina Silva.
-                            No episódio desta semana do nosso podcast, você vai escutar a poderosa Voz Feminina de Nina Silva @ninasilvaperfil.
-                        </p>
-                    </div>
-                </article>
-            </a>
-            <a href="">
-                <article class="podcast">
-                    <img src="img/images.pd5.png" alt="podcast5" />
-                    <div class="escritaarticle">
-                        <h1>
-                            StartSe Podcasts
-                        </h1>
-                        <p>
-                            Agora em 10 #5 - Mulheres na liderança: o que ainda deve mudar?
-                            Quantas empresas você conhece que são lideradas por mulheres? Elas ainda são minoria nos cargos de liderança — seja em startups ou em grandes corporações. 
-                            No quinto episódio do Agora em 10, nós discutimos a presença do sexo feminino no setor de tecnologia e nas empresas em geral e reforçamos o que ainda precisa mudar.
-                        </p>
-                    </div>
-                </article>
-            </a>
-*/

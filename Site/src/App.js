@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Cabecalho />
-        <Routes />
+        <Routes/>
       </BrowserRouter>
     </div>
   );

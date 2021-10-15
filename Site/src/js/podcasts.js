@@ -25,6 +25,7 @@ function numSum() {
 }
 //Pega o resultado da requisicao do script no HTML
 function podFunc(ep) {
+	console.log("carregou")
 	// Armazena os podcasts
 	arr.push(new podcast(ep.results[0].collectionName, ep.results[0].artworkUrl600, ep.results[0].artistName, ep.results[0].collectionViewUrl, ep.results[0].feedUrl));
 

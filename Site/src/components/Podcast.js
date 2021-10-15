@@ -1,8 +1,7 @@
-import {Link} from 'react-router-dom'
 function Podcast(){
     return(
         <>
-        <Link to="">
+        <a href="">
                 <article className="podcast">
                     <img src="img/images.jpeg" alt="podcast1" />
                     <div className="escritaarticle">
@@ -16,7 +15,7 @@ function Podcast(){
                         </p>
                     </div>
                 </article>
-        </Link>
+        </a>
         </>
     )
 }

@@ -8,15 +8,15 @@ export default function Cabecalho () {
     return (
         <>
         <header>
-            <div class="container">
-                <section class="logo">
+            <div className="container">
+                <section className="logo">
                     <a href="home.html"><img src={logoHeader} alt="Logotipo_TechDelas" />
                     <p><span>Tech</span>delas</p></a>
                 </section>
 
                 <button id="menu">☰</button>
 
-                <section class="navegacao" id="menuMobile" >
+                <section className="navegacao" id="menuMobile" >
                     <nav>
                         <button id="sair"><img src={exitMobile} alt="Sair do menu" /></button>
                         <ul>
