@@ -1,17 +1,22 @@
 import {podFunc} from '../js/podcasts.js';
+import '../js/script.js'
+import '../css/podcast.css'
 import '../css/sobre.css';
 import '../css/global.css';
 import Podcast from '../components/Podcast.js';
-import {useEffect} from 'react';
-import {resp} from '../js/api.js'
+import axios from 'axios'
+import Header from '../components/header'
+import Footer from "../components/footer"
 function Podcasts(){
-    
-    useEffect(()=>{
-        console.log(resp)
-    //     
+    let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
+    linksPod.forEach(link=>{
+        axios.get(link).then(response=>response.data).then(val=>podFunc(val))
     })
+    //axios.get("https://itunes.apple.com/lookup?id=1498395235&callBack").then(response=>response.data).then(val=>podFunc(val))
+    
     return(
         <>
+        <Header />
         <div className="container">
         <section id="intro">
             <h1>
@@ -23,21 +28,6 @@ function Podcasts(){
             </p>
         </section>
         <section id="podcasts">
-        <a href="">
-                <article className="podcast">
-                    <img src="img/images.jpeg" alt="podcast1" />
-                    <div className="escritaarticle">
-                        <h1>
-                            MULHERES DE 50
-                        </h1>
-                        <p>
-                            T8:01 - Dúvidas com tecnologia? Chama um anjo
-                            Está sofrendo para fazer cadastro no aplicativo do INSS? Não sabe como organizar as fotos no celular? Precisa fazer back-up dos arquivos na nuvem?  A gente se desespera o tempo todo com questões tecnológicas, não é mesmo?
-                            Pois a Viviane Palladino Donnamaria, 42 anos, ajudou a fundar uma empresa que conecta pessoas mais velhas a jovens interessados em ensinar tecnologia.
-                        </p>
-                    </div>
-                </article>
-        </a>
             <Podcast />
             <Podcast />
             <Podcast />
@@ -45,11 +35,7 @@ function Podcasts(){
             <Podcast />
         </section>
         </div>
-        {/* <script src={`https://itunes.apple.com/lookup?id=1503246918&callback=${podFunc()}`}></script> */}
-        <script src={`https://itunes.apple.com/lookup?id=1498395235`}></script>
-        <script src={"https://itunes.apple.com/lookup?id=136773036&callback=podFunc"}></script>
-        <script src={"https://itunes.apple.com/lookup?id=1518837789&callback=podFunc"}></script>
-        <script src={"https://itunes.apple.com/lookup?id=1470543817&callback=podFunc"}></script>
+        <Footer />
         </> 
     )}
 export default Podcasts;
