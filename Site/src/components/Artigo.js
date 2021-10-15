@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom'
 function Artigo({artigo,titulo, txt, img, alt, classes}){
     return(
-    <a href={artigo} target="_blank" className = {classes+" Cat"}>
+    <Link to={artigo} target="_blank" className = {classes+" Cat"}>
         <div className="post">
             <div className="texto">
                 <h3>{titulo}</h3>
@@ -8,7 +9,7 @@ function Artigo({artigo,titulo, txt, img, alt, classes}){
             </div>
             <img src={img} alt={alt} />
         </div>
-    </a>
+    </Link>
 )
 }
 export default Artigo

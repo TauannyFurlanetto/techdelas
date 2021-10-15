@@ -1,6 +1,6 @@
 import postImg from "../img/post2.jpg"
 
-export default function Art_individual ({titulo, classes, txt, autor, data, img, alt, fig, artigo}) {
+export default function Art_individual ({titulo, txt, autor, data, img, alt, fig, artigo}) {
     return (
         <article className="artigo">
 
@@ -33,37 +33,6 @@ export default function Art_individual ({titulo, classes, txt, autor, data, img,
             <p>No entanto, isso não fez Clarke desistir, muito pelo contrário, suas invenções fizeram a diferença no mundo da engenharia elétrica e para as mulheres e homens em todo o mundo.</p>
             <p><strong>Referências: </strong> <a href="http://2engenheiros.com/2018/02/20/mulheres-na-engenharia/">2 Engenheiros: 5 Mulheres que Revolucionaram a Engenharia.</a></p>
 
-        
-
-        <div className="tags">
-            <a href="">Tecnologia</a>
-            <a href="">Empoderamento</a>
-            <a href="">Ciência</a>
-        </div>
-
-        <div className="separador"></div>
-
-        <div className="reacao">
-            <img src="icones/thumbs-up.svg" alt="curtida" />
-            <button className="coment"><img src="icones/message-circle.svg" alt="" /><a /></button>
-        </div>
-
-        <div className="comentario">
-            <h3>Escreva seu comentário:</h3>
-            <div id="comentario">
-
-            <form className='artigoComent'>
-                    <div className="caixa">
-                        <label for="comentario"></label>
-                        <textarea name="comentario" id="comentario" required maxlength="200"></textarea>
-                    </div>
-
-                    <button type="submit" className="enviar">Enviar</button>
-
-            </form>
-
-            </div>
-        </div>
 
     </article>
     )
