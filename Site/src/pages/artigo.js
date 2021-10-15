@@ -1,7 +1,10 @@
-import '../css/home.css';
 import '../css/global.css';
+import '../css/artigo.css';
 
-import postImg from "../img/post2.jpg"
+import postImg1 from "../img/post1.jpg";
+import postImg2 from "../img/post2.jpg";
+import postImg3 from "../img/post3.jpg";
+
 import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 import Art_individual from '../components/Artigo_indiv';
@@ -10,8 +13,25 @@ import '../js/script.js';
 let artigos = [
     {
         titulo: "Mulheres revolucionárias na Engenharia Química",
+        subtitulo: "Inspirações femininas na área, desafios e motivações",
+        img: postImg1,
+        alt: "Mulher extraindo químico de tonel com uma mangueira",
+        fig: "Imagem retirada de pexels",
+
+    },
+
+    {
+        titulo: "Mulheres revolucionárias na Engenharia Química",
         txt: "Inspirações femininas na área, desafios e motivações",
-        img: postImg,
+        img: postImg2,
+        alt: "Mulher extraindo químico de tonel com uma mangueira",
+        fig: "Imagem retirada de pexels",
+    },
+
+    {
+        titulo: "Mulheres revolucionárias na Engenharia Química",
+        txt: "Inspirações femininas na área, desafios e motivações",
+        img: postImg3,
         alt: "Mulher extraindo químico de tonel com uma mangueira",
         fig: "Imagem retirada de pexels",
     }
