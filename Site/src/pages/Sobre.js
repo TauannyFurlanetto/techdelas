@@ -7,7 +7,7 @@ import profGi from "../fotos/foto_Giovana.png"
 import profTau from "../fotos/foto_Tau.jpg"
 import profVanessa from "../fotos/foto_Vanessa.jpg"
 import profVivian from "../fotos/foto_vivian.jpeg"
-
+import logo from "../icones/logo_header.svg"
 import '../js/script.js';
 
 import Cabecalho from '../components/header';
@@ -33,7 +33,7 @@ function Sobre() {
                     </article>
 
                     <article className="logomao">
-                        <img src="icones/logo_header.svg" alt="Logotipo TechDelas"/>
+                        <img src={logo} alt="Logotipo TechDelas"/>
                     </article>
                 </section>
             </div>
