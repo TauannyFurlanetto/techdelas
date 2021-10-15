@@ -5,7 +5,6 @@ import '../css/escreva.css';
 import '../js/script.js';
 import '../js/formEscreva.js';
 
-import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 
 
@@ -13,8 +12,7 @@ function Escreva() {
     return (
         <div>
             
-        <Cabecalho />
-
+=
         <section className="story">
             <div className="container">
                 <h1>Mande sua história...</h1>

@@ -10,7 +10,6 @@ import profVivian from "../fotos/foto_vivian.jpeg"
 import logo from "../icones/logo_header.svg"
 import '../js/script.js';
 
-import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
  
 
@@ -18,8 +17,6 @@ function Sobre() {
     return (
         <div>
         
-        <Cabecalho />
-
             <div className="container">
                 <section className="aboult">
                     <article className="sobre">

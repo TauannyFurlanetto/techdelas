@@ -15,8 +15,6 @@ function Home() {
     const [banner2, setBanner2] = useState(bannerDois);
   return (
     <div className="Home">
-      <Cabecalho />
-
     <section className="banner">
         <div className="container">
             <div className="left">
