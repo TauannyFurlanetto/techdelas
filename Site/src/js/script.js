@@ -13,12 +13,14 @@ let verMais;
 
 window.addEventListener('load', () => {
 	// Pega os elementos
+	console.log("load")
 	exitMenu = document.getElementById('sair');
 	abrirMenu = document.getElementById('menu');
 	menu = document.getElementById('menuMobile');
 	let closeMenu = false;
 	// Abre o menu
 	abrirMenu.addEventListener('click', () => {
+		console.log("click")
 		if (menu.style.display === "block") {
 			menu.style.display = "none";
 		} else {

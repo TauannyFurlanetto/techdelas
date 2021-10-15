@@ -17,22 +17,6 @@ let artigos = [
         img: postImg1,
         alt: "Mulher extraindo químico de tonel com uma mangueira",
         fig: "Imagem retirada de pexels",
-    },
-
-    {
-        titulo: "Mulheres revolucionárias na Engenharia Química",
-        txt: "Inspirações femininas na área, desafios e motivações",
-        img: postImg2,
-        alt: "Mulher extraindo químico de tonel com uma mangueira",
-        fig: "Imagem retirada de pexels",
-    },
-
-    {
-        titulo: "Mulheres revolucionárias na Engenharia Química",
-        txt: "Inspirações femininas na área, desafios e motivações",
-        img: postImg3,
-        alt: "Mulher extraindo químico de tonel com uma mangueira",
-        fig: "Imagem retirada de pexels",
     }
 ]
 

@@ -5,7 +5,6 @@ import '../css/sobre.css';
 import '../css/global.css';
 import Podcast from '../components/Podcast.js';
 import axios from 'axios'
-import Header from '../components/header'
 import Footer from "../components/footer"
 function Podcasts(){
     let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
@@ -16,7 +15,6 @@ function Podcasts(){
     
     return(
         <>
-        <Header />
         <div className="container">
         <section id="intro">
             <h1>
