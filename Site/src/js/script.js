@@ -94,7 +94,7 @@ window.addEventListener('load', () => {
 
 function loginToggle() {
 	wrapper.classList.toggle("active");
-	loginPage.classList.toggle("active");
+	loginPage.classList.toggle("active")
 }
 
 function cadastroToggle() {
@@ -106,6 +106,11 @@ function closePopup() {
 	wrapper.classList.remove("active");
 	loginPage.classList.remove("active");
 	cadastroPage.classList.remove("active");
+	let erroClear = document.querySelectorAll(".error");
+	console.log(erroClear)
+	erroClear.forEach(error=>{
+		error.innerHTML = " "
+	})
 }
 
 function addPost(newPostsAmount) {
