@@ -5,14 +5,16 @@ import '../css/global.css';
 import Podcast from '../components/Podcast.js';
 import axios from 'axios'
 import Footer from "../components/footer"
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 function Podcasts(){
+    const [podcast, setPodcast] = useState(<Podcast/>)
     useEffect(()=>{
         let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
         linksPod.forEach(link=>{
             axios.get(link).then(response=>response.data).then(val=>podFunc(val))
+            setPodcast(<Podcast />)
         })
-    },[ ])
+    }, [])
     return(
         <>
         <div className="container">
@@ -26,14 +28,19 @@ function Podcasts(){
             </p>
         </section>
         <section id="podcasts">
-            <Podcast />
-            <Podcast />
-            <Podcast />
-            <Podcast />
-            <Podcast />
+           {podcast}
+           {podcast}
+           <Podcast/>
+           <Podcast/>
+           <Podcast/>
         </section>
         </div>
         <Footer />
         </> 
     )}
 export default Podcasts;
+// let elementVal = ()=>{
+//     {if (elementPod === '1')
+//     {setElementPod('0')}
+//     else{setElementPod('1')}
+// }

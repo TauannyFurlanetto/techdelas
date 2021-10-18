@@ -7,8 +7,8 @@ import Posts from '../components/Posts'
 function PostPages() {
   return (
     <div className="Posts">
-    <section class="posts pagPosts">
-        <div class="container">
+    <section className="posts pagPosts">
+        <div className="container">
             <h2>Posts</h2>
             <Posts></Posts>
         </div>

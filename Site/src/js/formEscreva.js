@@ -7,7 +7,8 @@ const escrevaButton = document.querySelector("#buttom-forms");
 const formEscreva = document.querySelector(".forms form");
 
 window.addEventListener("load", ()=>{
-    escrevaButton.addEventListener("click", (event)=>{
+    if(escrevaButton !== null){
+        escrevaButton.addEventListener("click", (event)=>{
         event.preventDefault();
         
         const inputNome = document.querySelector("#fname");
@@ -40,4 +41,5 @@ window.addEventListener("load", ()=>{
             formEscreva.submit();
         }
     })
+    }
 })

@@ -30,31 +30,31 @@ function Escreva() {
                     <div className="container-2">
                         <div className="nome-sobrenome">
                             <div className="name">
-                                <label for="fname">Primeiro nome:</label>
-                                <input type="text" id="fname" name="fname" required="required" placeholder="Digite aqui seu primeiro nome" autofocus/>
+                                <label htmlFor="fname">Primeiro nome:</label>
+                                <input type="text" id="fname" name="fname" required="required" placeholder="Digite aqui seu primeiro nome" autoFocus/>
                             </div>
                 
                             <div className="last-name">
-                                <label for="lname">Sobrenome:</label>
+                                <label htmlFor="lname">Sobrenome:</label>
                                 <input type="text" id="lname" name="lname" required="required" placeholder="Digite aqui seu sobrenome"/>
                             </div>
                         </div>
             
                         <div className="email">
-                            <label for="email">Email:</label>
+                            <label htmlFor="email">Email:</label>
                             <div className="input">
                                 {/* <!-- <img src="icones/email.svg" alt=""/> --> */}
-                                <input type="email" id="email" name="email" required="required" placeholder="seuemail@aqui.com" maxlength="50" autocomplete="on"/>
+                                <input type="email" id="email" name="email" required="required" placeholder="seuemail@aqui.com" maxLength="50" autoComplete="on"/>
                             </div>
                         </div>
 
                         <div className="div-anonymous">
-                            <label for="anonymous">Mandar anonimamente</label>
+                            <label htmlFor="anonymous">Mandar anonimamente</label>
                             <input type="checkbox" id="anonymous" name="anonymous" value=""/>
                         </div>
             
                         <div className="your-story">
-                            <label for="message">Conte sua história:</label>
+                            <label htmlFor="message">Conte sua história:</label>
                             <textarea name="message" id="message" cols="30" rows="10" required="required" placeholder="Digite aqui a sua história ou conteúdo"></textarea>
                         </div>
                         <div className="errosEscreva">

@@ -7,13 +7,12 @@ import Escreva from './pages/Escreva';
 import Sobre from './pages/Sobre';
 import Home from './pages/Home';
 import PostPages from './pages/Posts';
-
 function Routes() {
   return (
     <div className="container-lg">
       <Switch>
         <Route path='/' exact component={Home} /> {/* Rota que termina em '/', deve direcionar ao home */}
-        <Route path='/podcasts' component={Podcasts} />
+        <Route path='/podcasts' component={Podcasts}/>
         <Route path='/artigo/:artigo' component={Artigo} />
         <Route path='/escreva' component={Escreva} />
         <Route path='/sobre' component={Sobre} />

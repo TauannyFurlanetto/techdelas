@@ -38,7 +38,7 @@ let toogle = true;
 let arrCat = ["Tecnologia", "Empoderamento", "Ciencia", "Educacao", "Saude"];
 const catList = document.querySelectorAll(".categorias ul li");
 function boldCategoria(txt){
-    if (txt.style.fontWeight == "500"){
+    if (txt.style.fontWeight === "500"){
         txt.style.fontWeight = "600";
     }else{
         txt.style.fontWeight = "500"

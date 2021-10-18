@@ -140,7 +140,7 @@ function Sobre() {
                         </article>
 
                         <article className="local">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0488050159!2d-46.87549321094932!3d-23.68153146695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20State%20of%20S%C3%A3o%20Paulo!5e0!3m2!1sen!2sbr!4v1631658993975!5m2!1sen!2sbr" width="500" height="270" style={{border: "solid 0px"}} allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0488050159!2d-46.87549321094932!3d-23.68153146695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2sS%C3%A3o%20Paulo%2C%20State%20of%20S%C3%A3o%20Paulo!5e0!3m2!1sen!2sbr!4v1631658993975!5m2!1sen!2sbr" width="500" height="270" style={{border: "solid 0px"}} allowFullScreen="" loading="lazy"></iframe>
                         </article>
                     </section>
                 </section>

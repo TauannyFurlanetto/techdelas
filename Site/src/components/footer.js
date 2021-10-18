@@ -23,10 +23,10 @@ export default function Rodape () {
                 <p>Conecte-se com a gente pelas redes sociais.</p>
                 <div className="iconesSocial">
                     <ul>
-                        <li><a href=""><img src={logoLinkedin} alt="Acesso ao linkedin" /></a></li>
-                        <li><a href=""><img src={logoFacebook} alt="Acesso ao facebook" /></a></li>
-                        <li><a href=""><img src={logoYoutube} alt="Acesso ao youtube" /></a></li>
-                        <li><a href=""><img src={logoInstagram} alt="Acesso ao instagram" /></a></li>
+                        <li><a href="#"><img src={logoLinkedin} alt="Acesso ao linkedin" /></a></li>
+                        <li><a href="#"><img src={logoFacebook} alt="Acesso ao facebook" /></a></li>
+                        <li><a href="#"><img src={logoYoutube} alt="Acesso ao youtube" /></a></li>
+                        <li><a href="#"><img src={logoInstagram} alt="Acesso ao instagram" /></a></li>
                     </ul>
                 </div>
                 </div>

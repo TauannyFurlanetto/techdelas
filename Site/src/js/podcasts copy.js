@@ -20,12 +20,17 @@ let arrDesc = [];
 // Cria um contador
 let num = 0;
 
+let dictVal = {
+	"img": "",
+	"url": "",
+	"h1": "",
+	"p": ""
+}
 function numSum() {
 	return num = num + 1;
 }
 //Pega o resultado da requisicao do script no HTML
 function podFunc(ep) {
-	console.log(ep)
 	// Armazena os podcasts
 	arr.push(new podcast(ep.results[0].collectionName, ep.results[0].artworkUrl600, ep.results[0].artistName, ep.results[0].collectionViewUrl, ep.results[0].feedUrl));
 
@@ -54,19 +59,17 @@ function podFunc(ep) {
 			element["title"] = element["title"].replaceAll("&lt;![CDATA[", "");
 			element["title"] = element["title"].replaceAll("]]&gt;", "");
 		});
-
 		// Seleciona os objetos no html
 		const podImg = document.querySelectorAll(".podcast img");
 		const podH1 = document.querySelectorAll(".podcast h1");
 		const podP = document.querySelectorAll(".podcast p");
 		const podcast = document.querySelectorAll("#podcasts a");
 
+
 		// Define os valores das imagens, h1 e do a (href)
-		podImg[num].src = arr[num].img;
-		podcast[num].setAttribute("href", arr[num].url);
-		podcast[num].style.textDecoration = "none";
-		podcast[num].style.cursor = "pointer";
-		podH1[num].innerHTML = arr[num].name;
+		dictVal["img"] = arr[num].img;
+		dictVal["url"] = arr[num].url;
+		dictVal["h1"] = arr[num].name;
 		numSum();
 		podH1.forEach((element, index) => {
 			element.innerHTML = arr[index].name
@@ -74,25 +77,27 @@ function podFunc(ep) {
 				// Compara o titulo do podcast atual ao titulo da descricao
 				// Atribui o valor adequado ao paragrafo
 				case resp[0]["title"]:
-					podP[index].innerHTML = resp[0]["desc"];
+					dictVal["p"]  = resp[0]["desc"];
 					break;
 				case resp[1]["title"]:
-					podP[index].innerHTML = resp[1]["desc"];
+					dictVal["p"]  = resp[1]["desc"];
 					break;
 				case resp[2]["title"]:
-					podP[index].innerHTML = resp[2]["desc"];
+					dictVal["p"]  = resp[2]["desc"];
 					break;
 				case resp[3]["title"]:
-					podP[index].innerHTML = resp[3]["desc"];
+					dictVal["p"] = resp[3]["desc"];
 					break;
 				case resp[4]["title"]:
-					podP[index].innerHTML = resp[4]["desc"];
+					dictVal["p"]  = resp[4]["desc"];
 					break;
 				default:
 					break;
 			}
 		})
+	
 	}).catch(err => {});
+	return dictVal
 }
 export {
 	podFunc

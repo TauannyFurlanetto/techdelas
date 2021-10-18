@@ -19,27 +19,30 @@ window.addEventListener('load', () => {
 	menu = document.getElementById('menuMobile');
 	let closeMenu = false;
 	// Abre o menu
-	abrirMenu.addEventListener('click', () => {
-		console.log("click")
-		if (menu.style.display === "block") {
-			menu.style.display = "none";
-		} else {
-			menu.style.display = "block";
-		}
-	})
+	if (abrirMenu !== null){
+		abrirMenu.addEventListener('click', () => {
+			if (menu.style.display === "block") {
+				menu.style.display = "none";
+			} else {
+				menu.style.display = "block";
+			}
+		})
+	}
 	// Fecha o menu
-	exitMenu.addEventListener('click', () => {
-		menu.style.display = "none";
-		closeMenu = true;
-	})
+	if (exitMenu !== null){
+		exitMenu.addEventListener('click', () => {
+			menu.style.display = "none";
+			closeMenu = true;
+		})
+	}
 	// Retorna o menu desktop caso a tela aumente de novo
 	window.addEventListener("resize", () => {
 		if (window.innerWidth > 1040) {
 			menu.style.display = "flex";
 			closeMenu = false;
 		}
-		if (window.innerWidth < 1040 && closeMenu == false) {
-			if (menu.style.display == "flex") {
+		if (window.innerWidth < 1040 && closeMenu === false) {
+			if (menu.style.display === "flex") {
 				menu.style.display = "none";
 			}
 		}
@@ -48,7 +51,7 @@ window.addEventListener('load', () => {
 	//Veja mais!!!! aaaaaaaaaaa
 
 	verMais = document.getElementById("veja-mais")
-	if (verMais != null) {
+	if (verMais !== null) {
 		verMais.onclick = (event) => {
 			event.preventDefault();
 			addPost(3)
@@ -76,11 +79,11 @@ window.addEventListener('load', () => {
 	}
 
 	wrapper.onclick = (event) => {
-		if (event.target == wrapper) {
+		if (event.target === wrapper) {
 			closePopup()
 		} else
 			exitPopup.forEach(exit => {
-				if (event.target == exit) {
+				if (event.target === exit) {
 					event.preventDefault();
 					closePopup();
 				}
@@ -120,7 +123,7 @@ function addPost(newPostsAmount) {
 
 window.addEventListener ('load', () => {
 	let btnComentar = document.querySelector('.coment');
-	if (btnComentar != null){
+	if (btnComentar !== null){
 		let comentario = document.querySelector ('.comentario');
 		comentario.style.display = 'none';
 		
@@ -137,7 +140,7 @@ window.addEventListener ('load', () => {
 window.addEventListener('load', () => {
 
   let btnComentar = document.querySelector('.coment');
-  if(btnComentar != null){
+  if(btnComentar !== null){
 	btnComentar.onmouseover = (evento) => {
 	btnComentar.style.cssText = 'background-color: #fff';
 	}
@@ -146,7 +149,7 @@ window.addEventListener('load', () => {
 
 window.addEventListener ('load', () => {
   let like = document.querySelector(".reacao img");
-	if(like != null){
+	if(like !== null){
 		like.addEventListener("click", ()=>{
 			if( like.src.includes("icones/thumbs-up.svg")){
 			  like.src = "icones/like_colorido.svg";
@@ -182,7 +185,7 @@ window.addEventListener("load", () => {
 
 	popupLogin.addEventListener("click", (event) => {
 		event.preventDefault()
-		if (ValidateForm(event.target.classList[0]) == 0){
+		if (ValidateForm(event.target.classList[0]) === 0){
 			event.target.parentNode.parentNode.submit()
 		}
 
@@ -190,7 +193,7 @@ window.addEventListener("load", () => {
 	})
 	popupRegister.addEventListener("click", (event) => {
 		event.preventDefault()
-		if (ValidateForm(event.target.classList[0]) == 0){
+		if (ValidateForm(event.target.classList[0]) === 0){
 			event.target.parentNode.parentNode.submit()
 		}
 	})
@@ -198,7 +201,7 @@ window.addEventListener("load", () => {
 
 function ValidateForm(classname) {
 	let labelDivs
-	if (classname == "register") {
+	if (classname === "register") {
 		labelDivs = document.querySelectorAll(".pop-up.register form > .pop-up-labels")
 		let errorNum = 0
 		if (inpRegName.value.length < 3 || inpRegName.value.length > 20) {
@@ -225,7 +228,7 @@ function ValidateForm(classname) {
 			InsertErrorMessage("register", "senha") //passando nenhum parametro de mensagem de erro o erro some da tela
 		}
 
-		if (inpRegConfirmPass.value != inpRegPass.value) {
+		if (inpRegConfirmPass.value !== inpRegPass.value) {
 			InsertErrorMessage("register", "senha-confirm", "Senha incorreta")
 			errorNum += 1
 		}
@@ -234,7 +237,7 @@ function ValidateForm(classname) {
 		}
 		return errorNum
 	}
-	else if (classname == "login") {
+	else if (classname === "login") {
 		labelDivs = document.querySelectorAll(".pop-up.login form > .pop-up-labels")
 		let errorNum = 0
 

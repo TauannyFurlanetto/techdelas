@@ -2,7 +2,7 @@ import logoHeader from "../icones/logo_header.svg";
 import exitMobile from "../icones/exit.svg";
 import email from "../icones/email.svg"
 import password from "../icones/senha.svg";
-import { Link , NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import '../js/script.js';
 export default function Cabecalho () {
     return (
