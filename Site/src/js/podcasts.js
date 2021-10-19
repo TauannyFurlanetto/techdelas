@@ -1,9 +1,9 @@
 // PODCAST
+
 // Criar um objeto de podcast
-function podcast(name, img, author, url, feed) {
+function podcast(name, img, url, feed) {
 	this.name = name;
 	this.img = img;
-	this.author = author;
 	this.url = url;
 	this.feed = feed;
 }
@@ -12,88 +12,68 @@ function descPod(desc, title) {
 	this.desc = desc;
 	this.title = title; //Será usado como chave de comparação
 }
-
-// Cria uma array para armazenar as requisicoes
-let arr = [];
 // Cria uma array para armazenar as decricoes
 let arrDesc = [];
-// Cria um contador
-let num = 0;
 
-function numSum() {
-	return num = num + 1;
-}
 //Pega o resultado da requisicao do script no HTML
-function podFunc(ep) {
-	console.log(ep)
-	// Armazena os podcasts
-	arr.push(new podcast(ep.results[0].collectionName, ep.results[0].artworkUrl600, ep.results[0].artistName, ep.results[0].collectionViewUrl, ep.results[0].feedUrl));
+async function fetchDesc(podcast) {
+	const descRss = await fetch(podcast.feedUrl);
+	const descTxt = await descRss.text();
+	let domParser = new DOMParser();
+	const descHtml = domParser.parseFromString(descTxt, "text/html");
+	arrDesc.push(new descPod(descHtml.querySelector("description").innerHTML, descHtml.querySelector("title").innerHTML));
+	return ([arrDesc, podcast])
+}
+// Faz uma requisicao e limpa os resultados
+async function request(request){
+	let answer = await request
+	return answer.data.results[0]
+}
+// Formata as descricoes
+let podArr = []
+function formatDesc(podcast){
+	podArr.push(podcast[1])
+	let desc = podcast[0]
+	desc.map((element) => {
+		element["desc"] = element["desc"].replaceAll("<\!--[CDATA[", "");
+		element["desc"] = element["desc"].replaceAll("<p-->", "");
+		element["desc"] = element["desc"].replaceAll("&nbsp", "");
+		element["desc"] = element["desc"].replaceAll(";", "");
+		element["desc"] = element["desc"].replaceAll("<p></p>]]", "");
+		element["desc"] = element["desc"].replaceAll("]]-->", "");
+		element["desc"] = element["desc"].replaceAll("&g", "");
+		element["desc"] = element["desc"].replaceAll(".t", "");
 
-	// Funcao que busca a desricao
-	async function fetchDesc() {
-		const descRss = await fetch(ep.results[0].feedUrl);
-		const descTxt = await descRss.text();
-		let domParser = new DOMParser();
-		const descHtml = domParser.parseFromString(descTxt, "text/html");
-		arrDesc.push(new descPod(descHtml.querySelector("description").innerHTML, descHtml.querySelector("title").innerHTML));
-		return (arrDesc);
+		element["title"] = element["title"].replaceAll("&lt;![CDATA[", "");
+		element["title"] = element["title"].replaceAll("]]&gt;", "");
+	})
+	return ([desc,podArr])
+}
+// Combina as decricoes com as outras informacoes
+function matchDescPod(podcasts){
+	let descricao = podcasts [0]
+	let podcastArr = podcasts[1]
+	podcastArr = podcastArr.slice(0,5)
+	let podcastFormat = []
+	function formatPod (array){
+		array = array.map((pod)=>{
+			return (new podcast(pod.collectionName, pod.artworkUrl600, pod.collectionViewUrl, " "))
+		})
+		return array
 	}
-	// Busca a descricao
-	fetchDesc().then(resp => {
-		// Formatacao da descricao e titulo
-		resp.map((element) => {
-			element["desc"] = element["desc"].replaceAll("<\!--[CDATA[", "");
-			element["desc"] = element["desc"].replaceAll("<p-->", "");
-			element["desc"] = element["desc"].replaceAll("&nbsp", "");
-			element["desc"] = element["desc"].replaceAll(";", "");
-			element["desc"] = element["desc"].replaceAll("<p></p>]]", "");
-			element["desc"] = element["desc"].replaceAll("]]-->", "");
-			element["desc"] = element["desc"].replaceAll("&g", "");
-			element["desc"] = element["desc"].replaceAll(".t", "");
-
-			element["title"] = element["title"].replaceAll("&lt;![CDATA[", "");
-			element["title"] = element["title"].replaceAll("]]&gt;", "");
-		});
-
-		// Seleciona os objetos no html
-		const podImg = document.querySelectorAll(".podcast img");
-		const podH1 = document.querySelectorAll(".podcast h1");
-		const podP = document.querySelectorAll(".podcast p");
-		const podcast = document.querySelectorAll("#podcasts a");
-
-		// Define os valores das imagens, h1 e do a (href)
-		podImg[num].src = arr[num].img;
-		podcast[num].setAttribute("href", arr[num].url);
-		podcast[num].style.textDecoration = "none";
-		podcast[num].style.cursor = "pointer";
-		podH1[num].innerHTML = arr[num].name;
-		numSum();
-		podH1.forEach((element, index) => {
-			element.innerHTML = arr[index].name
-			switch (element.innerHTML) {
-				// Compara o titulo do podcast atual ao titulo da descricao
-				// Atribui o valor adequado ao paragrafo
-				case resp[0]["title"]:
-					podP[index].innerHTML = resp[0]["desc"];
-					break;
-				case resp[1]["title"]:
-					podP[index].innerHTML = resp[1]["desc"];
-					break;
-				case resp[2]["title"]:
-					podP[index].innerHTML = resp[2]["desc"];
-					break;
-				case resp[3]["title"]:
-					podP[index].innerHTML = resp[3]["desc"];
-					break;
-				case resp[4]["title"]:
-					podP[index].innerHTML = resp[4]["desc"];
-					break;
-				default:
-					break;
+	podcastFormat.push(formatPod(podcastArr))
+	podcastFormat[0].map((pod)=>{
+		descricao.map(desc=>{
+			if (desc.title == pod.name){
+				 pod.feed = desc.desc
 			}
 		})
-	}).catch(err => {});
+	})
+	return podcastFormat[0]
 }
 export {
-	podFunc
+	fetchDesc,
+	request,
+	formatDesc,
+	matchDescPod
 }

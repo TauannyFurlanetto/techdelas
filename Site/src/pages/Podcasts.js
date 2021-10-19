@@ -1,4 +1,4 @@
-import {fetchDesc, request, formatDesc, mat, matchDescPod} from '../js/podcasts copy 2.js';
+import {fetchDesc, request, formatDesc, matchDescPod} from '../js/podcasts.js';
 import '../css/podcast.css'
 import '../css/sobre.css';
 import '../css/global.css';
@@ -7,7 +7,6 @@ import axios from 'axios'
 import Footer from "../components/footer"
 import {useEffect, useState} from 'react'
 function Podcasts(){
-    let podStore = []
     const [podcast, setPodcast] = useState([])
     useEffect(()=>{
         let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
