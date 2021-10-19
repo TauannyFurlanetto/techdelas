@@ -2,7 +2,7 @@ import '../css/global.css';
 import '../css/artigo.css';
 
 import { useParams } from 'react-router-dom';
-
+import { useState } from 'react';
 import postImg1 from "../img/post1.jpg";
 import postImg2 from "../img/post2.jpg";
 import postImg3 from "../img/post3.jpg";
@@ -10,6 +10,9 @@ import postImg3 from "../img/post3.jpg";
 import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 import Art_individual from '../components/Artigo_indiv';
+import likeImg from "../icones/thumbs-up.svg";
+import likeColorido from "../icones/like_colorido.svg"
+import comments from "../icones/message-circle.svg"
 import '../js/script.js';
 
 let artigos = [
@@ -39,7 +42,7 @@ export default function Artigo(){
     console.log(postObject.titulo)
     console.log(postObject.subtitulo)
     console.log(postObject)
-
+    const [like, setLike] = useState(likeImg)
     return (
 <div>
     
@@ -71,8 +74,8 @@ export default function Artigo(){
         <div className="separador"></div>
 
         <div className="reacao">
-            <img src="icones/thumbs-up.svg" alt="curtida" />
-            <button className="coment"><img src="icones/message-circle.svg" alt="" /><a /></button>
+            <img src={like} onClick = {()=>{if(like==likeImg){setLike(likeColorido)}else{setLike(likeImg)}}} alt="curtida" />
+            <button className="coment"><img src={comments} alt="" /><a /></button>
         </div>
 
         <div className="comentario">
@@ -81,8 +84,8 @@ export default function Artigo(){
 
             <form className='artigoComent'>
                     <div className="caixa">
-                        <label for="comentario"></label>
-                        <textarea name="comentario" id="comentario" required maxlength="200"></textarea>
+                        <label htmlFor="comentario"></label>
+                        <textarea name="comentario" id="comentario" required maxLength="200"></textarea>
                     </div>
 
                     <button type="submit" className="enviar">Enviar</button>
