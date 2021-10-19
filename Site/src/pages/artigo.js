@@ -10,6 +10,8 @@ import postImg3 from "../img/post3.jpg";
 import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 import Art_individual from '../components/Artigo_indiv';
+import like from "../icones/thumbs-up.svg";
+import comments from "../icones/message-circle.svg"
 import '../js/script.js';
 
 let artigos = [
@@ -71,8 +73,8 @@ export default function Artigo(){
         <div className="separador"></div>
 
         <div className="reacao">
-            <img src="icones/thumbs-up.svg" alt="curtida" />
-            <button className="coment"><img src="icones/message-circle.svg" alt="" /><a /></button>
+            <img src={like} alt="curtida" />
+            <button className="coment"><img src={comments} alt="" /><a /></button>
         </div>
 
         <div className="comentario">
@@ -81,8 +83,8 @@ export default function Artigo(){
 
             <form className='artigoComent'>
                     <div className="caixa">
-                        <label for="comentario"></label>
-                        <textarea name="comentario" id="comentario" required maxlength="200"></textarea>
+                        <label htmlFor="comentario"></label>
+                        <textarea name="comentario" id="comentario" required maxLength="200"></textarea>
                     </div>
 
                     <button type="submit" className="enviar">Enviar</button>
