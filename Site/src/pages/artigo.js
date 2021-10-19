@@ -2,7 +2,7 @@ import '../css/global.css';
 import '../css/artigo.css';
 
 import { useParams } from 'react-router-dom';
-
+import { useState } from 'react';
 import postImg1 from "../img/post1.jpg";
 import postImg2 from "../img/post2.jpg";
 import postImg3 from "../img/post3.jpg";
@@ -11,7 +11,8 @@ import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 import Figure from '../components/figure';
 import Art_individual from '../components/Artigo_indiv';
-import like from "../icones/thumbs-up.svg";
+import likeImg from "../icones/thumbs-up.svg";
+import likeColorido from "../icones/like_colorido.svg"
 import comments from "../icones/message-circle.svg"
 import '../js/script.js';
 
@@ -41,7 +42,7 @@ export default function Artigo(){
     console.log(postObject.titulo)
     console.log(postObject.subtitulo)
     console.log(postObject)
-
+    const [like, setLike] = useState(likeImg)
     return (
 <div>
     
@@ -75,7 +76,7 @@ export default function Artigo(){
         <div className="separador"></div>
 
         <div className="reacao">
-            <img src={like} alt="curtida" />
+            <img src={like} onClick = {()=>{if(like==likeImg){setLike(likeColorido)}else{setLike(likeImg)}}} alt="curtida" />
             <button className="coment"><img src={comments} alt="" /><a /></button>
         </div>
 

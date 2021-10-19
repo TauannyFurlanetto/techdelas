@@ -23,7 +23,7 @@ function Podcasts(){
                 Recomendações de podcasts
             </h1>
             <p>
-                Buscando podcasts motivacionais, que abordem temas super importantes e pouco abordados no nosso cotidiano? Pois então você está no local correto! Aqui iremos fornecer algumas recomendações que tratam diversos temas voltado ao público feminino e que acima de tudo ajudam na  quebra da estigmatização feminina.
+                Buscando podcasts motivacionais, que abordem temas super importantes e pouco discutidos no nosso cotidiano? Pois então você está no lugar correto! Aqui iremos fornecer algumas recomendações que tratam diversos temas voltado ao público feminino e que acima de tudo ajudam na  quebra da estigmatização feminina.
                 Queremos ajudar no empoderamento, na disseminação de conhecimento e na construção de um local, seguro, que dê voz a todas as mulheres, de todas as idades, deste país. Somos fortes, inteligentes e capazes!
             </p>
         </section>

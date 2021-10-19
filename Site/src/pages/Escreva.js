@@ -12,7 +12,6 @@ function Escreva() {
     return (
         <div>
             
-=
         <section className="story">
             <div className="container">
                 <h1>Mande sua história...</h1>
