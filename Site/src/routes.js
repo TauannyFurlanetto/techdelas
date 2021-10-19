@@ -7,6 +7,7 @@ import Escreva from './pages/Escreva';
 import Sobre from './pages/Sobre';
 import Home from './pages/Home';
 import PostPages from './pages/Posts';
+import Error404 from './pages/Erro'
 function Routes() {
   return (
     <div className="container-lg">
@@ -17,7 +18,7 @@ function Routes() {
         <Route path='/escreva' component={Escreva} />
         <Route path='/sobre' component={Sobre} />
         <Route path = '/posts'component={PostPages} />
-        {/* <Route component={Error404} /> */}
+        <Route component={Error404} />
       </Switch>
     </div>
   );
