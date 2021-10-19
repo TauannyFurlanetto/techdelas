@@ -1,6 +1,8 @@
 import '../css/global.css';
 import '../css/artigo.css';
 
+import { useParams } from 'react-router-dom';
+
 import postImg1 from "../img/post1.jpg";
 import postImg2 from "../img/post2.jpg";
 import postImg3 from "../img/post3.jpg";
@@ -21,7 +23,17 @@ let artigos = [
 ]
 
 export default function Artigo(){
-return (
+
+    const { artigo = 'nao-existe' } = useParams()
+
+    console.log(artigo)
+    let postObject = (require('../posts/'+ artigo)).default
+    console.log(`este artigo ${artigo} contem os parametros ${Object.keys(postObject)}`)
+    console.log(postObject.titulo)
+    console.log(postObject.subtitulo)
+    console.log(postObject)
+
+    return (
 <div>
     
 
@@ -30,7 +42,7 @@ return (
         <article className="artigo">
         
        
-            {artigos.map((post, indice) => 
+            {/* {artigos.map((post, indice) => 
                 <Art_individual
                 key={indice}
                 titulo={post.cor} 
@@ -38,7 +50,7 @@ return (
                 alt={post.alt}
                 fig={post.fig}
                 />
-            )}
+            )} */}
         
 
         
@@ -78,71 +90,6 @@ return (
 
     <Rodape />
 
-    <div className="pop-up-wrapper">
-        <div className="pop-up register">
-
-            <a href=""><img src="icones/exit.svg" alt="" /></a>
-
-            <h2>Cadastre-se:</h2>
-
-            <form>
-                <label for-id="nome">Nome</label>
-                <input type="nome" id="nome" name="nome"/>
-
-                <label for-id="email">Email</label>
-                <div className="input">
-                    <img src="icones/email.svg" alt="" />
-                    <input type="email" id="email" name="email"/>
-                </div>
-
-                <label for-id="senha">Senha</label>
-                <div className="input">
-                    <img src="icones/senha.svg" alt="" />
-                    <input type="senha" id="senha" name="senha"/>
-                </div>
-
-                <label for-id="senha">Digite novamente sua senha</label>
-                <div className="input">
-                    <img src="icones/senha.svg" alt="" />
-                    <input type="senha" id="senha" name="senha"/>
-                </div>
-
-                <div className="button">
-                    <button className="register">Cadastre-se</button>
-                </div>
-            </form>
-
-        </div>
-
-        <div className="pop-up login">
-
-            <a href=""><img src="icones/exit.svg" alt="" /></a>
-
-            <h2>Login:</h2>
-
-            <form>
-
-                <label for-id="email">Email</label>
-                <div className="input">
-                    <img src="icones/email.svg" alt="" />
-                    <input type="email" id="email" name="email"/>
-                </div>
-
-                <label for-id="senha">Senha</label>
-                <div className="input">
-                    <img src="icones/senha.svg" alt="" />
-                    <input type="senha" id="senha" name="senha"/>
-                </div>
-
-                <a className="esqueci" href="">Esqueci minha senha</a>
-
-                <div className="button">
-                    <button className="register">Login</button>
-                </div>
-            </form>
-
-        </div>
-
-</div>
+    
 </div>
 )}

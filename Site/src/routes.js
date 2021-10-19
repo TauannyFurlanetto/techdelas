@@ -14,6 +14,7 @@ function Routes() {
         <Route path='/' exact component={Home} /> {/* Rota que termina em '/', deve direcionar ao home */}
         <Route path='/podcasts' component={Podcasts}/>
         <Route path='/artigo/:artigo' component={Artigo} />
+        <Route path='/artigo/' exact component={Artigo} />
         <Route path='/escreva' component={Escreva} />
         <Route path='/sobre' component={Sobre} />
         <Route path = '/posts'component={PostPages} />

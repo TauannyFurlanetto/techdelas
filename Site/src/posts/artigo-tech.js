@@ -1,8 +1,8 @@
-post = {
+const post = {
     titulo: "Mulheres na Tecnologia",
     classes: "Tecnologia Empoderamento",
     subtitulo: "Como está a presença delas no mercado de TI?",
-    img: postImg,
+    img: "postImg",
     alt: "Mulher digital",
     artigo: "artigo-tech.html",
     autor: "Priscila Bianchi",
@@ -21,3 +21,4 @@ post = {
         p: '<strong>Referências: </strong> <a href="http://2engenheiroshttps://inforchannel.com.br/2021/03/08/mulheres-na-tecnologia-como-esta-a-presenca-delas-no-mercado-de-ti/.com/2018/02/20/mulheres-na-engenharia/">BIANCHI, Priscila. Mulheres na tecnologia: como está a presença delas no mercado de TI?</a>'
     }
 }
+export default post
