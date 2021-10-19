@@ -30,7 +30,9 @@ function numSum() {
 	return num = num + 1;
 }
 //Pega o resultado da requisicao do script no HTML
-function podFunc(ep) {
+async function podFunc(ep) {
+	ep = await ep
+	let epData = await ep
 	// Armazena os podcasts
 	arr.push(new podcast(ep.results[0].collectionName, ep.results[0].artworkUrl600, ep.results[0].artistName, ep.results[0].collectionViewUrl, ep.results[0].feedUrl));
 
@@ -60,35 +62,32 @@ function podFunc(ep) {
 			element["title"] = element["title"].replaceAll("]]&gt;", "");
 		});
 		// Seleciona os objetos no html
-		const podImg = document.querySelectorAll(".podcast img");
-		const podH1 = document.querySelectorAll(".podcast h1");
-		const podP = document.querySelectorAll(".podcast p");
-		const podcast = document.querySelectorAll("#podcasts a");
-		console.log("pre pod")
+		// const podImg = document.querySelectorAll(".podcast img");
+		// const podH1 = document.querySelectorAll(".podcast h1");
+		// const podP = document.querySelectorAll(".podcast p");
+		// const podcast = document.querySelectorAll("#podcasts a");
 		let podItem = new thisPod(arr[num].img, arr[num].url, arr[num].name, " ")
-		console.log('pod ' + podItem.img)
 		dictVal.push(podItem)
+		dictVal.forEach(ele=>console.log("DICT VAL: \n" + ele.h1))
 		// Define os valores das imagens, h1 e do a (href)
 		dictVal.forEach((element, index) => {
-			console.log("desc0")
-			element.innerHTML = arr[index].name
-			switch (element.innerHTML) {
+			switch (element.h1) {
 				// Compara o titulo do podcast atual ao titulo da descricao
 				// Atribui o valor adequado ao paragrafo
 				case resp[0]["title"]:
-					dictVal[index].p  = resp[0]["desc"];
+					element.p  = resp[0]["desc"];
 					break;
 				case resp[1]["title"]:
-					dictVal[index].p  = resp[1]["desc"];
+					element.p  = resp[1]["desc"];
 					break;
 				case resp[2]["title"]:
-					dictVal[index].p  = resp[2]["desc"];
+					element.p  = resp[2]["desc"];
 					break;
 				case resp[3]["title"]:
-					dictVal[index].p = resp[3]["desc"];
+					element.p = resp[3]["desc"];
 					break;
 				case resp[4]["title"]:
-					dictVal[index].p = resp[4]["desc"];
+					element.p = resp[4]["desc"];
 					break;
 				default:
 					break;
