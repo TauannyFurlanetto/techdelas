@@ -239,12 +239,8 @@
     body, button, footer{
         font-size: 20px; 
     }
-
-}
-
-@media (max-width:615px){
-    /* REMOVE  BAR POSTS */
-    .janela .topo::after{
+     /* REMOVE  BAR POSTS */
+     .janela .topo::after{
         content:none;
     }
     .janela .topo{
@@ -254,7 +250,10 @@
     .janela .topo .post img {
         width: 100%;
     }
+
 }
+
+
 @media (max-width: 422px){
     .banner .left h1 {
         font-size: 40px;

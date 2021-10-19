@@ -1,4 +1,4 @@
-import {podFunc} from '../js/podcasts copy.js';
+import {fetchDesc, request, formatDesc, matchDescPod} from '../js/podcasts.js';
 import '../css/podcast.css'
 import '../css/sobre.css';
 import '../css/global.css';
@@ -7,15 +7,14 @@ import axios from 'axios'
 import Footer from "../components/footer"
 import {useEffect, useState} from 'react'
 function Podcasts(){
-    let podStore = []
     const [podcast, setPodcast] = useState([])
     useEffect(()=>{
         let linksPod = ["https://itunes.apple.com/lookup?id=1503246918&callBack","https://itunes.apple.com/lookup?id=1498395235&callBack","https://itunes.apple.com/lookup?id=1367730836&callBack", "https://itunes.apple.com/lookup?id=1518837789&callBack", "https://itunes.apple.com/lookup?id=1470543817&callBack" ]
         linksPod.forEach(link=>{
-            podStore.push(axios.get(link).then(response=>response.data).then(val=>podFunc(val)))
+            request(axios.get(link)).then(podcast=>fetchDesc(podcast)).then((podcast)=>formatDesc(podcast)).then(descFormat=>matchDescPod(descFormat)).then(podFormat=> setPodcast(podFormat))
         })
-        console.log(podStore)
     }, [])
+    
     return(
         <>
         <div className="container">
@@ -29,9 +28,9 @@ function Podcasts(){
             </p>
         </section>
         <section id="podcasts">
-            {podcast.forEach(pod=>{
-                <Podcast url= {pod.url} img={pod.img} p={pod.p} h1={pod.h1} />
-            })}
+            {podcast.map((pod, index)=>(
+                <Podcast key = {index} url= {pod.url} img={pod.img} p={pod.feed} h1={pod.name} />
+            ))}
         </section>
         </div>
         <Footer />
