@@ -9,6 +9,7 @@ import postImg3 from "../img/post3.jpg";
 
 import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
+import Figure from '../components/figure';
 import Art_individual from '../components/Artigo_indiv';
 import likeImg from "../icones/thumbs-up.svg";
 import likeColorido from "../icones/like_colorido.svg"
@@ -27,15 +28,14 @@ let artigos = [
 
 export default function Artigo(){
 
-    const { artigo = 'artigo404' } = useParams()
+    const { artigo = 'artigo404' } = useParams() //variavel 'artigo' guarda o que aparece na url depois de /artigo/, o default é /artigo/artigo404
 
-    console.log(artigo)
     let postObject
     try{
         postObject = (require('../posts/'+ artigo)).default
     }
     catch{
-        postObject = (require('../posts/'+ "artigo404")).default
+        postObject = (require('../posts/'+ "artigo404")).default //executado caso a url resulte em um artigo que não existe
     }
     
     console.log(`este artigo ${artigo} contem os parametros ${Object.keys(postObject)}`)
@@ -61,6 +61,8 @@ export default function Artigo(){
                 fig={post.fig}
                 />
             )} */}
+
+            
         
 
         

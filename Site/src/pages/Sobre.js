@@ -2,17 +2,19 @@ import '../icones/logo-branco.png';
 import '../css/global.css';
 import '../css/sobre.css';
 
+import Valores from '../components/Valores'
+
+import iconeForca from "../icones/forca.png"
+import iconeLampada from "../icones/lampada-brilhante.png"
+import iconeEscala from "../icones/graphics-scale.png"
+import iconeMaoCoracao from "../icones/coracao.png"
+import iconeCoracao from "../icones/coracao-artificial.png"
 import profAlice from "../fotos/foto_Alice.jpeg"
 import profGi from "../fotos/foto_Giovana.png"
 import profTau from "../fotos/foto_Tau.jpg"
 import profVanessa from "../fotos/foto_Vanessa.jpg"
 import profVivian from "../fotos/foto_vivian.jpeg"
 import logo from "../icones/logo_header.svg"
-import iconeForca from "../icones/forca.png"
-import iconeLampada from "../icones/lampada-brilhante.png"
-import iconeEscala from "../icones/graphics-scale.png"
-import iconeMaoCoracao from "../icones/coracao.png"
-import iconeCoracao from "../icones/coracao-artificial.png"
 import iconeEmail from "../icones/email.svg"
 import iconeTelefone from "../icones/telefone.svg"
 import iconeLinkedin from "../icones/linkedin_roxo.svg"
@@ -60,11 +62,7 @@ function Sobre() {
                         <p>Permitir que mulheres de todas as idades interajam umas com as outras e tenham acesso a temas relevantes como mercado de trabalho, empoderamento feminino, ciência, tecnologia e feminismo. </p> <br/>
                         <h2>Valores</h2>
                         <ul>
-                            <li><img src={iconeForca} alt="ícone braço"/>Empoderar</li>
-                            <li><img src={iconeLampada} alt="ícone lâmpada"/>Inspirar</li>
-                            <li><img src={iconeEscala} alt="Ícone escala gráfica"/>Crescer e evoluir juntas</li>
-                            <li><img src={iconeMaoCoracao} alt="Ícone mão segurando coração"/>Incluir</li>
-                            <li><img src={iconeCoracao} alt="Ícone de coração"/>Paixão por realizar</li>
+                            <Valores imagem={iconeForca} titulo="Empoderar" />
                         </ul>
                     </section>
                 </div>
