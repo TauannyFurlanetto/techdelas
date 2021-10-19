@@ -33,7 +33,7 @@ function Posts(){
             txt: "Como está a presença delas no mercado de TI?",
             img: postImg,
             alt: "Mulher digital",
-            artigo: "artigo-tech.html"
+            artigo: "artigo/artigo-tech"
         },
         {
             titulo: "Mulheres revolucionárias na Engenharia Química",
@@ -41,7 +41,7 @@ function Posts(){
             txt: "Inspirações femininas na área, desafios e motivações",
             img: postImg,
             alt: "Mulher extraindo químico de tonel com uma mangueira",
-            artigo: "artigo.html"
+            artigo: "artigo/artigo"
         },
         {
             titulo: "Empoderamento da Mulher na Medicina",
@@ -49,7 +49,7 @@ function Posts(){
             txt: "Apesar de representar a maioria na linha de frente contra o Coronavírus, as mulheres ainda enfrentam uma série de desafios",
             img: postImg,
             alt: "Mulher colocando luva médica",
-            artigo: "artigo-med.html"
+            artigo: "artigo/artigo-med"
         }
     ]
     return(

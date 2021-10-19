@@ -24,10 +24,17 @@ let artigos = [
 
 export default function Artigo(){
 
-    const { artigo = 'nao-existe' } = useParams()
+    const { artigo = 'artigo404' } = useParams()
 
     console.log(artigo)
-    let postObject = (require('../posts/'+ artigo)).default
+    let postObject
+    try{
+        postObject = (require('../posts/'+ artigo)).default
+    }
+    catch{
+        postObject = (require('../posts/'+ "artigo404")).default
+    }
+    
     console.log(`este artigo ${artigo} contem os parametros ${Object.keys(postObject)}`)
     console.log(postObject.titulo)
     console.log(postObject.subtitulo)
