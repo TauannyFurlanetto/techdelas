@@ -38,18 +38,14 @@ export default function Artigo(){
         postObject = (require('../posts/'+ "artigo404")).default //executado caso a url resulte em um artigo que não existe
     }
     
-    console.log(`este artigo ${artigo} contem os parametros ${Object.keys(postObject)}`)
-    console.log(postObject.titulo)
-    console.log(postObject.subtitulo)
-    console.log(postObject)
     const [like, setLike] = useState(likeImg)
     let artContent = [];
     postObject.content.forEach(element => {
         if (element.p){
-            artContent.push(element.p)
+            artContent.push(<p>  {element.p}  </p>)
         }
         else if(element.img){
-                // artContent 
+            artContent.push(<Figure imgsrc={require('../' + element.img.source).default} caption={element.img.alt}></Figure>)
         }
     });
     
@@ -71,9 +67,6 @@ export default function Artigo(){
             </div>
 
             {artContent}
-            
-
-            <Figure imgsrc={require("../img/artigo-med.png").default} caption="Imagem teste"></Figure>
 
 
             <div className="tags">
