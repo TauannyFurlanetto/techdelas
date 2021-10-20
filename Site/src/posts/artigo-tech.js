@@ -4,7 +4,7 @@ const post = {
     subtitulo: "Como está a presença delas no mercado de TI?",
     img: "artigo-tech.png",
     alt: "Mulher digital",
-    artigo: "artigo-tech", //url
+    url: "artigo-tech", //url
     autor: "Priscila Bianchi",
     data: "18/03/2021",
 

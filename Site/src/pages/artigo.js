@@ -38,10 +38,6 @@ export default function Artigo(){
         postObject = (require('../posts/'+ "artigo404")).default //executado caso a url resulte em um artigo que não existe
     }
     
-    console.log(`este artigo ${artigo} contem os parametros ${Object.keys(postObject)}`)
-    console.log(postObject.titulo)
-    console.log(postObject.subtitulo)
-    console.log(postObject)
     const [like, setLike] = useState(likeImg)
     let artContent = [];
     postObject.content.forEach(element => {
