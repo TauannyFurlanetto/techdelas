@@ -281,7 +281,6 @@ footer span{
 }
 footer .left .logo .texto>p{
     font-size: 18px;
-    font-weight: 200;
 }
 footer .left .logo .texto h3{
     font-size: 60px;
@@ -299,7 +298,7 @@ footer .container p{
     margin: 0;
     padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
-    
+    font-weight: 300;
 }
 footer .socialMedia h3{
     text-transform: uppercase;
