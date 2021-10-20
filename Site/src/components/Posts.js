@@ -3,6 +3,7 @@ import Categoria from './Categoria.js';
 import Artigo from './Artigo.js';
 import lupa from "../icones/lupa.svg";
 import postImg from "../img/post1.jpg";
+import db from "../postdb.json";
 
 import {readdir} from 'fs'
 
@@ -12,10 +13,9 @@ import {readdir} from 'fs'
 
 function Posts(){
 
-    let listaDePosts = require.context("../posts", false, "/.js/")
-    
-    console.log(listaDePosts);
-    console.log("aaaaaaaaaa");
+    let postList = db.postlist
+
+    console.log(postList)
 
     let categorias = [
         { 
