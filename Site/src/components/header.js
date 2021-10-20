@@ -2,7 +2,7 @@ import logoHeader from "../icones/logo_header.svg";
 import exitMobile from "../icones/exit.svg";
 import email from "../icones/email.svg"
 import password from "../icones/senha.svg";
-import {NavLink} from "react-router-dom";
+import {NavLink, Link} from "react-router-dom";
 import '../js/script.js';
 export default function Cabecalho () {
     return (
@@ -10,8 +10,8 @@ export default function Cabecalho () {
         <header>
             <div className="container">
                 <section className="logo">
-                    <a href="home.html"><img src={logoHeader} alt="Logotipo_TechDelas" />
-                    <p><span>Tech</span>delas</p></a>
+                    <Link to="/"><img src={logoHeader} alt="Logotipo_TechDelas" />
+                    <p><span>Tech</span>delas</p></Link>
                 </section>
 
                 <button id="menu">☰</button>
