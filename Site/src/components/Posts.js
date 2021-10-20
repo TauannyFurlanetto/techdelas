@@ -3,7 +3,20 @@ import Categoria from './Categoria.js';
 import Artigo from './Artigo.js';
 import lupa from "../icones/lupa.svg";
 import postImg from "../img/post1.jpg";
+
+import {readdir} from 'fs'
+
+
+
+
+
 function Posts(){
+
+    let listaDePosts = require.context("../posts", false, "/.js/")
+    
+    console.log(listaDePosts);
+    console.log("aaaaaaaaaa");
+
     let categorias = [
         { 
             classe: "Tecnologia",
