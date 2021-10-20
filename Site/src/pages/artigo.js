@@ -49,7 +49,7 @@ export default function Artigo(){
             artContent.push(element.p)
         }
         else if(element.img){
-                artContent 
+                // artContent 
         }
     });
     
