@@ -46,10 +46,10 @@ export default function Artigo(){
     let artContent = [];
     postObject.content.forEach(element => {
         if (element.p){
-            artContent.push(element.p)
+            artContent.push(<p>  {element.p}  </p>)
         }
         else if(element.img){
-                artContent 
+            artContent.push(<Figure imgsrc={require('../' + element.img.source).default} caption={element.img.alt}></Figure>)
         }
     });
     
@@ -71,9 +71,6 @@ export default function Artigo(){
             </div>
 
             {artContent}
-            
-
-            <Figure imgsrc={require("../img/artigo-med.png").default} caption="Imagem teste"></Figure>
 
 
             <div className="tags">
