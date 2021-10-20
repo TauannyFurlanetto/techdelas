@@ -43,6 +43,17 @@ export default function Artigo(){
     console.log(postObject.subtitulo)
     console.log(postObject)
     const [like, setLike] = useState(likeImg)
+    let artContent = [];
+    postObject.content.forEach(element => {
+        if (element.p){
+            artContent.push(element.p)
+        }
+        else if(element.img){
+                artContent 
+        }
+    });
+    
+    
     return (
 <div>
     
@@ -50,54 +61,52 @@ export default function Artigo(){
     <section className="content">
         
         <article className="artigo">
-        
-       
-            {/* {artigos.map((post, indice) => 
-                <Art_individual
-                key={indice}
-                titulo={post.cor} 
-                img={post.img} 
-                alt={post.alt}
-                fig={post.fig}
-                />
-            )} */}
 
+            <div className="titulo">
+                <h1>{postObject.titulo}</h1>
+                <h2>{postObject.subtitulo}</h2>
+
+                <h3>{postObject.autor}</h3>
+                <p>{postObject.data}</p>
+            </div>
+
+            {artContent}
             
-        
 
-        
+            <Figure imgsrc={require("../img/artigo-med.png").default} caption="Imagem teste"></Figure>
 
-        <div className="tags">
-            <a href="">Tecnologia</a>
-            <a href="">Empoderamento</a>
-            <a href="">Ciência</a>
-        </div>
 
-        <div className="separador"></div>
+            <div className="tags">
+                <a href="">Tecnologia</a>
+                <a href="">Empoderamento</a>
+                <a href="">Ciência</a>
+            </div>
 
-        <div className="reacao">
-            <img src={like} onClick = {()=>{if(like==likeImg){setLike(likeColorido)}else{setLike(likeImg)}}} alt="curtida" />
-            <button className="coment"><img src={comments} alt="" /><a /></button>
-        </div>
+            <div className="separador"></div>
 
-        <div className="comentario">
-            <h3>Escreva seu comentário:</h3>
-            <div id="comentario">
+            <div className="reacao">
+                <img src={like} onClick = {()=>{if(like==likeImg){setLike(likeColorido)}else{setLike(likeImg)}}} alt="curtida" />
+                <button className="coment"><img src={comments} alt="" /><a /></button>
+            </div>
 
-            <form className='artigoComent'>
+            <div className="comentario">
+                <h3>Escreva seu comentário:</h3>
+                <div id="comentario">
+
+                <form className='artigoComent'>
                     <div className="caixa">
                         <label htmlFor="comentario"></label>
                         <textarea name="comentario" id="comentario" required maxLength="200"></textarea>
                     </div>
-
+    
                     <button type="submit" className="enviar">Enviar</button>
 
-            </form>
+                </form>
 
+                </div>
             </div>
-        </div>
 
-    </article>
+        </article>
     </section>
 
     <Rodape />
