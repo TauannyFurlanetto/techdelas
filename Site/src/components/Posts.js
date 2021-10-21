@@ -41,7 +41,7 @@ function Posts(){
         },
         { 
             classe: "Saude",
-            txt: "Saúde Mental"
+            txt: "Saúde"
         }
     ]
     let postagens = []
