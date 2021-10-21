@@ -5,6 +5,7 @@ import lupa from "../icones/lupa.svg";
 import postImg from "../img/post1.jpg";
 import db from "../postdb.json";
 import errorimg from "../img/notfound.png"
+import { useState, useEffect } from 'react';
 
 import {readdir} from 'fs'
 
@@ -15,6 +16,8 @@ import {readdir} from 'fs'
 function Posts(){
 
     let postList = db.postlist
+
+    const [currentMaxPosts, setcurrentMaxPost] = useState(3);
 
 
     console.log(postList)
@@ -43,22 +46,38 @@ function Posts(){
     ]
     let postagens = []
 
-
-    let i = 0
-    while(i <postList.length) {
-        
-        let post = (require('../posts/' + postList[i]).default)
-        if (!post.hidden){
-            try{
-                postagens.push({titulo: post.titulo, classes: post.classes, subtitulo: post.subtitulo, img: (require("../img/" + post.img)).default, alt: post.alt, url: post.url})
+    function RenderPosts(maxPosts){
+        let i = 0
+        while(i <postList.length && i<maxPosts) {
+    
+            let post = (require('../posts/' + postList[i]).default)
+            if (!post.hidden){
+                try{
+                    postagens.push({titulo: post.titulo, classes: post.classes, subtitulo: post.subtitulo, img: (require("../img/" + post.img)).default, alt: post.alt, url: post.url})
+                }
+                catch{
+                    try{
+                        postagens.push({titulo: post.titulo, classes: post.classes, subtitulo: post.subtitulo, img: errorimg, alt: post.alt, url: post.url})
+                    }
+                    catch{
+                        postagens.push({titulo: "erro", classes: "erro", subtitulo: "erro", img: errorimg, alt: "erro", url: "erro"})
+                    }
+    
+                }
             }
-            catch{
-                postagens.push({titulo: post.titulo, classes: post.classes, subtitulo: post.subtitulo, img: errorimg, alt: post.alt, url: post.url})
-
-            }
+            i += 1
         }
-        i += 1
     }
+
+
+    RenderPosts(currentMaxPosts)
+
+    function AddPost(event){
+        event.preventDefault()
+        setcurrentMaxPost(currentMaxPosts + 1)
+        RenderPosts(currentMaxPosts)
+    }
+    
 
     let postCards = (postagens.map((post,index)=>(
         <Artigo 
@@ -93,7 +112,7 @@ function Posts(){
                         {postCards}
                     </div>
                 </div>
-            <a href="posts.html" id="veja-mais">veja mais...</a>
+            <a href="posts.html" id="veja-mais" onClick={AddPost}>veja mais...</a>
             </article>
         </div>
     </section>

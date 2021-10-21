@@ -50,13 +50,13 @@ window.addEventListener('load', () => {
 
 	//Veja mais!!!! aaaaaaaaaaa
 
-	verMais = document.getElementById("veja-mais")
-	if (verMais !== null) {
-		verMais.onclick = (event) => {
-			event.preventDefault();
-			addPost(3)
-		}
-	}
+	// verMais = document.getElementById("veja-mais")
+	// if (verMais !== null) {
+	// 	verMais.onclick = (event) => {
+	// 		event.preventDefault();
+	// 		addPost(3)
+	// 	}
+	// }
 
 	// POP-UP
 
