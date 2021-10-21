@@ -52,7 +52,7 @@ function toggleView(view){
         if(!element.className.includes(ele.classList[0])){
             element.style.display = view;
         }else{
-            element.style.display = "flex";
+            element.style.display = "inherit";
         }
        })
        
