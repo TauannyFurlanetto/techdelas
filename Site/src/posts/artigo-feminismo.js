@@ -2,7 +2,7 @@ const post = {
     titulo: "A História do Feminismo",
     classes: "Empoderamento",
     subtitulo: "Como está a presença delas no mercado de TI?",
-    img: "postImg",
+    img: "artigo_feminismo.png",
     alt: "Legenda",
     url: "artigo-feminismo",
     autor: "Céli Regina Jardim Pinto",
@@ -10,7 +10,7 @@ const post = {
 
     content: {
         img: {
-            source: "img/artigo-tech.png",
+            source: "img/artigo_feminismo_posts.png",
             alt: "Legenda imagem"
         },
         p: "Ao longo da história ocidental sempre houve mulheres que se rebelaram contra sua condição, que lutaram por liberdade e muitas vezes pagaram com suas próprias vidas. A Inquisição da Igreja Católica foi implacável com qualquer mulher que desafiasse os princípios por ela pregados como dogmas insofismáveis. Mas a chamada primeira onda do feminismo aconteceu a partir das últimas décadas do século XIX , quando as mulheres, primeiro na Inglaterra, organizaram-se para lutar por seus direitos, sendo que o primeiro deles que se popularizou foi o direito ao voto. As sufragetes, como ficaram conhecidas, promoveram grandes manifestações em Londres, foram presas várias vezes, fizeram greves de fome. Em 1913, na famosa corrida de cavalo em Derby, a feminista Emily Davison atirou-se à frente do cavalo do Rei, morrendo. O direito ao voto foi conquistado no Reino Unido em 1918.",
