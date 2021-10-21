@@ -4,7 +4,7 @@ const post = {
     subtitulo: "Como está a presença delas no mercado de TI?",
     img: "postImg",
     alt: "Legenda",
-    artigo: "artigo-feminismo.html",
+    artigo: "/artigo-feminismo",
     autor: "Céli Regina Jardim Pinto",
     data: "18/06/2010",
 
@@ -24,7 +24,7 @@ const post = {
         p: 'Uma das mais significativas vitórias do feminismo brasileiro foi a criação do Conselho Nacional da Condição da Mulher (CNDM), em 1984, que, tendo sua secretária com status de ministro, promoveu junto com importantes grupos - como o Centro Feminista de Estudos e Assessoria (CFEMEA), de Brasília - uma campanha nacional para a inclusão dos direitos das mulheres na nova carta constitucional. Do esforço resultou que a Constituição de 1988 é uma das que mais garante direitos para a mulher no mundo. O CNDM perdeu completamente a importância com os governos de Fernando Collor de Mello e Fernando Henrique Cardoso. No primeiro governo de Luiz Inácio Lula da Silva, foi criada a Secretaria Especial de Políticas para as Mulheres, com status de ministério, e foi recriado o Conselho, com características mais próximas do que ele havia sido originalmente.',
         p: 'Ainda na última década do século XX, o movimento sofreu, seguindo uma tendência mais geral, um processo de profissionalização, por meio da criação de Organizações Não-Governamentais (ONGs), focadas, principalmente, na intervenção junto ao Estado, a fim de aprovar medidas protetoras para as mulheres e de buscar espaços para a sua maior participação política. Uma das questões centrais dessa época era a luta contra a violência, de que a mulher é vítima, principalmente a violência doméstica. Além das Delegacias Especiais da Mulher, espalhadas pelo país, a maior conquista foi a Lei Maria da Penha (Lei n. 11 340, de 7 de agosto de 2006), que criou mecanismos para coibir a violência doméstica e familiar contra a mulher.',
         p: 'Ainda é mister apontar para as duas Conferências Nacionais para a Política da Mulher, ocorridas em 2005 e 2007, que mobilizaram mais de 3 000 mulheres e produziram alentados documentos de análise sobre a situação da mulher no Brasil.',
-        p: '<strong>Referências: </strong> <a href="https://www.scielo.br/j/rsocp/a/GW9TMRsYgQNzxNjZNcSBf5r">PINTO, Céli Regina Jardim. Feminismo, história e poder.</a>'
+        p: 'Referências: Scielo'
     }
 }
 export default post
