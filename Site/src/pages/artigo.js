@@ -45,7 +45,12 @@ export default function Artigo(){
             artContent.push(<p>  {element.p}  </p>)
         }
         else if(element.img){
-            artContent.push(<Figure imgsrc={require('../' + element.img.source).default} caption={element.img.alt}></Figure>)
+            try{
+                artContent.push(<Figure imgsrc={require('../' + element.img.source).default} caption={element.img.alt}></Figure>)
+            }
+            catch{
+                artContent.push(<Figure imgsrc={require('../img/notfound.png').default} caption={"imagem indisponível"}></Figure>)
+            }
         }
     });
     
