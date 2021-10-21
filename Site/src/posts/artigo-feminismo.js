@@ -4,7 +4,7 @@ const post = {
     subtitulo: "Como está a presença delas no mercado de TI?",
     img: "postImg",
     alt: "Legenda",
-    artigo: "/artigo-feminismo",
+    url: "artigo-feminismo",
     autor: "Céli Regina Jardim Pinto",
     data: "18/06/2010",
 
