@@ -1,6 +1,5 @@
 import '../css/home.css';
 import '../css/global.css';
-import Cabecalho from '../components/header';
 import Rodape from '../components/footer';
 import '../js/script.js';
 import Posts from '../components/Posts'

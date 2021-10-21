@@ -1,8 +1,7 @@
 import '../icones/logo-branco.png';
 import '../css/global.css';
 import '../css/sobre.css';
-
-import Valores from '../components/Valores'
+import '../js/script.js';
 
 import iconeForca from "../icones/forca.png"
 import iconeLampada from "../icones/lampada-brilhante.png"
@@ -23,12 +22,124 @@ import iconeYout from "../icones/youtube_roxo.svg"
 import iconeInsta from "../icones/instagram_roxo.svg"
 import iconeWhats from "../icones/whatsapp.svg"
 
-import '../js/script.js';
-
+import Valores from '../components/Valores'
+import Equipe from '../components/Equipe'
+import ContatoSobre from '../components/ContatoSobre';
+import RedesSociais from '../components/RedesSociais';
 import Rodape from '../components/footer';
  
 
 function Sobre() {
+
+    let valores = [
+        {
+            icone: iconeForca,
+            alt: 'ícone braço',
+            titulo: 'Empoderar'
+
+        },
+        {
+            icone: iconeLampada,
+            alt: 'ícone lâmpada',
+            titulo: 'Inspirar'   
+        },
+        {
+            icone: iconeEscala,
+            alt: 'Ícone escala gráfica',
+            titulo: 'Crescer e evoluir juntas'   
+        },
+        {
+            icone: iconeMaoCoracao,
+            alt: 'Ícone mão segurando coração',
+            titulo: 'Incluir'   
+        },
+        {
+            icone: iconeCoracao,
+            alt: 'Ícone de coração',
+            titulo: 'Paixão por realizar'   
+        }
+    ]
+
+    let equipe = [
+        {
+            foto: profAlice,
+            nome: 'Alice Marques Candido',
+            escolaridade: 'Estudante Universitária',
+            funcao: 'Estagiária OLX Brasil',
+            idade: '21 anos'
+        },
+        {
+            foto: profGi,
+            nome: 'Giovana Narciso Guimarães',
+            escolaridade: 'Estudante Universitária',
+            funcao: 'Estagiária OLX Brasil',
+            idade: '18 anos'
+        },
+        {
+            foto: profTau,
+            nome: 'Tauanny Virgínio Furlanetto',
+            escolaridade: 'Estudante Universitária',
+            funcao: 'Estagiária OLX Brasil',
+            idade: '19 anos'
+        },
+        {
+            foto: profVanessa,
+            nome: 'Vanessa Rodrigues Cardoso',
+            escolaridade: 'Estudante Ensino Técnico',
+            funcao: 'Estagiária OLX Brasil',
+            idade: '18 anos'
+        },
+        {
+            foto: profVivian,
+            nome: 'Vivian Ribeiro de Souza',
+            escolaridade: 'Estudante Universitária',
+            funcao: 'Estagiária OLX Brasil',
+            idade: '21 anos'
+        }
+    ]
+    
+
+    let contatos = [
+        {
+            href: 'mailto:techdelas@gmail.com',
+            icone: iconeEmail,
+            desc: 'techdelas@gmail.com'
+        },
+        {
+            href: 'tel:+55559000000',
+            icone: iconeTelefone,
+            desc: '(55)9000000'
+        },
+        {
+            href: 'https://api.whatsapp.com/send?phone=5555559000000&text=Oi%2C%20vi%20seu%20contato%20na%20p%C3%A1gina%20TechDelas!',
+            icone: iconeWhats,
+            desc: 'Whatsapp'
+        }
+    ]
+
+    let redesSociais = [
+        {
+            href: 'http://linkedin.com',
+            icone: iconeLinkedin,
+            alt: 'Logotipo linkedin'
+        },
+        {
+            href: 'http://facebook.com',
+            icone: iconeFacebook,
+            alt: 'Logotipo facebook'
+        },
+        {
+            href: 'http://youtube.com',
+            icone: iconeYout,
+            alt: 'Logotipo youtube'
+        },
+        {
+            href: 'http://instagram.com',
+            icone: iconeInsta,
+            alt: 'Logotipo instagram'
+        }
+    ]
+
     return (
         <div>
         
@@ -62,7 +173,14 @@ function Sobre() {
                         <p>Permitir que mulheres de todas as idades interajam umas com as outras e tenham acesso a temas relevantes como mercado de trabalho, empoderamento feminino, ciência, tecnologia e feminismo. </p> <br/>
                         <h2>Valores</h2>
                         <ul>
-                            <Valores imagem={iconeForca} titulo="Empoderar" />
+                            {valores.map((valor, indice) =>
+                                <Valores
+                                key={indice}
+                                icone={valor.icone}
+                                alt={valor.alt}
+                                titulo={valor.titulo}
+                                />
+                            )}
                         </ul>
                     </section>
                 </div>
@@ -71,50 +189,16 @@ function Sobre() {
             <div className="container">
                     <h1 id="titulo">A Equipe</h1>
                         <section className="equipe">
-                            <article>
-                                <div className="person" style={{backgroundImage: `url(${profAlice})`}}></div>
-                                <h2>Alice Marques Candido</h2>
-                                <p>Estudante Universitária<br/>
-                                    Estagiária OLX Brasil<br/>
-                                    21 anos
-                                </p>
-                            </article>
-
-                            <article>
-                                <div className="person" style={{backgroundImage: `url(${profGi})`}}></div>
-                                <h2>Giovana Narciso Guimarães</h2>
-                                <p>Estudante Universitária<br/>
-                                    Estagiária OLX Brasil<br/>
-                                    18 anos
-                                </p>
-                            </article>
-
-                            <article>
-                                <div className="person" style={{backgroundImage: `url(${profTau})`}}></div>
-                                <h2>Tauanny Virgínio Furlanetto</h2>
-                                <p>Estudante Universitária<br/>
-                                    Estagiária OLX Brasil<br/>
-                                    19 anos
-                                </p>
-                            </article>
-
-                            <article>
-                                <div className="person" style={{backgroundImage: `url(${profVanessa})`}}></div>
-                                <h2>Vanessa Rodrigues Cardoso</h2>
-                                <p>Estudante Ensino Técnico<br/>
-                                    Estagiária OLX Brasil<br/>
-                                    18 anos
-                                </p>
-                            </article>
-
-                            <article>
-                                <div className="person" style={{backgroundImage: `url(${profVivian})`}}></div>
-                                <h2>Vivian Ribeiro de Souza</h2>
-                                <p>Estudante Universitária<br/>
-                                    Estagiária OLX Brasil<br/>
-                                    21 anos
-                                </p>
-                            </article>
+                            {equipe.map((integrante, indice) =>
+                                <Equipe
+                                key={indice}
+                                foto={integrante.foto}
+                                nome={integrante.nome}
+                                escolaridade={integrante.escolaridade}
+                                funcao={integrante.funcao}
+                                idade={integrante.idade}
+                                />
+                            )}
                         </section>
                         
             </div>
@@ -126,14 +210,24 @@ function Sobre() {
                     <section className="contact">
                         <article className="redes">
                             <p>Entre em contato com a gente:</p><br/>
-                            <p><a href="mailto:techdelas@gmail.com"><img src={iconeEmail}/> techdelas@gmail.com</a></p>
-                            <p><a href="tel:+55559000000"><img src={iconeTelefone}/> (55)9000000</a></p>
-                            <p><a href="https://api.whatsapp.com/send?phone=5555559000000&text=Oi%2C%20vi%20seu%20contato%20na%20p%C3%A1gina%20TechDelas!"><img src={iconeWhats}/> Whatsapp</a></p>
+                            {contatos.map((contato, indice) =>
+                                <ContatoSobre 
+                                    key={indice}
+                                    href={contato.href}
+                                    icone={contato.icone}
+                                    desc={contato.desc}
+                                />
+                            )}
+                            
                             <div className="icons">
-                            <a href="http://linkedin.com"><img src={iconeLinkedin} alt="Logotipo linkedin"/></a>
-                            <a href="http://facebook.com"><img src={iconeFacebook} alt="Logotipo facebook"/></a>
-                            <a href="http://youtube.com"><img src={iconeYout} alt="Logotipo youtube"/></a>
-                            <a href="http://instagram.com"><img src={iconeInsta} alt="Logotipo instagram"/></a>
+                            {redesSociais.map((redes, indice) =>
+                                <RedesSociais 
+                                    key={indice}
+                                    href={redes.href}
+                                    icone={redes.icone}
+                                    alt={redes.desc}
+                                />
+                            )}
                             </div>
                         </article>
 
