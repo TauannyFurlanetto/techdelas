@@ -16,6 +16,7 @@ function Posts(){
 
     let postList = db.postlist
 
+
     console.log(postList)
 
     let categorias = [
@@ -40,32 +41,36 @@ function Posts(){
             txt: "Saúde Mental"
         }
     ]
-    let postagens = [
-        {
-            titulo: "Mulheres na Tecnologia",
-            classes: "Tecnologia Empoderamento",
-            subtitulo: "Como está a presença delas no mercado de TI?",
-            img: postImg,
-            alt: "Mulher digital",
-            url: "artigo-tech"
-        },
-        {
-            titulo: "Mulheres revolucionárias na Engenharia Química",
-            classes: "Ciencia Empoderamento",
-            subtitulo: "Inspirações femininas na área, desafios e motivações",
-            img: postImg,
-            alt: "Mulher extraindo químico de tonel com uma mangueira",
-            url: "artigo-educacao"
-        },
-        {
-            titulo: "Empoderamento da Mulher na Medicina",
-            classes: "Empoderamento",
-            subtitulo: "Apesar de representar a maioria na linha de frente contra o Coronavírus, as mulheres ainda enfrentam uma série de desafios",
-            img: postImg,
-            alt: "Mulher colocando luva médica",
-            url: "artigo-saude"
+    let postagens = []
+
+
+    let i = 0
+    while(i <postList.length) {
+        
+        let post = (require('../posts/' + postList[i]).default)
+        if (!post.hidden){
+            try{
+                postagens.push({titulo: post.titulo, classes: post.classes, subtitulo: post.subtitulo, img: (require("../img/" + post.img)).default, alt: post.alt, url: post.url})
+            }
+            catch{
+                postagens.push({titulo: post.titulo, classes: post.classes, subtitulo: post.subtitulo, img: errorimg, alt: post.alt, url: post.url})
+
+            }
         }
-    ]
+        i += 1
+    }
+
+    let postCards = (postagens.map((post,index)=>(
+        <Artigo 
+        key = {index} 
+        artigo = {post.url} 
+        classes = {post.classes} 
+        titulo={post.titulo} 
+        subtitulo = {post.subtitulo} 
+        img = {post.img} 
+        alt = {post.alt}>
+        </Artigo>
+    )))
     return(
         <section className="posts">
         <div className="container">
@@ -85,19 +90,7 @@ function Posts(){
             <article className="janela">
                 <div className="topo">
                     <div className="postagens">
-                        {
-                            postagens.map((post,index)=>(
-                                <Artigo 
-                                key = {index} 
-                                artigo = {post.url} 
-                                classes = {post.classes} 
-                                titulo={post.titulo} 
-                                subtitulo = {post.subtitulo} 
-                                img = {post.img} 
-                                alt = {post.alt}>
-                                </Artigo>
-                            ))
-                        }
+                        {postCards}
                     </div>
                 </div>
             <a href="posts.html" id="veja-mais">veja mais...</a>
