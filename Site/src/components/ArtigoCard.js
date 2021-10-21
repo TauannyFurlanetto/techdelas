@@ -7,7 +7,7 @@ function Artigo({artigo,titulo, subtitulo, img, alt, classes}){
                 <h3>{titulo}</h3>
                 <p>{subtitulo}</p>
             </div>
-            <img src={img} alt={alt} style={{height: '10rem', width: '14rem'}} />
+            <img src={img} alt={alt} style={{width: '14rem'}} />
         </div>
     </Link>
 )

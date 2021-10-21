@@ -2,7 +2,7 @@ const post = {
     titulo: "A saúde na senilidade",
     classes: "Saude",  //tags do post
     subtitulo: "Orientações sobre alimentação, exercícios e psicologia",
-    img: "artigo_saude_posts.png",
+    img: "Image.png",
     alt: "Senhora de se alongando", //alt da imagem
     url: "artigo-saude", //link do artigo
     autor: "Pronto Saúde",
