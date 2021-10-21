@@ -1,6 +1,6 @@
 const post = {
     titulo: "Titulo do artigo",
-    classes: "Tecnologia Empoderamento",  //tags do post
+    classes: "Tecnologia Empoderamento",  //tags do post -- Saude / Tecnologia / Empoderamento / Educacao / Ciencia
     subtitulo: "Subtitulo do artigo",
     img: "postImg",
     alt: "Imagem do artigo", //alt da imagem

@@ -9,7 +9,7 @@ const post = {
     data: "25/02/2020",
 
     content: [{img: {
-        source: "img/artigo-saude.jpg",
+        source: "img/artigo_saude.jpg",
         alt: "Foto retirada de Pexels"
     }},
         {p: "Da infância até a velhice, a mulher passa por muitos momentos – e cada um deles com suas características próprias, que necessitam de cuidados especiais. Por isso, o acompanhamento com médicos especialistas, além do próprio ginecologista, é fundamental para que a saúde fique sempre em dia."},
