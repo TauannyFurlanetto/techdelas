@@ -1,9 +1,10 @@
 import {pesquisar} from'../js/pesquisa.js';
 import Categoria from './Categoria.js';
-import Artigo from './Artigo.js';
+import Artigo from './ArtigoCard.js';
 import lupa from "../icones/lupa.svg";
 import postImg from "../img/post1.jpg";
 import db from "../postdb.json";
+import errorimg from "../img/notfound.png"
 
 import {readdir} from 'fs'
 
@@ -43,26 +44,26 @@ function Posts(){
         {
             titulo: "Mulheres na Tecnologia",
             classes: "Tecnologia Empoderamento",
-            txt: "Como está a presença delas no mercado de TI?",
+            subtitulo: "Como está a presença delas no mercado de TI?",
             img: postImg,
             alt: "Mulher digital",
-            artigo: "artigo/artigo-tech"
+            url: "artigo-tech"
         },
         {
             titulo: "Mulheres revolucionárias na Engenharia Química",
             classes: "Ciencia Empoderamento",
-            txt: "Inspirações femininas na área, desafios e motivações",
+            subtitulo: "Inspirações femininas na área, desafios e motivações",
             img: postImg,
             alt: "Mulher extraindo químico de tonel com uma mangueira",
-            artigo: "artigo/artigo"
+            url: "artigo-educacao"
         },
         {
             titulo: "Empoderamento da Mulher na Medicina",
             classes: "Empoderamento",
-            txt: "Apesar de representar a maioria na linha de frente contra o Coronavírus, as mulheres ainda enfrentam uma série de desafios",
+            subtitulo: "Apesar de representar a maioria na linha de frente contra o Coronavírus, as mulheres ainda enfrentam uma série de desafios",
             img: postImg,
             alt: "Mulher colocando luva médica",
-            artigo: "artigo/artigo-med"
+            url: "artigo-saude"
         }
     ]
     return(
@@ -86,7 +87,15 @@ function Posts(){
                     <div className="postagens">
                         {
                             postagens.map((post,index)=>(
-                                <Artigo key = {index} artigo = {post.artigo} classes = {post.classes} titulo={post.titulo} txt = {post.txt} img = {post.img} alt = {post.alt}></Artigo>
+                                <Artigo 
+                                key = {index} 
+                                artigo = {post.url} 
+                                classes = {post.classes} 
+                                titulo={post.titulo} 
+                                subtitulo = {post.subtitulo} 
+                                img = {post.img} 
+                                alt = {post.alt}>
+                                </Artigo>
                             ))
                         }
                     </div>

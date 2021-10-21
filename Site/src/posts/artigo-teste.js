@@ -1,4 +1,5 @@
 const post = {
+    hidden: true, //não aparece na busca de posts
     titulo: "Titulo do artigo",
     classes: "Tecnologia Empoderamento",  //tags do post -- Saude / Tecnologia / Empoderamento / Educacao / Ciencia
     subtitulo: "Subtitulo do artigo",

@@ -1,4 +1,5 @@
 const post = {
+    hidden: true,
     titulo: "Ops!",
     classes: "",  //tags do post
     subtitulo: "Este artigo não foi encontrado em nosso site",
