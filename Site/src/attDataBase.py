@@ -3,7 +3,7 @@
 import os
 import json
 
-files = os.listdir("src\posts") #lista dos arquivos no diretório
+files = os.listdir("src/posts") #lista dos arquivos no diretório
 # print(files)
 
 # o loop while retira o ".js" de todos as strings dentro de files
@@ -18,7 +18,7 @@ postdb = {"postlist": files} #dicionario com a lista
 postdbjson = json.dumps(postdb) #converte o dicionario em json para ser usado no jsx
 
 
-file = open("src\postdb.json", "w") #cria o arquivo postdb.json dentro de src
+file = open("src/postdb.json", "w") #cria o arquivo postdb.json dentro de src
 file.write(str(postdbjson)) #passa o json para dentro do arquivo
 file.close() #fecha o arquivinho owo
 
