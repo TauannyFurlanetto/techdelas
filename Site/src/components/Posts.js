@@ -18,6 +18,7 @@ function Posts(){
     let postList = db.postlist
 
     const [currentMaxPosts, setcurrentMaxPost] = useState(3);
+    const [opacity, setOpacity] = useState({opacity: "100%"});
 
 
     console.log(postList)
@@ -70,15 +71,23 @@ function Posts(){
     }
 
 
+    let vejamais= (<a href="posts.html" id="veja-mais" onClick={AddPost} style={opacity}>veja mais...</a>)
+    useEffect(() =>{vejamais= (<a href="posts.html" id="veja-mais" onClick={AddPost} style={opacity}>veja mais...</a>)},[opacity])
+
     RenderPosts(currentMaxPosts)
 
     function AddPost(event){
         event.preventDefault()
         setcurrentMaxPost(currentMaxPosts + 1)
         RenderPosts(currentMaxPosts)
+        if(currentMaxPosts == postList.length -3){ //eu não tenho certeza porque isso funciona, mas funciona
+            setOpacity({opacity: "40%"}) 
+        }
     }
     
-
+    
+    
+    
     let postCards = (postagens.map((post,index)=>(
         <Artigo 
         key = {index} 
@@ -112,7 +121,7 @@ function Posts(){
                         {postCards}
                     </div>
                 </div>
-            <a href="posts.html" id="veja-mais" onClick={AddPost}>veja mais...</a>
+            {vejamais}
             </article>
         </div>
     </section>
