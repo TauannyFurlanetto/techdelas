@@ -9,6 +9,7 @@ import bannerUm from "../img/heroFoto2.jpg";
 import bannerDois from "../img/heroFoto.jpg";
 import { useState } from 'react';
 import Posts from '../components/Posts'
+import {Link} from "react-router-dom";
 
 function Home() {
     const [banner, setBanner] = useState(bannerUm);
@@ -23,7 +24,7 @@ function Home() {
                     <p>Leia e publique histórias sobre ciência, tecnologia, empoderamento e o mercado de trabalho, e sua relação com o mundo feminino.
                     </p>
                 </div>
-                <a href="escreva.html"><button>Escreva para gente</button></a>
+                <Link to="/escreva"><button>Escreva para gente</button></Link>
             </div>
             <div id="imagem">
                 <div style={{backgroundImage: `url(${banner})`}} onAnimationIteration = {()=>{if(banner==bannerUm){setBanner(bannerDois); setBanner2(bannerUm)}else{setBanner(bannerUm); setBanner2(bannerDois)}}}></div>

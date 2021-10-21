@@ -70,7 +70,7 @@ function Posts(){
         <div className="container">
             <article className="barra">
                 <div className="topo">
-                    <button><img src={lupa} alt=""/></button>
+                    <button type="submit"><img src={lupa} alt=""/></button>
                     <input type="text" name="pesquisarArtigo" id="artigo" placeholder="Pesquise um post..." onKeyUp={pesquisar}/>
                 </div>
                 <div className="categorias">
