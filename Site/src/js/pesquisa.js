@@ -1,3 +1,10 @@
+import post from "../posts/artigo-tech";
+import post2 from "../posts/artigo-med";
+import post3 from "../posts/artigo-eng";
+import post4 from "../posts/artigo-saude";
+import post5 from "../posts/artigo-feminismo";
+import post6 from "../posts/artigo-educacao";
+
 function pesquisar(){
     let input, filtro, menu, menuItens, links;
 
@@ -55,7 +62,6 @@ function toggleView(view){
             element.style.display = "inherit";
         }
        })
-       
     });
 }
 

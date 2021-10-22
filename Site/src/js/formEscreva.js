@@ -36,6 +36,6 @@ const formEscreva = document.querySelector(".forms .formulario");
             ulErros.innerHTML += "<li>" + erro+ "</li>";
         })
     }else{
-        formEscreva.submit();
+        window.location.reload();
 }}
 export{escrevaButton}
