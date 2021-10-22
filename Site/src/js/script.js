@@ -107,9 +107,18 @@ function closePopup() {
 	loginPage.classList.remove("active");
 	cadastroPage.classList.remove("active");
 	let erroClear = document.querySelectorAll(".error");
-	console.log(erroClear)
+	inpLogEmail = document.getElementById("login-email")
+	inpLogPass = document.getElementById("login-senha")
+	inpRegEmail = document.getElementById("reg-email")
+	inpRegPass = document.getElementById("reg-senha")
+	inpRegConfirmPass = document.getElementById("reg-senha-confirm")
+	inpRegName = document.getElementById("reg-nome")
+	let inpArr = [inpLogEmail, inpLogPass, inpRegConfirmPass, inpRegEmail, inpRegName, inpRegPass]
 	erroClear.forEach(error=>{
 		error.innerHTML = " "
+	})
+	inpArr.forEach(input=>{
+		input.value = ""
 	})
 	
 }
