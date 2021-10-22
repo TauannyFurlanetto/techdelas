@@ -7,7 +7,7 @@
     */
 export default function Figure({imgsrc, caption, alt=""}){
     
-    if(alt == ""){
+    if(alt === ""){
         alt = caption
     }
     return(

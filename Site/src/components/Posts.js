@@ -2,16 +2,9 @@ import {pesquisar} from'../js/pesquisa.js';
 import Categoria from './Categoria.js';
 import Artigo from './ArtigoCard.js';
 import lupa from "../icones/lupa.svg";
-import postImg from "../img/post1.jpg";
 import db from "../postdb.json";
 import errorimg from "../img/notfound.png"
 import { useState, useEffect } from 'react';
-
-import {readdir} from 'fs'
-
-
-
-
 
 function Posts(){
 
@@ -82,7 +75,7 @@ function Posts(){
         event.preventDefault()
         setcurrentMaxPost(currentMaxPosts + 1)
         RenderPosts(currentMaxPosts)
-        if(currentMaxPosts == postList.length -1){ //eu não tenho certeza porque isso funciona, mas funciona
+        if(currentMaxPosts === postList.length -1){ //eu não tenho certeza porque isso funciona, mas funciona
             setOpacity({opacity: "40%"}) 
         }
     }

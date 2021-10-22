@@ -1,10 +1,3 @@
-import post from "../posts/artigo-tech";
-import post2 from "../posts/artigo-med";
-import post3 from "../posts/artigo-eng";
-import post4 from "../posts/artigo-saude";
-import post5 from "../posts/artigo-feminismo";
-import post6 from "../posts/artigo-educacao";
-
 function pesquisar(){
     let input, filtro, menu, menuItens, links;
 
@@ -41,9 +34,6 @@ function pesquisar(){
      }
 }
 
-let toogle = true;
-let arrCat = ["Tecnologia", "Empoderamento", "Ciencia", "Educacao", "Saude"];
-const catList = document.querySelectorAll(".categorias ul li");
 function boldCategoria(txt){
     if (txt.style.fontWeight === "500"){
         txt.style.fontWeight = "600";

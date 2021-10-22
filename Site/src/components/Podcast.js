@@ -1,7 +1,7 @@
 function Podcast({url, img, p, h1}){
     return(
         <>
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" rel="noreferrer">
                 <article className="podcast">
                     <img src={img} alt="podcast1" />
                     <div className="escritaarticle">

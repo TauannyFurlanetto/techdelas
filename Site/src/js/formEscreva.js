@@ -4,7 +4,6 @@
 // min 500 caracters 
 
 console.log("formsLoad")
-const formEscreva = document.querySelector(".forms .formulario");
     console.log("buttonNotNull")
     const escrevaButton = (event)=>{
     console.log("click")

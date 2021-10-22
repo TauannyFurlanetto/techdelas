@@ -1,4 +1,3 @@
-import postImg from "../img/post2.jpg"
 
 export default function Art_individual ({titulo, txt, autor, data, img, alt, fig, artigo}) {
     return (
