@@ -9,8 +9,6 @@ let loginPage;
 let cadastroPage;
 let exitPopup;
 
-let verMais;
-
 window.addEventListener('load', () => {
 	// Pega os elementos
 	console.log("load")
@@ -215,7 +213,6 @@ window.addEventListener("load", () => {
 })
 
 function ValidateForm(classname) {
-	let labelDivs
 	if (classname === "register") {
 		labelDivs = document.querySelectorAll(".pop-up.register form > .pop-up-labels")
 		let errorNum = 0

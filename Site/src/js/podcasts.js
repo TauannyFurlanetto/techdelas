@@ -64,7 +64,7 @@ function matchDescPod(podcasts){
 	podcastFormat.push(formatPod(podcastArr))
 	podcastFormat[0].map((pod)=>{
 		descricao.map(desc=>{
-			if (desc.title == pod.name){
+			if (desc.title === pod.name){
 				 pod.feed = desc.desc
 			}
 		})

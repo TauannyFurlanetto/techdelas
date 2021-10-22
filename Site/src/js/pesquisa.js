@@ -1,5 +1,5 @@
 function pesquisar(){
-    let input, filtro, menu, menuItens, links;
+    let input, filtro, menu, menuItens;
 
     input = document.getElementById('artigo');
     filtro = input.value.toUpperCase();
