@@ -177,11 +177,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
     
 }
 .janela .topo .post img {
     margin: 20px 10px;
+    width: 200px;
+    height: 163px;
+    object-fit: cover;
 }
 .janela .topo{
     position: relative;
