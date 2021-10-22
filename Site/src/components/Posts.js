@@ -16,7 +16,8 @@ import {readdir} from 'fs'
 function Posts(){
 
     let postList = db.postlist
-    postList = postList.filter(filename => !filename.hidden)
+    postList = postList.filter((str, i) => !(require('../posts/' + postList[i]).default).hidden) // filter passa a index i, e retorna apenas o que não contém .hidden no posts.js
+    console.log(postList)
 
     const [currentMaxPosts, setcurrentMaxPost] = useState(3);
     const [opacity, setOpacity] = useState({opacity: "100%"});
