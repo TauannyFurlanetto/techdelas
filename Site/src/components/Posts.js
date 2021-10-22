@@ -16,6 +16,7 @@ import {readdir} from 'fs'
 function Posts(){
 
     let postList = db.postlist
+    postList = postList.filter(filename => !filename.hidden)
 
     const [currentMaxPosts, setcurrentMaxPost] = useState(3);
     const [opacity, setOpacity] = useState({opacity: "100%"});
@@ -80,7 +81,7 @@ function Posts(){
         event.preventDefault()
         setcurrentMaxPost(currentMaxPosts + 1)
         RenderPosts(currentMaxPosts)
-        if(currentMaxPosts == postList.length -3){ //eu não tenho certeza porque isso funciona, mas funciona
+        if(currentMaxPosts == postList.length -1){ //eu não tenho certeza porque isso funciona, mas funciona
             setOpacity({opacity: "40%"}) 
         }
     }

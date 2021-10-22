@@ -111,6 +111,7 @@ function closePopup() {
 	erroClear.forEach(error=>{
 		error.innerHTML = " "
 	})
+	
 }
 
 function addPost(newPostsAmount) {

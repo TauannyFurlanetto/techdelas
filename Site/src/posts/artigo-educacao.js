@@ -1,6 +1,6 @@
 const post = {
     titulo: "Por que o machismo cria barreiras para as mulheres na tecnologia",
-    classes: "Ciencia e Educacao",  //tags do post
+    classes: "Ciencia Educacao",  //tags do post
     subtitulo: "Precisamos falar sobre os desafios das mulheres na área e o que fazer para aumentar sua participação.",
     img: "artigo_aducacao_dentro.jpg",
     alt: "Menina andando em cima circuitos", //alt da imagem
