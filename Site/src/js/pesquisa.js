@@ -19,7 +19,7 @@ function pesquisar(){
         console.log(menuItens2);
         if(links.innerHTML.toUpperCase().includes(filtro) && (menuItens2[i].classList[0].includes(listaDeClasses) || menuItens2[i].classList[1].includes(listaDeClasses))){
             
-            menuItens2[i].style.display='block';
+            menuItens2[i].style.display='flex';
             vejaMais.style.display='block';
 
         }else{
