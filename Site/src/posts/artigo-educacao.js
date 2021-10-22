@@ -2,14 +2,14 @@ const post = {
     titulo: "Por que o machismo cria barreiras para as mulheres na tecnologia",
     classes: "Ciencia Educacao",  //tags do post
     subtitulo: "Precisamos falar sobre os desafios das mulheres na área e o que fazer para aumentar sua participação.",
-    img: "artigo_aducacao_dentro.jpg",
+    img: "artigo_educacao_fora.jpg",
     alt: "Menina andando em cima circuitos", //alt da imagem
-    url: "artigo_educacao_dentro", //link do artigo
+    url: "artigo-educacao", //link do artigo
     autor: "Progra{m}aria",
     data: "25/02/2020",
 
     content: [{img: {
-        source: "img/artigo_educacao_fora.jpg",
+        source: "img/artigo_aducacao_dentro.jpg",
         alt: "Foto retirada de Pexels"
     }},
         {p: "Pense rápido: qual era seu brinquedo favorito? É provável que, caso você seja mulher, a resposta seja boneca ou panelinhas. Se você é homem, possivelmente respondeu à pergunta lembrando de videogames ou computadores. Essa divisão, considerada natural por muitos, reflete estereótipos de gênero construídos historicamente, que delegam às garotas, desde cedo, tarefas e interesses relacionados à esfera do cuidado e ao âmbito privado. Não podia brincar com meus primos e irmãos. Era presenteada com bonecas e objetos cor-de-rosa, que eu detestava, conta a analista de sistemas Larissa Pereira Gambale, 22 anos."},
